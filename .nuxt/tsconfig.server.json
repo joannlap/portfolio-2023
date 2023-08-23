@@ -1,0 +1,73 @@
+{
+  "compilerOptions": {
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "jsx": "preserve",
+    "jsxFactory": "h",
+    "jsxFragmentFactory": "Fragment",
+    "paths": {
+      "#imports": [
+        "/Users/vincent/Web/portfolio-joann/.nuxt/types/nitro-imports"
+      ],
+      "#paths": [
+        "/Users/vincent/Web/portfolio-joann/node_modules/nuxt/dist/core/runtime/nitro/paths"
+      ],
+      "~": [
+        "/Users/vincent/Web/portfolio-joann"
+      ],
+      "~/*": [
+        "/Users/vincent/Web/portfolio-joann/*"
+      ],
+      "@": [
+        "/Users/vincent/Web/portfolio-joann"
+      ],
+      "@/*": [
+        "/Users/vincent/Web/portfolio-joann/*"
+      ],
+      "~~": [
+        "/Users/vincent/Web/portfolio-joann"
+      ],
+      "~~/*": [
+        "/Users/vincent/Web/portfolio-joann/*"
+      ],
+      "@@": [
+        "/Users/vincent/Web/portfolio-joann"
+      ],
+      "@@/*": [
+        "/Users/vincent/Web/portfolio-joann/*"
+      ],
+      "assets": [
+        "/Users/vincent/Web/portfolio-joann/assets"
+      ],
+      "assets/*": [
+        "/Users/vincent/Web/portfolio-joann/assets/*"
+      ],
+      "public": [
+        "/Users/vincent/Web/portfolio-joann/public"
+      ],
+      "public/*": [
+        "/Users/vincent/Web/portfolio-joann/public/*"
+      ],
+      "pinia": [
+        "/Users/vincent/Web/portfolio-joann/node_modules/pinia/dist/pinia"
+      ],
+      "#image": [
+        "/Users/vincent/Web/portfolio-joann/node_modules/@nuxt/image-edge/dist/runtime"
+      ],
+      "#image/*": [
+        "/Users/vincent/Web/portfolio-joann/node_modules/@nuxt/image-edge/dist/runtime/*"
+      ]
+    }
+  },
+  "include": [
+    "/Users/vincent/Web/portfolio-joann/.nuxt/types/nitro-nuxt.d.ts",
+    "./types/nitro.d.ts",
+    "../**/*",
+    "../server/**/*"
+  ]
+}
