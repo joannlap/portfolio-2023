@@ -11,20 +11,7 @@
         </li>
       </ul>
     </nav>
-    <nav class="SelectedWork">
-      <h2 class="SubHeading">Selected Work</h2>
-      <ul>
-        <li
-          v-for="project in projects"
-          :key="project.id"
-          :aria-label="`Open the ${project.title} project`"
-        >
-          <NuxtLink :to="`/project/${project.title.toLowerCase()}`">
-            <SvgArrowDownRight />{{ project.title }}
-          </NuxtLink>
-        </li>
-      </ul>
-    </nav>
+    <SelectedWork :work="work" />
     <SocialFooter />
   </aside>
 </template>
@@ -32,10 +19,10 @@
 <script setup lang="ts">
 import SvgArrowDownRight from "~/assets/icons/arrow-down-right.svg?component";
 import SvgLogo from "~/assets/icons/logo.svg?component";
-import { useProjectStore } from "~/stores/project";
+import { useWorkStore } from "~/stores/work";
 
-const projectStore = useProjectStore();
-const projects = projectStore.projects;
+const workStore = useWorkStore();
+const work = workStore.work;
 </script>
 
 <style lang="scss" scoped>
@@ -52,7 +39,7 @@ aside {
     display: none;
   }
 
-  @include breakpoint(medium) {
+  @include breakpoint(xmedium) {
     position: fixed;
     max-width: 350px;
     padding: 60px 30px;
@@ -65,14 +52,14 @@ aside {
 .Navigation {
   margin: 35px 0 0;
 
-  @include breakpoint(medium) {
+  @include breakpoint(xmedium) {
     margin: 35px 0 65px;
   }
 
   ul {
     display: flex;
     flex-direction: row;
-    @include breakpoint(medium) {
+    @include breakpoint(xmedium) {
       flex-direction: column;
     }
   }
@@ -90,7 +77,7 @@ ul {
   display: flex;
   justify-content: center;
 
-  @include breakpoint(medium) {
+  @include breakpoint(xmedium) {
     justify-content: flex-start;
     flex-direction: column;
   }
@@ -101,7 +88,7 @@ ul {
     max-width: 260px;
     margin-right: 10px;
 
-    @include breakpoint(medium) {
+    @include breakpoint(xmedium) {
       margin-right: 0;
     }
 
@@ -117,7 +104,7 @@ ul {
         min-width: 26px;
         min-height: 26px;
 
-        @include breakpoint(medium) {
+        @include breakpoint(xmedium) {
           margin-right: 10px;
         }
       }
@@ -127,7 +114,7 @@ ul {
 .SelectedWork {
   margin-bottom: auto;
   display: none;
-  @include breakpoint(medium) {
+  @include breakpoint(xmedium) {
     display: block;
   }
 }
@@ -136,7 +123,7 @@ ul {
   display: flex;
   justify-content: center;
 
-  @include breakpoint(medium) {
+  @include breakpoint(xmedium) {
     justify-content: flex-start;
   }
 }

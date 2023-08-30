@@ -1,11 +1,18 @@
 <template>
-  <PageHeader title="About" image="/images/about-header.jpg" />
   <section id="maincontent" class="Container">
-    <article></article>
+    <nuxt-img class="Image" src="/images/joanndesktop.jpg" alt="Joann" />
+    <p>
+      Hi! my name is Jo-Ann, I’m a designer focussed on graphic design,
+      illustration and 3D/Motion. Graduated in the summer of 2022 from Amsterdam
+      University of Applied Sciences as an Interaction Designer.
+    </p>
   </section>
+  <div class="MobileFooter">
+    <SocialFooter />
+  </div>
 </template>
 
-<script setup lang="ts">
+<script setup lang="ts" scoped>
 definePageMeta({
   layout: "default",
 });
@@ -16,60 +23,28 @@ onMounted(() => {
 
 <style lang="scss" scoped>
 .Container {
-  padding: 0 3rem 8rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  column-gap: 2rem;
+  width: unset;
+  flex-wrap: wrap;
+  @include breakpoint(xmedium) {
+    align-items: flex-start;
+    flex-direction: row;
+  }
 }
-article {
-  position: relative;
-  max-width: 580px;
-  margin: 0 auto;
-  padding-top: 0;
+.Image {
+  margin-top: 0;
+  margin-bottom: 30px;
+  @include breakpoint(xmedium) {
+    max-width: 487px;
+    margin-bottom: 0;
+  }
 }
-
-h2 {
-  position: relative;
-  opacity: 0;
-  transition: all 0.5s ease-out; /* Transition effect for the animation */
-  transform: translateY(100px);
-}
-
 p {
-  opacity: 0;
-  transition: all 0.8s ease-in-out;
-
-  &:not(:last-of-type) {
-    margin-bottom: 2rem;
-  }
-}
-.animate-in {
-  opacity: 1; /* When the animate-in class is added, the subtitles will become visible */
-  transform: translateY(0px);
-}
-h2::before {
-  content: "";
-  z-index: -1;
-  position: absolute;
-  width: calc($triangle-width/2.5);
-  height: calc($triangle-height/2.5);
-  overflow: hidden;
-  clip-path: polygon(100% 0, 0 50%, 100% 100%);
-  background-color: $c-primary-light;
-  transform: translate(32px, -38px);
-  transition: all 0.2s ease-in-out;
-  opacity: inherit;
-}
-h2.Rotated::before {
-  transform: rotate(160deg) translate(-70px, 45px);
-}
-
-@include breakpoint(xmedium) {
-  h2:first-of-type {
-    position: absolute;
-    top: -100px;
-    right: 100px;
-    margin: 0;
-  }
-  article {
-    padding-top: 64px;
-  }
+  margin-top: 3rem;
+  max-width: 435px;
+  font-size: 14px;
 }
 </style>

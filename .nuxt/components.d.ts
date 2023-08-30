@@ -2,6 +2,7 @@
 declare module 'vue' {
   export interface GlobalComponents {
     'Navigation': typeof import("../components/navigation.vue")['default']
+    'SelectedWork': typeof import("../components/selectedWork.vue")['default']
     'SocialFooter': typeof import("../components/socialFooter.vue")['default']
     'Tag': typeof import("../components/tag.vue")['default']
     'NuxtWelcome': typeof import("../node_modules/@nuxt/ui-templates/dist/templates/welcome.vue")['default']
@@ -25,6 +26,7 @@ declare module 'vue' {
     'Html': typeof import("../node_modules/nuxt/dist/head/runtime/components")['Html']
     'Body': typeof import("../node_modules/nuxt/dist/head/runtime/components")['Body']
     'LazyNavigation': typeof import("../components/navigation.vue")['default']
+    'LazySelectedWork': typeof import("../components/selectedWork.vue")['default']
     'LazySocialFooter': typeof import("../components/socialFooter.vue")['default']
     'LazyTag': typeof import("../components/tag.vue")['default']
     'LazyNuxtWelcome': typeof import("../node_modules/@nuxt/ui-templates/dist/templates/welcome.vue")['default']
@@ -51,6 +53,7 @@ declare module 'vue' {
 }
 
 export const Navigation: typeof import("../components/navigation.vue")['default']
+export const SelectedWork: typeof import("../components/selectedWork.vue")['default']
 export const SocialFooter: typeof import("../components/socialFooter.vue")['default']
 export const Tag: typeof import("../components/tag.vue")['default']
 export const NuxtWelcome: typeof import("../node_modules/@nuxt/ui-templates/dist/templates/welcome.vue")['default']
@@ -74,6 +77,7 @@ export const Head: typeof import("../node_modules/nuxt/dist/head/runtime/compone
 export const Html: typeof import("../node_modules/nuxt/dist/head/runtime/components")['Html']
 export const Body: typeof import("../node_modules/nuxt/dist/head/runtime/components")['Body']
 export const LazyNavigation: typeof import("../components/navigation.vue")['default']
+export const LazySelectedWork: typeof import("../components/selectedWork.vue")['default']
 export const LazySocialFooter: typeof import("../components/socialFooter.vue")['default']
 export const LazyTag: typeof import("../components/tag.vue")['default']
 export const LazyNuxtWelcome: typeof import("../node_modules/@nuxt/ui-templates/dist/templates/welcome.vue")['default']

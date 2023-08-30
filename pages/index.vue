@@ -1,24 +1,23 @@
 <template>
-  <PageHeader title="Projects" />
   <section id="maincontent">
-    <section class="ProjectContainer">
+    <section class="HomeContainer">
       <div
-        v-for="project in projects"
-        :key="project.id"
-        class="ProjectItem"
-        :aria-label="`Open the ${project.title} project`"
+        v-for="workItem in work"
+        :key="workItem.id"
+        class="HomeItem"
+        :aria-label="`Open ${workItem.title}`"
         tabindex="0"
       >
-        <NuxtLink :to="`project/${project.title.toLowerCase()}`">
+        <NuxtLink :to="`work/${workItem.title}`">
           <nuxt-img
-            class="Project-headerImage"
-            :src="project?.headerImage"
-            :alt="project?.headerImageAlt"
+            class="HomeImage"
+            :src="workItem?.headerImage"
+            :alt="workItem?.headerImageAlt"
             sizes="md:500px sm:300px xsm:250px"
           />
-          <div class="ProjectItem-button">
+          <div class="HomeItem-button">
             <SvgArrowDownRight />
-            {{ project.title }}
+            {{ workItem.title }}
           </div>
         </NuxtLink>
       </div>
@@ -30,7 +29,7 @@
 </template>
 
 <script setup lang="ts">
-import { useProjectStore } from "~/stores/project";
+import { useWorkStore } from "~/stores/work";
 import SvgArrowDownRight from "~/assets/icons/arrow-down-right.svg?component";
 
 definePageMeta({
@@ -38,30 +37,25 @@ definePageMeta({
   title: "Home",
 });
 
-const projectStore = useProjectStore();
-const projects = projectStore.projects;
+const workStore = useWorkStore();
+const work = workStore.work;
+console.log(work);
 </script>
 
 <style lang="scss">
-#maincontent {
-  margin-left: 0px;
-  padding: 30px 30px 60px;
-
-  @include breakpoint(medium) {
-    padding: 60px 30px;
-    margin-left: 350px;
-  }
-}
-.ProjectContainer {
+.HomeContainer {
   display: grid;
   grid-template-columns: 1fr;
   column-gap: 1rem;
   row-gap: 1rem;
-
-  @include breakpoint(medium) {
+  @include breakpoint(small) {
     grid-template-columns: 1fr 1fr;
   }
-  .ProjectItem {
+
+  @include breakpoint(xmedium) {
+    grid-template-columns: 1fr 1fr;
+  }
+  .HomeItem {
     cursor: pointer;
     img {
       width: 100%;
@@ -70,16 +64,17 @@ const projects = projectStore.projects;
       text-decoration: none;
       color: $c-black;
     }
-    .ProjectItem-button {
+    .HomeItem-button {
       margin: 10px 0 20px;
       display: flex;
 
-      @include breakpoint(medium) {
+      @include breakpoint(xmedium) {
         display: none;
       }
 
       svg {
         margin-top: -1px;
+        min-width: 26px;
       }
     }
   }
@@ -97,7 +92,7 @@ const projects = projectStore.projects;
       margin-bottom: 1rem;
     }
   }
-  @include breakpoint(medium) {
+  @include breakpoint(xmedium) {
     display: none;
   }
 }

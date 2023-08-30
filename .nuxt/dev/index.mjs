@@ -121,9 +121,6 @@ const _inlineRuntimeConfig = {
     "routeRules": {
       "/__nuxt_error": {
         "cache": false
-      },
-      "/contact": {
-        "prerender": true
       }
     }
   },

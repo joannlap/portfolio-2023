@@ -27,9 +27,6 @@ export default defineNuxtConfig({
       },
     },
   },
-  routeRules: {
-    "/contact": { prerender: true },
-  },
   googleFonts: {
     prefetch: true,
     families: {

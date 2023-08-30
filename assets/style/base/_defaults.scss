@@ -10,3 +10,27 @@ h2 {
   font-family: Inter, sans-serif;
   font-weight: 600;
 }
+
+#maincontent {
+  margin-left: 0px;
+  padding: 30px 20px 60px;
+
+  @include breakpoint(xmedium) {
+    padding: 60px 30px;
+    margin-left: 350px;
+  }
+}
+.Image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin: 4rem 0 2rem;
+
+  @include breakpoint(xmedium) {
+    height: 100%;
+    margin: 4rem auto 2rem;
+  }
+  @include breakpoint(large) {
+    margin: 4rem 0;
+  }
+}
