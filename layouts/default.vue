@@ -1,15 +1,7 @@
 <template>
   <a href="#maincontent" class="SkipLink">Skip to content</a>
-  <aside>
-    <h1>Joann Lap</h1>
-    <nav>
-      <ul>
-        <li><NuxtLink to="/contact">Contact</NuxtLink></li>
-      </ul>
-    </nav>
-  </aside>
+  <Navigation />
   <NuxtPage />
-  <Footer />
 </template>
 
 <script setup lang="ts">

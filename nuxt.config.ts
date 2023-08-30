@@ -33,13 +33,7 @@ export default defineNuxtConfig({
   googleFonts: {
     prefetch: true,
     families: {
-      Roboto: true,
-      "Josefin+Sans": true,
-      Lato: [100, 300],
-      Raleway: {
-        wght: [300, 700, 900],
-        ital: [100],
-      },
+      Inter: true,
     },
   },
 });
