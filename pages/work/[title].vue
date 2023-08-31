@@ -17,17 +17,19 @@
       </div>
       <div class="Work-gallery">
         <nuxt-img
-          class="Image"
+          class="Image skeleton"
           :src="getWork?.headerImage"
           :alt="getWork?.headerImageAlt"
           sizes="md:1000px sm:300px xsm:250px"
+          loading="lazy"
         />
         <nuxt-img
           v-for="image in getWork?.images"
           key="image"
-          class="Image"
+          class="Image skeleton"
           :src="image"
           alt="#"
+          loading="lazy"
         />
       </div>
     </header>
@@ -41,7 +43,6 @@
 
 <script setup lang="ts">
 import { useWorkStore } from "~/stores/work";
-import SvgArrowDownRight from "~/assets/icons/arrow-down-right.svg?component";
 
 definePageMeta({
   layout: "default",
@@ -171,7 +172,7 @@ h2 {
   flex-wrap: wrap;
   margin-top: 1rem;
   @include breakpoint(xmedium) {
-    margin-top: 0;
+    margin-top: 12px;
   }
 }
 .MobileFooter {
@@ -200,6 +201,19 @@ h2 {
   ul {
     justify-content: flex-start;
     flex-direction: column;
+  }
+}
+
+.skeleton {
+  animation: skeleton-loading 1s linear infinite alternate;
+}
+
+@keyframes skeleton-loading {
+  0% {
+    background-color: hsl(200, 20%, 80%);
+  }
+  100% {
+    background-color: hsl(200, 20%, 95%);
   }
 }
 </style>

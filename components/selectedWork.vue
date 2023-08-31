@@ -83,7 +83,7 @@ ul {
   }
 }
 .SelectedWork {
-  margin-bottom: auto;
+  margin-bottom: 5rem;
   display: none;
   @include breakpoint(xmedium) {
     display: block;

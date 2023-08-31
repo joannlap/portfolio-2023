@@ -92,7 +92,8 @@ onMounted(() => {
   &:nth-child(even) {
     grid-column: 1/-1;
   }
-  @include breakpoint(xmedium) {
+
+  @include breakpoint(medium) {
     grid-column: 1/2;
     &:nth-child(even) {
       grid-column: 2/3;

@@ -9,15 +9,31 @@
         tabindex="0"
       >
         <NuxtLink :to="`work/${workItem.title}`">
-          <nuxt-img
-            class="HomeImage"
-            :src="workItem?.headerImage"
-            :alt="workItem?.headerImageAlt"
-            sizes="md:500px sm:300px xsm:250px"
-          />
+          <div class="ImageContainer">
+            <nuxt-img
+              class="HomeImage"
+              :src="workItem?.headerImage"
+              :alt="workItem?.headerImageAlt"
+              sizes="md:500px sm:300px xsm:250px"
+              loading="lazy"
+            />
+            <div class="ImageHover">
+              <h3>{{ workItem?.title }}</h3>
+              <div class="ImageHoverBottom">
+                <div class="TagGroup">
+                  <Tag
+                    v-for="tag in workItem?.tags"
+                    :key="tag"
+                    :tagName="tag"
+                  />
+                </div>
+                <SvgArrowDownRight />
+              </div>
+            </div>
+          </div>
           <div class="HomeItem-button">
             <SvgArrowDownRight />
-            {{ workItem.title }}
+            {{ workItem?.title }}
           </div>
         </NuxtLink>
       </div>
@@ -93,6 +109,93 @@ const work = workStore.work;
   }
   @include breakpoint(xmedium) {
     display: none;
+  }
+}
+
+.ImageContainer {
+  position: relative;
+}
+.HomeItem:hover {
+  .ImageHover {
+    opacity: 1;
+  }
+  h3 {
+    animation: moveInTop 0.5s ease-out;
+    opacity: 0;
+  }
+  svg {
+    animation: moveInBottom 0.5s ease-out;
+    opacity: 0;
+  }
+  .TagGroup .Tag {
+    animation: moveInBottom 0.5s ease-out;
+    opacity: 0;
+    &:nth-child(1) {
+      animation-delay: 0.1s;
+    }
+    &:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+  }
+}
+.ImageHover {
+  cursor: pointer;
+  padding: 16px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  color: $c-white;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.7);
+
+  .TagGroup {
+    display: flex;
+    flex-direction: row;
+    column-gap: 4px;
+    > .Tag {
+      border: solid 0.5px $c-white;
+      opacity: 0;
+    }
+  }
+
+  h3 {
+    opacity: 0;
+  }
+}
+.ImageHoverBottom {
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto;
+  width: 100%;
+  svg {
+    opacity: 0;
+    path {
+      fill: $c-white;
+    }
+  }
+}
+@keyframes moveInTop {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes moveInBottom {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 </style>
