@@ -59,16 +59,16 @@ if (!getWork?.id) {
 // Get all work
 const work = workStore.getWork;
 const filteredWork = work.filter((workItem) => workItem.title !== title);
-console.log(getWork.imageGridSize);
+
 onMounted(() => {
   // Animations n shit
   document.documentElement.style.setProperty(
     "--grid-size-mobile",
-    getWork.imageGridSize[0]
+    `${getWork.imageGridSize[0]}`
   );
   document.documentElement.style.setProperty(
     "--grid-size-desktop",
-    getWork.imageGridSize[1]
+    `${getWork.imageGridSize[1]}`
   );
 });
 </script>

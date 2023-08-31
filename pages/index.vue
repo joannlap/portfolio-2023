@@ -39,7 +39,6 @@ definePageMeta({
 
 const workStore = useWorkStore();
 const work = workStore.work;
-console.log(work);
 </script>
 
 <style lang="scss">
