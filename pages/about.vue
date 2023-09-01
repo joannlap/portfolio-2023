@@ -13,9 +13,7 @@
 </template>
 
 <script setup lang="ts" scoped>
-definePageMeta({
-  layout: "default",
-});
+
 onMounted(() => {
   // Animations n shit
 });

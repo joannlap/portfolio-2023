@@ -10,13 +10,14 @@
       >
         <NuxtLink :to="`work/${workItem.title}`">
           <div class="ImageContainer">
-            <nuxt-img
-              class="HomeImage"
-              :src="workItem?.headerImage"
-              :alt="workItem?.headerImageAlt"
-              sizes="md:500px sm:300px xsm:250px"
-              loading="lazy"
-            />
+              <nuxt-img
+                class="HomeImage"
+                
+                :src="workItem?.headerImage"
+                :alt="workItem?.headerImageAlt"
+                sizes="md:500px sm:300px xsm:250px"
+                loading="lazy"
+              />
             <div class="ImageHover">
               <h3>{{ workItem?.title }}</h3>
               <div class="ImageHoverBottom">
@@ -49,7 +50,6 @@ import { useWorkStore } from "~/stores/work";
 import SvgArrowDownRight from "~/assets/icons/arrow-down-right.svg?component";
 
 definePageMeta({
-  layout: "default",
   title: "Home",
 });
 
@@ -120,21 +120,24 @@ const work = workStore.work;
     opacity: 1;
   }
   h3 {
-    animation: moveInTop 0.5s ease-out;
+    animation: moveInTop 0.5s ease-out forwards;
     opacity: 0;
   }
-  svg {
-    animation: moveInBottom 0.5s ease-out;
+  .ImageHoverBottom svg {
+    animation: moveInBottom 0.5s ease-out forwards;
+    animation-delay: .75s;
     opacity: 0;
   }
   .TagGroup .Tag {
-    animation: moveInBottom 0.5s ease-out;
+    $delay: .2;
+    animation: moveInBottom 0.5s ease-out forwards;
     opacity: 0;
-    &:nth-child(1) {
-      animation-delay: 0.1s;
-    }
-    &:nth-child(2) {
-      animation-delay: 0.2s;
+
+    @for $i from 1 through 5 {
+      &:nth-child(#{$i}) {
+        animation-delay: #{$delay}s;
+        $delay: $delay + 0.1;
+      }
     }
   }
 }

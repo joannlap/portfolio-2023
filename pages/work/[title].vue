@@ -17,7 +17,7 @@
       </div>
       <div class="Work-gallery">
         <nuxt-img
-          class="Image skeleton"
+          class="HomeImage Image"
           :src="getWork?.headerImage"
           :alt="getWork?.headerImageAlt"
           sizes="md:1000px sm:300px xsm:250px"
@@ -26,7 +26,7 @@
         <nuxt-img
           v-for="image in getWork?.images"
           key="image"
-          class="Image skeleton"
+          class="Image"
           :src="image"
           alt="#"
           loading="lazy"
@@ -45,7 +45,7 @@
 import { useWorkStore } from "~/stores/work";
 
 definePageMeta({
-  layout: "default",
+  layout: "detail",
 });
 const workStore = useWorkStore();
 const route = useRoute();
@@ -204,16 +204,4 @@ h2 {
   }
 }
 
-.skeleton {
-  animation: skeleton-loading 1s linear infinite alternate;
-}
-
-@keyframes skeleton-loading {
-  0% {
-    background-color: hsl(200, 20%, 80%);
-  }
-  100% {
-    background-color: hsl(200, 20%, 95%);
-  }
-}
 </style>

@@ -143,5 +143,8 @@ export const useWorkStore = definePiniaStore("work-store", {
         (workItem) => workItem.title.toLowerCase() === title.toLowerCase()
       ),
   },
-  actions: {},
+  actions: {
+
+  },
+  
 });
