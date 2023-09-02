@@ -3,7 +3,7 @@
     <nuxt-img
       v-for="image in playground.images"
       key="image"
-      class="PlaygroundImage"
+      class="PlaygroundImage Image"
       :src="image.src"
       :alt="image.alt"
     />
@@ -86,6 +86,7 @@ onMounted(() => {
   height: 100%;
   width: 100%;
   grid-column: 1/-1;
+  margin: 0;
   &:nth-child(even) {
     grid-column: 1/-1;
   }

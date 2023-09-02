@@ -25,6 +25,16 @@ h2 {
   height: 100%;
   object-fit: cover;
   margin: 4rem 0 2rem;
+  opacity: 0;
+  animation: fade-in  1s ease forwards;
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 
   @include breakpoint(xmedium) {
     height: 100%;

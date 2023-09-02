@@ -7,11 +7,11 @@
           :key="workItem.id"
           class="HomeItem"
           :class="{ 
-            'fade-out': clickedItem !== null && clickedItem !== workItem.id, 
-            'move-down': clickedItem !== null && clickedItem === workItem.id, 
+            'fade-out': clickedItem !== null && clickedItem !== workItem.id,
+            'fade-late': clickedItem !== null && clickedItem === workItem.id,
             'disable-hover': clickedItem !== null 
           }"
-          :style="{ '--stagger': `${index * 0.1}s`}"
+          :style="{ '--stagger': `${index * 0.15}s`}"
           :aria-label="`Open ${workItem.title}`"
           tabindex="0"
           @click="handleClick(workItem.id, workItem.title)"
@@ -19,7 +19,7 @@
           <!-- <NuxtLink :to="`work/${workItem.title}`"> -->
             <div class="ImageContainer">
                 <nuxt-img
-                  class="HomeImage"
+                  class="HomeImage Image"
                   
                   :src="workItem?.headerImage"
                   :alt="workItem?.headerImageAlt"
@@ -95,8 +95,10 @@ const handleClick = (id: number, title: string) => {
     transform: translateY(0);
     margin-left: 0;
     margin-right: 0;
+    
     img {
       width: 100%;
+      margin: 0;
     }
     a {
       text-decoration: none;
@@ -120,43 +122,9 @@ const handleClick = (id: number, title: string) => {
       transition: opacity 1s var(--stagger) ease;
       opacity: 0;
     }
-    &.move-down:nth-child(even) {
-      // transition: all 1s 1s ease;
-      animation: move-down-even 1s 1s ease forwards;
-      
-      @keyframes move-down-even {
-        0% {
-          transform: translateY(0) translateX(0);
-          margin-left:0;
-        }
-        50% {
-          transform: translateY(0) translateX(0);
-          margin-left: -100%;
-        }
-        100% {
-          transform: translateY(350px);
-          margin-left: -100%;
-        }
-      }
-    }
-    &.move-down:nth-child(odd) {
-      // transition: all 1s 1s ease;
-      animation: move-down-odd 1s 1s ease forwards;
-
-      @keyframes move-down-odd {
-        0% {
-          transform: translateY(0) translateX(0);
-          margin-right:0;
-        }
-        50% {
-          transform: translateY(0) translateX(0);
-          margin-right: -100%;
-        }
-        100% {
-          transform: translateY(350px);
-          margin-right: -100%;
-        }
-      }
+    &.fade-late {
+      transition: opacity 1s 1.2s ease;
+      opacity: 0;
     }
   }
 }
@@ -183,7 +151,10 @@ const handleClick = (id: number, title: string) => {
 }
 .HomeItem:hover {
   .ImageHover {
-    opacity: 1;
+    opacity: 0;
+    @include breakpoint(xmedium) {
+      opacity: 1;
+    }
   }
   h3 {
     animation: moveInTop 0.5s ease-out forwards;
