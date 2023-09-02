@@ -21,10 +21,23 @@ footer {
   .Socials {
     display: flex;
     column-gap: 10px;
+    a {
+      color: $c-black;
+      svg {
+        width: 24px;
+        height: 24px;
+      }
+      &:hover {
+        color: $c-grey;
+      }
+    }
   }
   .Email {
     text-decoration: none;
     color: $c-black;
+    &:hover {
+      color: $c-grey;
+    }
   }
 }
 </style>

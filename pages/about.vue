@@ -44,5 +44,7 @@ p {
   margin-top: 3rem;
   max-width: 435px;
   font-size: 14px;
+  animation: move-in .4s ease forwards;
+  opacity: 0;
 }
 </style>

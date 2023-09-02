@@ -80,6 +80,11 @@ ul {
         }
       }
     }
+    &:hover {
+      a {
+        color: $c-grey;
+      }
+    }
   }
 }
 .SelectedWork {
