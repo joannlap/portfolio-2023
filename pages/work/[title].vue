@@ -15,25 +15,27 @@
           {{ getWork?.description }}
         </p>
       </div>
-      <div class="Work-gallery">
-        <nuxt-img
-          class="HomeImage Image"
-          :src="getWork?.headerImage"
-          :alt="getWork?.headerImageAlt"
-          sizes="md:1000px sm:300px xsm:250px"
-          loading="lazy"
-        />
-        <nuxt-img
-          v-for="image in getWork?.images"
-          key="image"
-          class="Image"
-          :src="image"
-          alt="#"
-          loading="lazy"
-        />
-      </div>
+      
     </header>
-    <div class="Work-content"></div>
+    <div class="Work-gallery">
+      <nuxt-img
+        class="HomeImage Image"
+        :src="getWork?.headerImage"
+        :alt="getWork?.headerImageAlt"
+        sizes="md:1000px sm:300px xsm:250px"
+        :style="{ '--stagger': `0s`}"
+        loading="lazy"
+      />
+      <nuxt-img
+        v-for="image, index in getWork?.images"
+        key="image"
+        class="Image"
+        :style="{ '--stagger': `${index * 0.1}s`}"
+        :src="image"
+        alt="#"
+        loading="lazy"
+      />
+    </div>
   </section>
   <div class="MobileFooter">
     <SelectedWork :work="filteredWork" />
@@ -94,11 +96,38 @@ onMounted(() => {
   .Image {
     object-fit: cover;
     margin: 0;
+    &:not(.HomeImage) {
+      opacity: 0;
+      animation: fade-in  1s var(--stagger) ease forwards;
+    }
+    @keyframes fade-in {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
   }
+     
 }
 .Work-header {
   display: block;
   max-width: 1000px;
+  animation: move-in .4s ease forwards;
+  opacity: 0;
+  transform: translateY(0);
+}
+
+@keyframes move-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 h1.Work-title {

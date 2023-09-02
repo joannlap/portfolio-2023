@@ -1,43 +1,52 @@
 <template>
   <section id="maincontent">
     <section class="HomeContainer">
-      <div
-        v-for="workItem in work"
-        :key="workItem.id"
-        class="HomeItem"
-        :aria-label="`Open ${workItem.title}`"
-        tabindex="0"
-      >
-        <NuxtLink :to="`work/${workItem.title}`">
-          <div class="ImageContainer">
-              <nuxt-img
-                class="HomeImage"
-                
-                :src="workItem?.headerImage"
-                :alt="workItem?.headerImageAlt"
-                sizes="md:500px sm:300px xsm:250px"
-                loading="lazy"
-              />
-            <div class="ImageHover">
-              <h3>{{ workItem?.title }}</h3>
-              <div class="ImageHoverBottom">
-                <div class="TagGroup">
-                  <Tag
-                    v-for="tag in workItem?.tags"
-                    :key="tag"
-                    :tagName="tag"
-                  />
+      <TransitionGroup name="list" tag="div">
+        <div
+          v-for="workItem, index in work"
+          :key="workItem.id"
+          class="HomeItem"
+          :class="{ 
+            'fade-out': clickedItem !== null && clickedItem !== workItem.id, 
+            'move-down': clickedItem !== null && clickedItem === workItem.id, 
+            'disable-hover': clickedItem !== null 
+          }"
+          :style="{ '--stagger': `${index * 0.1}s`}"
+          :aria-label="`Open ${workItem.title}`"
+          tabindex="0"
+          @click="handleClick(workItem.id, workItem.title)"
+        >
+          <!-- <NuxtLink :to="`work/${workItem.title}`"> -->
+            <div class="ImageContainer">
+                <nuxt-img
+                  class="HomeImage"
+                  
+                  :src="workItem?.headerImage"
+                  :alt="workItem?.headerImageAlt"
+                  sizes="md:500px sm:300px xsm:250px"
+                  loading="lazy"
+                />
+              <div class="ImageHover">
+                <h3>{{ workItem?.title }}</h3>
+                <div class="ImageHoverBottom">
+                  <div class="TagGroup">
+                    <Tag
+                      v-for="tag in workItem?.tags"
+                      :key="tag"
+                      :tagName="tag"
+                    />
+                  </div>
+                  <SvgArrowDownRight />
                 </div>
-                <SvgArrowDownRight />
               </div>
             </div>
-          </div>
-          <div class="HomeItem-button">
-            <SvgArrowDownRight />
-            {{ workItem?.title }}
-          </div>
-        </NuxtLink>
-      </div>
+            <div class="HomeItem-button">
+              <SvgArrowDownRight />
+              {{ workItem?.title }}
+            </div>
+          <!-- </NuxtLink> -->
+        </div>
+      </TransitionGroup>
     </section>
   </section>
   <div class="MobileFooter">
@@ -52,13 +61,23 @@ import SvgArrowDownRight from "~/assets/icons/arrow-down-right.svg?component";
 definePageMeta({
   title: "Home",
 });
-
+const router = useRouter();
 const workStore = useWorkStore();
 const work = workStore.work;
+// New reactive variable
+const clickedItem =  ref<number | null>(null);
+
+const handleClick = (id: number, title: string) => {
+  clickedItem.value = id;
+  
+  setTimeout(() => {
+    router.push(`work/${title}`);
+  }, (work.length - 1) * 300 + 400); // 1000 milliseconds = 1 second
+};
 </script>
 
 <style lang="scss">
-.HomeContainer {
+.HomeContainer > div {
   display: grid;
   grid-template-columns: 1fr;
   column-gap: 1rem;
@@ -72,6 +91,10 @@ const work = workStore.work;
   }
   .HomeItem {
     cursor: pointer;
+    transition: all 1s var(--stagger);
+    transform: translateY(0);
+    margin-left: 0;
+    margin-right: 0;
     img {
       width: 100%;
     }
@@ -90,6 +113,49 @@ const work = workStore.work;
       svg {
         margin-top: -1px;
         min-width: 26px;
+      }
+    }
+
+    &.fade-out {
+      transition: opacity 1s var(--stagger) ease;
+      opacity: 0;
+    }
+    &.move-down:nth-child(even) {
+      // transition: all 1s 1s ease;
+      animation: move-down-even 1s 1s ease forwards;
+      
+      @keyframes move-down-even {
+        0% {
+          transform: translateY(0) translateX(0);
+          margin-left:0;
+        }
+        50% {
+          transform: translateY(0) translateX(0);
+          margin-left: -100%;
+        }
+        100% {
+          transform: translateY(350px);
+          margin-left: -100%;
+        }
+      }
+    }
+    &.move-down:nth-child(odd) {
+      // transition: all 1s 1s ease;
+      animation: move-down-odd 1s 1s ease forwards;
+
+      @keyframes move-down-odd {
+        0% {
+          transform: translateY(0) translateX(0);
+          margin-right:0;
+        }
+        50% {
+          transform: translateY(0) translateX(0);
+          margin-right: -100%;
+        }
+        100% {
+          transform: translateY(350px);
+          margin-right: -100%;
+        }
       }
     }
   }
@@ -181,6 +247,13 @@ const work = workStore.work;
     }
   }
 }
+.disable-hover .ImageHover {
+  pointer-events: none;
+  /* Add any other styles to disable hover */
+  display: none;
+}
+
+
 @keyframes moveInTop {
   from {
     opacity: 0;
