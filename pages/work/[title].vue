@@ -15,14 +15,17 @@
           {{ getWork?.description }}
         </p>
       </div>
-      
     </header>
     <div class="Work-gallery">
+      <video controls v-if="getWork?.video">
+        <source :src="getWork?.video" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
       <nuxt-img
-        v-for="image, index in getWork?.images"
+        v-for="(image, index) in getWork?.images"
         key="image"
         class="Image"
-        :style="{ '--stagger': `${index * 0.1}s`}"
+        :style="{ '--stagger': `${index * 0.1}s` }"
         :src="image"
         alt="#"
         loading="lazy"
@@ -90,17 +93,14 @@ onMounted(() => {
     margin: 0;
     animation-delay: var(--stagger);
   }
-     
 }
 .Work-header {
   display: block;
   max-width: 1000px;
-  animation: move-in .4s ease forwards;
+  animation: move-in 0.4s ease forwards;
   opacity: 0;
   transform: translateY(0);
 }
-
-
 
 h1.Work-title {
   font-family: "Inter";
@@ -108,6 +108,7 @@ h1.Work-title {
   font-size: 30px;
   line-height: 130%;
 
+  text-transform: uppercase;
   text-align: left;
   margin-bottom: 3rem;
 
@@ -204,5 +205,4 @@ h2 {
     flex-direction: column;
   }
 }
-
 </style>

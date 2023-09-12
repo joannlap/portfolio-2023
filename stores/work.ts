@@ -4,7 +4,7 @@ export const useWorkStore = definePiniaStore("work-store", {
       {
         id: 1,
         title:
-          "COKE STUDIO PRESENTS: 50 YEARS HIPHOP TRIBUTE POWERED BY FOUNDATION",
+          "Coke Studio presents: 50 years hiphop tribute powered by Foundation",
         headerImage: "/images/work/project-thumbnails/LL-tribute.png",
         headerImageAlt: "TO BE FILLED",
         client: "Foundation Amsterdam Hiphop Academy",
@@ -82,6 +82,7 @@ export const useWorkStore = definePiniaStore("work-store", {
           "/images/work/yeye/yeyelogo.gif",
         ],
         imageGridSize: [1, 1],
+        video: "/images/work/yeye/landscape.mp4",
       },
       {
         id: 5,
@@ -143,8 +144,5 @@ export const useWorkStore = definePiniaStore("work-store", {
         (workItem) => workItem.title.toLowerCase() === title.toLowerCase()
       ),
   },
-  actions: {
-
-  },
-  
+  actions: {},
 });
