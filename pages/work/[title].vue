@@ -119,7 +119,6 @@ h1.Work-title {
 }
 h2 {
   font-size: 16px;
-  text-transform: uppercase;
 }
 .Work-paragraph {
   white-space: pre-line;

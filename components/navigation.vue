@@ -123,13 +123,4 @@ ul {
     display: block;
   }
 }
-
-.Logo {
-  display: flex;
-  justify-content: center;
-
-  @include breakpoint(xmedium) {
-    justify-content: flex-start;
-  }
-}
 </style>
