@@ -29,6 +29,7 @@ const work = workStore.work;
 aside {
   display: flex;
   flex-direction: column;
+  align-items: center;
   max-width: 100%;
   padding: 60px 30px 0;
   left: 0;
@@ -43,6 +44,7 @@ aside {
     position: fixed;
     max-width: 350px;
     padding: 60px 30px;
+    align-content: flex-start;
 
     footer {
       display: block;
@@ -122,5 +124,9 @@ ul {
   @include breakpoint(xmedium) {
     display: block;
   }
+}
+.Logo {
+  min-width: 240px;
+  max-width: 300px;
 }
 </style>

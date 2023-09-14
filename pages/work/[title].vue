@@ -16,20 +16,60 @@
         </p>
       </div>
     </header>
-    <div class="Work-gallery">
-      <video controls v-if="getWork?.video">
-        <source :src="getWork?.video" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
-      <nuxt-img
-        v-for="(image, index) in getWork?.images"
-        key="image"
-        class="Image"
-        :style="{ '--stagger': `${index * 0.1}s` }"
-        :src="image"
-        alt="#"
-        loading="lazy"
-      />
+    <div class="grid-container">
+      <div
+        v-for="(row, rowIndex) in rows"
+        :key="`row-${rowIndex}`"
+        class="row"
+        :style="{
+          'grid-template-columns': row.join(' '),
+        }"
+      >
+        <div
+          v-for="(col, colIndex) in row"
+          :key="`col-${colIndex}`"
+          class="column"
+        >
+          {{
+            console.log(
+              getWork.images[calculateImageIndex(rows, rowIndex, colIndex)]
+            )
+          }}
+          {{ console.log(calculateImageIndex(rows, rowIndex, colIndex)) }}
+
+          <video
+            controls
+            v-if="
+              getWork?.images?.[
+                calculateImageIndex(rows, rowIndex, colIndex)
+              ]?.endsWith('mp4')
+            "
+          >
+            <source
+              :src="
+                getWork?.images?.[calculateImageIndex(rows, rowIndex, colIndex)]
+              "
+              type="video/mp4"
+            />
+            Your browser does not support the video tag.
+          </video>
+          <nuxt-img
+            v-if="
+              getWork?.images?.[
+                calculateImageIndex(rows, rowIndex, colIndex)
+              ]?.endsWith('jpg') ||
+              getWork?.images?.[
+                calculateImageIndex(rows, rowIndex, colIndex)
+              ]?.endsWith('png')
+            "
+            :src="
+              getWork?.images?.[calculateImageIndex(rows, rowIndex, colIndex)]
+            "
+            alt="#"
+            loading="lazy"
+          />
+        </div>
+      </div>
     </div>
   </section>
   <div class="MobileFooter">
@@ -44,6 +84,7 @@ import { useWorkStore } from "~/stores/work";
 definePageMeta({
   layout: "detail",
 });
+
 const workStore = useWorkStore();
 const route = useRoute();
 
@@ -58,42 +99,65 @@ if (!getWork?.id) {
 const work = workStore.getWork;
 const filteredWork = work.filter((workItem) => workItem.title !== title);
 
-onMounted(() => {
-  // Animations n shit
-  document.documentElement.style.setProperty(
-    "--grid-size-mobile",
-    `${getWork.imageGridSize[0]}`
-  );
-  document.documentElement.style.setProperty(
-    "--grid-size-desktop",
-    `${getWork.imageGridSize[1]}`
+// New reactive variable to store the current layout
+const currentLayout = ref<string[]>([]);
+
+// Function to update layout based on screen width
+const updateLayout = () => {
+  console.log("hello", window.matchMedia("(max-width: 1024px)").matches);
+  if (window.matchMedia("(max-width: 1024px)").matches) {
+    // Use mobile layout
+    currentLayout.value = getWork?.mobileLayout?.split("/") || [];
+  } else {
+    // Use desktop layout
+    currentLayout.value = getWork?.desktopLayout?.split("/") || [];
+  }
+};
+
+// Initial layout setting
+updateLayout();
+
+// Listen for window resize
+window.addEventListener("resize", updateLayout);
+
+// Cleanup listener when component unmounts
+watchEffect((onInvalidate) => {
+  onInvalidate(() => {
+    window.removeEventListener("resize", updateLayout);
+  });
+});
+// Updated rows definition
+const rows = computed(() => {
+  return currentLayout.value.map((r) =>
+    r
+      .trim()
+      .split(" ")
+      .map((c) => c.trim())
   );
 });
+const calculateImageIndex = (
+  rows: string[][] | undefined,
+  rowIndex: number,
+  colIndex: number
+) => {
+  if (!rows || !getWork?.images) return -1;
+  let imageIndex = 0;
+  for (let r = 0; r < rows?.length; r++) {
+    // Loop through each row
+    for (let c = 0; c < rows[r]?.length; c++) {
+      // Loop through each column in the current row
+      if (r === rowIndex && c === colIndex) {
+        // Found the target cell
+        return imageIndex; // Return the calculated image index
+      }
+      imageIndex++; // Increment the image index
+    }
+  }
+  return -1; // If we can't find it for some reason, return an error code (-1)
+};
 </script>
 
 <style lang="scss" scoped>
-:root {
-  --grid-size-mobile: 1;
-  --grid-size-desktop: 2;
-}
-
-.Work-gallery {
-  display: grid;
-  margin-top: 3rem;
-  grid-template-columns: repeat(var(--grid-size-mobile), 1fr);
-  column-gap: 15px;
-  row-gap: 15px;
-
-  @include breakpoint(xmedium) {
-    grid-template-columns: repeat(var(--grid-size-desktop), 1fr);
-  }
-
-  .Image {
-    object-fit: cover;
-    margin: 0;
-    animation-delay: var(--stagger);
-  }
-}
 .Work-header {
   display: block;
   max-width: 1000px;
@@ -102,6 +166,17 @@ onMounted(() => {
   transform: translateY(0);
 }
 
+.row .Image {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  animation-delay: var(--stagger);
+
+  @include breakpoint(xmedium) {
+    margin: 0;
+  }
+}
 h1.Work-title {
   font-family: "Inter";
   font-weight: 600;
@@ -166,6 +241,9 @@ h2 {
     }
   }
 }
+.Work-data {
+  min-width: 300px;
+}
 .TagGroup {
   display: flex;
   column-gap: 4px;
@@ -202,6 +280,26 @@ h2 {
   ul {
     justify-content: flex-start;
     flex-direction: column;
+  }
+}
+
+.grid-container {
+  margin-top: 2rem;
+}
+.row {
+  display: grid;
+  column-gap: 1rem;
+  margin-bottom: 1rem;
+}
+.column {
+  width: 100%;
+  height: auto; // or any desired height
+
+  img {
+    object-fit: cover;
+    height: 100%;
+
+    width: 100%;
   }
 }
 </style>

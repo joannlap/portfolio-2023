@@ -3,47 +3,46 @@
     <section class="HomeContainer">
       <TransitionGroup name="list" tag="div">
         <div
-          v-for="workItem, index in work"
+          v-for="(workItem, index) in work"
           :key="workItem.id"
           class="HomeItem"
-          :class="{ 
+          :class="{
             'fade-out': clickedItem !== null && clickedItem !== workItem.id,
             'fade-late': clickedItem !== null && clickedItem === workItem.id,
-            'disable-hover': clickedItem !== null 
+            'disable-hover': clickedItem !== null,
           }"
-          :style="{ '--stagger': `${index * 0.15}s`}"
+          :style="{ '--stagger': `${index * 0.15}s` }"
           :aria-label="`Open ${workItem.title}`"
           tabindex="0"
           @click="handleClick(workItem.id, workItem.title)"
         >
           <!-- <NuxtLink :to="`work/${workItem.title}`"> -->
-            <div class="ImageContainer">
-                <nuxt-img
-                  class="HomeImage Image"
-                  
-                  :src="workItem?.headerImage"
-                  :alt="workItem?.headerImageAlt"
-                  sizes="md:500px sm:300px xsm:250px"
-                  loading="lazy"
-                />
-              <div class="ImageHover">
-                <h3>{{ workItem?.title }}</h3>
-                <div class="ImageHoverBottom">
-                  <div class="TagGroup">
-                    <Tag
-                      v-for="tag in workItem?.tags"
-                      :key="tag"
-                      :tagName="tag"
-                    />
-                  </div>
-                  <SvgArrowDownRight />
+          <div class="ImageContainer">
+            <nuxt-img
+              class="HomeImage Image"
+              :src="workItem?.headerImage"
+              :alt="workItem?.headerImageAlt"
+              sizes="md:500px sm:300px xsm:250px"
+              loading="lazy"
+            />
+            <div class="ImageHover">
+              <h3>{{ workItem?.title }}</h3>
+              <div class="ImageHoverBottom">
+                <div class="TagGroup">
+                  <Tag
+                    v-for="tag in workItem?.tags"
+                    :key="tag"
+                    :tagName="tag"
+                  />
                 </div>
+                <SvgArrowDownRight />
               </div>
             </div>
-            <div class="HomeItem-button">
-              <SvgArrowDownRight />
-              {{ workItem?.title }}
-            </div>
+          </div>
+          <div class="HomeItem-button">
+            <SvgArrowDownRight />
+            {{ workItem?.title }}
+          </div>
           <!-- </NuxtLink> -->
         </div>
       </TransitionGroup>
@@ -65,14 +64,14 @@ const router = useRouter();
 const workStore = useWorkStore();
 const work = workStore.work;
 // New reactive variable
-const clickedItem =  ref<number | null>(null);
+const clickedItem = ref<number | null>(null);
 
 const handleClick = (id: number, title: string) => {
   clickedItem.value = id;
-  
+
   setTimeout(() => {
     router.push(`work/${title}`);
-  }, (work.length - 1) * 300 + 400); // 1000 milliseconds = 1 second
+  }, (work.length - 1) * 300 + 400);
 };
 </script>
 
@@ -95,7 +94,7 @@ const handleClick = (id: number, title: string) => {
     transform: translateY(0);
     margin-left: 0;
     margin-right: 0;
-    
+
     img {
       width: 100%;
       margin: 0;
@@ -162,11 +161,11 @@ const handleClick = (id: number, title: string) => {
   }
   .ImageHoverBottom svg {
     animation: moveInBottom 0.5s ease-out forwards;
-    animation-delay: .75s;
+    animation-delay: 0.75s;
     opacity: 0;
   }
   .TagGroup .Tag {
-    $delay: .2;
+    $delay: 0.2;
     animation: moveInBottom 0.5s ease-out forwards;
     opacity: 0;
 
@@ -223,7 +222,6 @@ const handleClick = (id: number, title: string) => {
   /* Add any other styles to disable hover */
   display: none;
 }
-
 
 @keyframes moveInTop {
   from {

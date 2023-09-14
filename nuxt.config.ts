@@ -2,7 +2,7 @@
 import svgLoader from "vite-svg-loader";
 
 export default defineNuxtConfig({
-  ssr: true,
+  ssr: false,
   image: {
     provider: "netlify",
   },
@@ -30,7 +30,7 @@ export default defineNuxtConfig({
   nitro: {
     prerender: {
       crawlLinks: true,
-      failOnError: false,
+      failOnError: true,
     },
   },
   googleFonts: {

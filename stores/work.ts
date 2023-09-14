@@ -19,6 +19,9 @@ export const useWorkStore = definePiniaStore("work-store", {
           "/images/work/LL-tribute/LL-1.jpg",
         ],
         imageGridSize: [1, 1],
+        gridLayout: "100%",
+        mobileLayout: "1fr / 1fr / 1fr / 1fr",
+        desktopLayout: "1fr / 1fr / 1fr / 1fr",
       },
       {
         id: 2,
@@ -31,11 +34,9 @@ export const useWorkStore = definePiniaStore("work-store", {
         description:
           "A lot of sweat, growth, pain, bodywork, brainwork, love and knowledge easily summarizes Foundation Bootcamp. Every summer Foundation Hiphop Academy holds a 3 week intensive bootcamp where dancers can dive into the elements of street and club culture. With more than 60 workshops in different street styles, parties, lectures, debates and an evaluation program called the Hawks Method. Foundation bootcamp visual language originated from street- and pop art. My inspiration where based from old hiphop/street magazines, graffiti art and movie posters. The approach was a city view, combined into an assemble of Avengers  ",
         images: [
-          "/images/work/FD-Bootcamp/arjun.jpg",
-          "/images/work/FD-Bootcamp/FD-BOOTCAMP-SCHEDULE-W1.jpg",
-          "/images/work/FD-Bootcamp/FD-BOOTCAMP-SCHEDULE-W2.jpg",
-          "/images/work/FD-Bootcamp/FD-BOOTCAMP-SCHEDULE-W3.jpg",
           "/images/work/FD-Bootcamp/FD-BOOTCAMP2023-FEED.jpg",
+          "/images/work/FD-Bootcamp/gifbootcamps.gif",
+          "/images/work/FD-Bootcamp/arjun.jpg",
           "/images/work/FD-Bootcamp/frankwa.jpg",
           "/images/work/FD-Bootcamp/jimmyyudat.jpg",
           "/images/work/FD-Bootcamp/josephgo.jpg",
@@ -44,8 +45,16 @@ export const useWorkStore = definePiniaStore("work-store", {
           "/images/work/FD-Bootcamp/suzume.jpg",
           "/images/work/FD-Bootcamp/willow.jpg",
           "/images/work/FD-Bootcamp/yugson.jpg",
+          "/images/work/FD-Bootcamp/btcmp-promo.mp4",
+          "/images/work/FD-Bootcamp/btcmp-teaser_3.mp4",
+          "/images/work/FD-Bootcamp/FD-BOOTCAMP-SCHEDULE-W1.jpg",
+          "/images/work/FD-Bootcamp/FD-BOOTCAMP-SCHEDULE-W2.jpg",
+          "/images/work/FD-Bootcamp/FD-BOOTCAMP-SCHEDULE-W3.jpg",
         ],
-        imageGridSize: [1, 1],
+        mobileLayout:
+          "1fr / 1fr / 1fr 1fr / 1fr 1fr / 1fr 1fr / 1fr 1fr / 1fr / 1fr / 1fr /  1fr / 1fr / 1fr",
+        desktopLayout:
+          "1.2fr 0.8fr / 1fr 1fr 1fr / 1fr 1fr 1fr / 1fr 1fr 1fr / 1fr 1fr / 1fr / 1fr / 1fr",
       },
       {
         id: 3,
@@ -64,6 +73,8 @@ export const useWorkStore = definePiniaStore("work-store", {
           "/images/work/nightowls/Nightowls_Kwaku-3.jpg",
         ],
         imageGridSize: [1, 2],
+        mobileLayout: "1fr / 1fr / 1fr / 1fr",
+        desktopLayout: "1.2fr .8fr / .8fr 1.2fr",
       },
       {
         id: 4,
@@ -80,9 +91,11 @@ export const useWorkStore = definePiniaStore("work-store", {
           "/images/work/yeye/nkonson.gif",
           "/images/work/yeye/sumsum.gif",
           "/images/work/yeye/yeyelogo.gif",
+          "/images/work/yeye/landscape.mp4",
         ],
         imageGridSize: [1, 1],
-        video: "/images/work/yeye/landscape.mp4",
+        mobileLayout: "1fr / 1fr / 1fr / 1fr / 1fr",
+        desktopLayout: "1fr / 1fr / 1fr / 1fr / 1fr",
       },
       {
         id: 5,
@@ -98,14 +111,16 @@ export const useWorkStore = definePiniaStore("work-store", {
           "/images/work/HHisErfgoed/fd-lecture-poster.jpg",
           "/images/work/HHisErfgoed/fd-lecture-posters-prints.jpg",
           "/images/work/HHisErfgoed/HHerfgoed-ArjunChadha-feed.jpg",
-          "/images/work/HHisErfgoed/HHerfgoed-sugacane-feed.jpg",
-          "/images/work/HHisErfgoed/lecture29JULY-04.jpg",
           "/images/work/HHisErfgoed/debat-juni-geel-feed.jpg",
           "/images/work/HHisErfgoed/debat-juni-geel-story.jpg",
           "/images/work/HHisErfgoed/debat-poster-maart-feed.jpg",
           "/images/work/HHisErfgoed/debat-poster-maart-story.jpg",
+          "/images/work/HHisErfgoed/HHerfgoed-sugacane-feed.jpg",
+          "/images/work/HHisErfgoed/lecture29JULY-04.jpg",
         ],
         imageGridSize: [1, 2],
+        mobileLayout: "1fr / 1fr / 1fr / 1fr / 1fr / 1fr / 1fr / 1fr / 1fr",
+        desktopLayout: "1fr / 1fr 1fr / 1.2fr .8fr / 1.2fr .8fr / 1.2fr .8fr",
       },
       {
         id: 6,
@@ -134,6 +149,10 @@ export const useWorkStore = definePiniaStore("work-store", {
           "/images/work/foundation/story-house-kelly.jpg",
         ],
         imageGridSize: [2, 3],
+        mobileLayout:
+          "1fr 1fr / 1fr 1fr / 1fr 1fr / 1fr 1fr / 1fr 1fr / 1fr 1fr / 1fr 1fr / 1fr",
+        desktopLayout:
+          "1fr 1fr 1fr / 1fr 1fr 1fr / 1fr 1fr 1fr / 1fr 1fr 1fr / 1fr 1fr 1fr",
       },
     ],
   }),

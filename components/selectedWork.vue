@@ -21,13 +21,6 @@ const props = defineProps<{
   work: {
     id: number;
     title: string;
-    headerImage: string;
-    headerImageAlt: string;
-    client: string;
-    date: string;
-    tags: string[];
-    description: string;
-    images: string[];
   }[];
 }>();
 const work = props.work;
