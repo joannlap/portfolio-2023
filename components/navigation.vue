@@ -44,7 +44,7 @@ aside {
     position: fixed;
     max-width: 350px;
     padding: 60px 30px;
-    align-content: flex-start;
+    align-items: flex-start;
 
     footer {
       display: block;

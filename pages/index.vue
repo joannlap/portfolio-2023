@@ -189,6 +189,7 @@ const handleClick = (id: number, title: string) => {
   color: $c-white;
   display: flex;
   flex-direction: column;
+  border-radius: 5px;
   background-color: rgba(0, 0, 0, 0.7);
 
   .TagGroup {
