@@ -76,6 +76,10 @@ const handleClick = (id: number, title: string) => {
 </script>
 
 <style lang="scss">
+.HomeContainer {
+  max-width: 1000px;
+  margin: 0 auto;
+}
 .HomeContainer > div {
   display: grid;
   grid-template-columns: 1fr;
@@ -85,9 +89,7 @@ const handleClick = (id: number, title: string) => {
     grid-template-columns: 1fr 1fr;
   }
 
-  @include breakpoint(xmedium) {
-    grid-template-columns: 1fr 1fr;
-  }
+
   .HomeItem {
     cursor: pointer;
     transition: all 1s var(--stagger);

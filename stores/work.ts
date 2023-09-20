@@ -124,7 +124,7 @@ export const useWorkStore = definePiniaStore("work-store", {
       {
         id: 6,
         title: "Foundation Hiphop Academy",
-        headerImage: "/images/work/project-thumbnails/Foundation.png",
+        headerImage: "/images/work/project-thumbnails/Foundation-last.png",
         headerImageAlt: "TO BE FILLED",
         client: "Foundation Hiphop Academy",
         date: "January 2023 - ongoing",

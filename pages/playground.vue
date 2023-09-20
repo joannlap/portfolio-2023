@@ -1,14 +1,17 @@
 <template>
-  <section id="maincontent" class="Container">
-    <nuxt-img
-      v-for="image in playground.images"
-      key="image"
-      class="PlaygroundImage Image"
-      :src="image.src"
-      :alt="image.alt"
-      @click="modalStore.setLink(image.src)"
-    />
-  </section>
+  <div class="PlaygroundContainer">
+
+    <section id="maincontent" class="Container">
+      <nuxt-img
+        v-for="image in playground.images"
+        key="image"
+        class="PlaygroundImage Image"
+        :src="image.src"
+        :alt="image.alt"
+        @click="modalStore.setLink(image.src)"
+      />
+    </section>
+  </div>
   <ImageModal v-if="modalStore.getLink" />
 </template>
 
@@ -76,7 +79,16 @@ const playground = {
     grid-template-columns: 1fr 1fr;
   }
   @include breakpoint(xmedium) {
-    grid-template-columns: 350px 1fr 1fr;
+    width: calc(100vw - 350px);
+    max-width: 1000px;
+    margin: 0 auto;
+    grid-template-columns: 1fr;
+  }
+}
+.PlaygroundContainer {
+  margin-left: 0;
+  @include breakpoint(xmedium) {
+    margin-left: 350px;
   }
 }
 .PlaygroundImage {
