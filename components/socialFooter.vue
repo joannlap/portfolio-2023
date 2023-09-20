@@ -1,9 +1,9 @@
 <template>
   <footer>
     <div class="Socials">
-      <a href="https://instagram.com"><SvgInstagram /></a>
-      <a href="https://linkedin.com"><SvgLinkedIn /></a>
-      <a href="https://behance.com"><SvgBehance /></a>
+      <a href="https://www.instagram.com/jafns_/"><SvgInstagram /></a>
+      <a href="https://www.linkedin.com/in/jo-ann-lieuw-a-peuw-056829192/"><SvgLinkedIn /></a>
+      <a href="https://www.behance.net/joannlieuw60d6"><SvgBehance /></a>
     </div>
     <a href="mailto:joannlieuw@gmail.com" class="Email">joannlieuw@gmail.com</a>
   </footer>
