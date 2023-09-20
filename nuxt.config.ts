@@ -36,7 +36,7 @@ export default defineNuxtConfig({
   googleFonts: {
     prefetch: true,
     families: {
-      Inter: true,
+      Inter: [400, 600, 700, 800],
     },
   },
 });
