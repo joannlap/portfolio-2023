@@ -12,12 +12,6 @@
   </div>
 </template>
 
-<script setup lang="ts" scoped>
-onMounted(() => {
-  // Animations n shit
-});
-</script>
-
 <style lang="scss" scoped>
 .Container {
   display: flex;

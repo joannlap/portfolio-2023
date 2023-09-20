@@ -13,6 +13,7 @@ export const useWorkStore = definePiniaStore("work-store", {
         description:
           "August 2023 marks 50 years of Hiphop. Hiphop is known for its rich cultural history in music. Coke studio presents 50 years of Hiphop Tribute show in collaboration with Lowlands and Foundation Amsterdam Hiphop Academy. As part of the tribute show, an intro video reveals a short timeline of pioneers with big influences in Hiphop music. The video was a compilation of various interviews and music clips, in combination with text motion.",
         images: [
+          ["/images/work/LL-tribute/Lowlands-50yrs-hiphop-intro_3.mp4", "/images/work/LL-tribute/LL-tribute.png"],
           "/images/work/LL-tribute/73broke.jpg",
           "/images/work/LL-tribute/electrifying.jpg",
           "/images/work/LL-tribute/koolherc.jpg",
@@ -45,8 +46,8 @@ export const useWorkStore = definePiniaStore("work-store", {
           "/images/work/FD-Bootcamp/suzume.jpg",
           "/images/work/FD-Bootcamp/willow.jpg",
           "/images/work/FD-Bootcamp/yugson.jpg",
-          "/images/work/FD-Bootcamp/btcmp-promo.mp4",
-          "/images/work/FD-Bootcamp/btcmp-teaser_3.mp4",
+          ["/images/work/FD-Bootcamp/btcmp-promo.mp4", "/images/work/FD-Bootcamp/btcmp-promo.png"],
+          ["/images/work/FD-Bootcamp/btcmp-teaser_3.mp4", "/images/work/FD-Bootcamp/btcmp-teaser.jpg"],
           "/images/work/FD-Bootcamp/FD-BOOTCAMP-SCHEDULE-W1.jpg",
           "/images/work/FD-Bootcamp/FD-BOOTCAMP-SCHEDULE-W2.jpg",
           "/images/work/FD-Bootcamp/FD-BOOTCAMP-SCHEDULE-W3.jpg",
@@ -87,11 +88,10 @@ export const useWorkStore = definePiniaStore("work-store", {
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam porttitor sapien eget metus facilisis ornare. Donec aliquam elit non est tincidunt, quis vehicula eros imperdiet. Proin efficitur maximus lorem et malesuada. In hac habitasse platea dictumst. Mauris mollis neque quis ullamcorper rutrum. Proin semper, metus dignissim facilisis suscipit, ante odio tinc",
         images: [
-          "/images/work/yeye/gye-wani.gif",
-          "/images/work/yeye/nkonson.gif",
-          "/images/work/yeye/sumsum.gif",
-          "/images/work/yeye/yeyelogo.gif",
-          "/images/work/yeye/landscape.mp4",
+          ["/images/work/yeye/landscape.mp4", "/images/work/yeye/yeye-logo.jpg"],
+          "/images/work/yeye/yeye-pattern1.jpg",
+          "/images/work/yeye/yeye-pattern2.jpg",
+          "/images/work/yeye/yeye-pattern3.jpg",
         ],
         imageGridSize: [1, 1],
         mobileLayout: "1fr / 1fr / 1fr / 1fr / 1fr",
@@ -132,6 +132,13 @@ export const useWorkStore = definePiniaStore("work-store", {
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam porttitor sapien eget metus facilisis ornare. Donec aliquam elit non est tincidunt, quis vehicula eros imperdiet. Proin efficitur maximus lorem et malesuada. In hac habitasse platea dictumst. Mauris mollis neque quis ullamcorper rutrum. Proin semper, metus dignissim facilisis suscipit, ante odio tinc",
         images: [
+          "/images/work/foundation/HH-KELLY-NEW.jpg",
+          "/images/work/foundation/HH-MOSEY-NEW-story.jpg",
+          "/images/work/foundation/House-Jasmin-story.jpg",
+          "/images/work/foundation/House-John-NEW.jpg",
+          "/images/work/foundation/House-Nene-story-min.jpg",
+          "/images/work/foundation/kidsclass-afroteen-story-min.jpg",
+          "/images/work/foundation/kidsclass-ballet2-story-min.jpg",
           "/images/work/foundation/fd-ketikoti-story.jpg",
           "/images/work/foundation/foundation-jam-poster-story.jpg",
           "/images/work/foundation/Instastory-dj-chainsaw-adv.jpg",

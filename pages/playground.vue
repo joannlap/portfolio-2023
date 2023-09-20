@@ -86,6 +86,7 @@ const playground = {
   grid-column: 1/-1;
   aspect-ratio: 1/1;
   margin: 0;
+  
   &:nth-child(even) {
     grid-column: 1/-1;
   }
@@ -97,6 +98,7 @@ const playground = {
     }
   }
   @include breakpoint(xmedium) {
+    cursor: pointer;
     grid-column: 2/3;
     &:nth-child(even) {
       grid-column: 3/4;

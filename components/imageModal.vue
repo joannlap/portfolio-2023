@@ -22,10 +22,14 @@ const modalStore = useModalStore();
   bottom: 0;
   left: 0;
   right: 0;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.2);
+  
+  @include breakpoint(xmedium) {
+    display: flex;
+  }
 }
 
 .ImageModal-modal {
