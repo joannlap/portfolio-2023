@@ -5,8 +5,8 @@
       <h1 class="Work-title">{{ getWork?.title }}</h1>
       <div class="Work-info">
         <div class="Work-data">
-          <h2>Client: {{ getWork?.client }}</h2>
-          <h2>Date: {{ getWork?.date }}</h2>
+          <h2>Client: <span>{{ getWork?.client }}</span></h2>
+          <h2>Date: <span>{{ getWork?.date }}</span></h2>
           <div class="TagGroup">
             <Tag v-for="tag in getWork?.tags" :key="tag" :tagName="tag" />
           </div>
@@ -220,7 +220,12 @@ h1.Work-title {
   }
 }
 h2 {
+  font-family: "Inter";
   font-size: 16px;
+  
+  span {
+    font-weight: 400;
+  }
 }
 .Work-paragraph {
   white-space: pre-line;
