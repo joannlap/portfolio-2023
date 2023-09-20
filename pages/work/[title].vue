@@ -30,36 +30,35 @@
           :key="`col-${colIndex}`"
           class="column"
         >
+        <div class="video-container" 
+              v-if="
+              getWork?.images?.[
+                calculateImageIndex(rows, rowIndex, colIndex)
+              ][0]?.endsWith('mp4')
+        ">
           <video
             controls
-            v-if="
-              getWork?.images?.[
+            @play="handlePlay(colIndex)" @pause="handlePause(colIndex)"
+            :poster="getWork?.images?.[
                 calculateImageIndex(rows, rowIndex, colIndex)
-              ]?.endsWith('mp4')
-            "
+              ][1]"
+            
           >
-            <source
-              :src="
-                getWork?.images?.[calculateImageIndex(rows, rowIndex, colIndex)]
-              "
-              type="video/mp4"
-            />
-            Your browser does not support the video tag.
+              <source :src="getWork?.images?.[
+                calculateImageIndex(rows, rowIndex, colIndex)
+              ][0]" type="video/mp4"/>
+                Browser does not support video tag  
+         
           </video>
+          <div class="play-button"  :data-video-index="colIndex" v-if="showPlayButtons[
+                `video-${colIndex}`]" @click="playClickedVideo">
+            <SvgPlay/>
+          </div>
+        </div>
           <nuxt-img
-            v-if="
-              getWork?.images?.[
-                calculateImageIndex(rows, rowIndex, colIndex)
-              ]?.endsWith('jpg') ||
-              getWork?.images?.[
-                calculateImageIndex(rows, rowIndex, colIndex)
-              ]?.endsWith('png') ||
-              getWork?.images?.[
-                calculateImageIndex(rows, rowIndex, colIndex)
-              ]?.endsWith('gif')
-            "
+            v-else
             :src="
-              getWork?.images?.[calculateImageIndex(rows, rowIndex, colIndex)]
+              getWork?.images?.[calculateImageIndex(rows, rowIndex, colIndex)] as string | undefined
             "
             alt="#"
             loading="lazy"
@@ -77,6 +76,7 @@
 <script setup lang="ts">
 import { useWorkStore } from "~/stores/work";
 import animateElement from "~/utils/animateElement";
+import SvgPlay from "~/assets/icons/play.svg?component";
 definePageMeta({
   layout: "detail",
 });
@@ -100,7 +100,6 @@ const currentLayout = ref<string[]>([]);
 
 // Function to update layout based on screen width
 const updateLayout = () => {
-  console.log("hello", window.matchMedia("(max-width: 1024px)").matches);
   if (window.matchMedia("(max-width: 1024px)").matches) {
     // Use mobile layout
     currentLayout.value = getWork?.mobileLayout?.split("/") || [];
@@ -150,6 +149,30 @@ const calculateImageIndex = (
     }
   }
   return -1; // If we can't find it for some reason, return an error code (-1)
+};
+
+
+const showPlayButtons = ref<{ [key: string]: boolean }>({});
+const numVideos = getWork.images.filter(image => image[0].endsWith('mp4')).length;
+for (let i = 0; i < numVideos; i++) {
+  showPlayButtons.value[`video-${i}`] = true;
+}
+const playClickedVideo = (event: Event) => {
+  const playButtonElement = event.target as HTMLElement;
+  const videoContainer = playButtonElement?.closest('.video-container');
+  const videoElement = videoContainer?.querySelector('video');
+
+  if (videoElement instanceof HTMLVideoElement) {
+    videoElement.play();
+  }
+};
+
+const handlePlay = (index: number) => {
+  showPlayButtons.value[`video-${index}`] = false;
+};
+
+const handlePause = (index: number) => {
+  showPlayButtons.value[`video-${index}`] = true;
 };
 
 onMounted(() => {
@@ -307,6 +330,25 @@ video,
 img {
   opacity: 0;
   transition: opacity 0.5s;
+}
+
+.video-container {
+  position: relative;
+}
+
+.video-container video {
+  width: 100%;
+  height: auto;
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2em; /* Update based on your design */
+  cursor: pointer;
+  opacity: .7;
 }
 
 .animate-in {
