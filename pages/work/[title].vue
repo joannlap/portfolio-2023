@@ -53,7 +53,10 @@
               ]?.endsWith('jpg') ||
               getWork?.images?.[
                 calculateImageIndex(rows, rowIndex, colIndex)
-              ]?.endsWith('png')
+              ]?.endsWith('png') ||
+              getWork?.images?.[
+                calculateImageIndex(rows, rowIndex, colIndex)
+              ]?.endsWith('gif')
             "
             :src="
               getWork?.images?.[calculateImageIndex(rows, rowIndex, colIndex)]
@@ -196,7 +199,12 @@ h2 {
 }
 .Work-paragraph {
   white-space: pre-line;
-  font-size: 12px;
+  font-size: 14px;
+  max-width: 540px;
+  margin-top: 30px;
+  @include breakpoint(xmedium) {
+    margin-top: 0px;
+  }
 }
 .Work-content {
   max-width: 580px;
@@ -232,14 +240,7 @@ h2 {
     justify-content: space-between;
     align-items: flex-start;
   }
-  p {
-    font-size: 16px;
-    max-width: 540px;
-    margin-top: 30px;
-    @include breakpoint(xmedium) {
-      margin-top: 0px;
-    }
-  }
+  
 }
 .Work-data {
   min-width: 300px;

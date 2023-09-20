@@ -23,43 +23,40 @@ const playground = {
       alt: "An illustration of Appa, the character of Avatar the Last Airbender",
     },
     {
-      src: "/images/playground/pin.jpg",
+      src: "/images/playground/DISNEY.jpg",
       alt: "An illustration of Disney Pin",
     },
     {
-      src: "/images/playground/asianfood.jpg",
+      src: "/images/playground/ramen.jpg",
       alt: "An illustration of an asian dish",
     },
     {
-      src: "/images/playground/joann.jpg",
+      src: "/images/playground/theOrphans.jpg",
+      alt: "An 3D model of my work name, Joann Lap",
+    },
+    {
+      src: "/images/playground/inflation.jpg",
       alt: "An 3D model of my name, Joann",
     },
     {
-      src: "/images/playground/joannlap.jpg",
+      src: "/images/playground/joannlap--round-v4.jpg",
       alt: "An 3D model of my name, Joann",
     },
+
     {
-      src: "/images/playground/theorphans.jpg",
+      src: "/images/playground/customs-kirby.jpg",
       alt: "An 3D model of my work name, Joann Lap",
     },
     {
-      src: "/images/playground/sketch.jpg",
+      src: "/images/playground/custom-kirby-1.jpg",
       alt: "An 3D model of my work name, Joann Lap",
     },
     {
-      src: "/images/playground/shoe2.jpg",
+      src: "/images/playground/dragonball-1.jpg",
       alt: "An 3D model of my work name, Joann Lap",
     },
     {
-      src: "/images/playground/shoe1.jpg",
-      alt: "An 3D model of my work name, Joann Lap",
-    },
-    {
-      src: "/images/playground/right-inside.jpg",
-      alt: "An 3D model of my work name, Joann Lap",
-    },
-    {
-      src: "/images/playground/right-outside.jpg",
+      src: "/images/playground/dragonball-2.jpg",
       alt: "An 3D model of my work name, Joann Lap",
     },
   ],
@@ -87,6 +84,7 @@ const playground = {
   height: 100%;
   width: 100%;
   grid-column: 1/-1;
+  aspect-ratio: 1/1;
   margin: 0;
   &:nth-child(even) {
     grid-column: 1/-1;

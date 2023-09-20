@@ -11,7 +11,7 @@
             'fade-late': clickedItem !== null && clickedItem === workItem.id,
             'disable-hover': clickedItem !== null,
           }"
-          :style="{ '--stagger': `${index * 0.15}s` }"
+          :style="{ '--stagger': `${index * 0.05}s` }"
           :aria-label="`Open ${workItem.title}`"
           tabindex="0"
           @click="handleClick(workItem.id, workItem.title)"
@@ -71,7 +71,7 @@ const handleClick = (id: number, title: string) => {
 
   setTimeout(() => {
     router.push(`work/${title}`);
-  }, (work.length - 1) * 300 + 400);
+  }, (work.length - 1) * 150);
 };
 </script>
 
@@ -121,11 +121,11 @@ const handleClick = (id: number, title: string) => {
     }
 
     &.fade-out {
-      transition: opacity 1s var(--stagger) ease;
+      transition: opacity .2s var(--stagger) ease;
       opacity: 0;
     }
     &.fade-late {
-      transition: opacity 1s 1.2s ease;
+      transition: opacity 1s .2s ease;
       opacity: 0;
     }
   }

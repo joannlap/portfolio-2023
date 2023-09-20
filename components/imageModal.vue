@@ -31,13 +31,13 @@ const modalStore = useModalStore();
 .ImageModal-modal {
   text-align: center;
   width: 80vw;
-  height: auto;
+    height: 80vh;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   img {
-    object-fit: cover;
+    object-fit: contain;
     width: 100%;
     height: 100%;
   }
@@ -49,6 +49,10 @@ const modalStore = useModalStore();
   cursor: pointer;
   right: -2rem;
   top: 0;
+  
+  background-color: white;
+  border-radius: 50%;
+  padding: 5px;
   svg {
     width: 32px;
     height: 32px;

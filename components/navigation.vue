@@ -103,6 +103,9 @@ ul {
       margin: 0 1rem;
       font-family: "Inter", sans-serif;
       margin: 0 1rem;
+      @include breakpoint(xmedium) {
+        margin-left: 0;
+      }
       svg {
         margin-right: 5px;
         margin-top: -2px;
@@ -113,6 +116,7 @@ ul {
         @include breakpoint(xmedium) {
           display: block;
           margin-right: 10px;
+          
         }
       }
     }
