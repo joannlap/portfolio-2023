@@ -88,10 +88,10 @@ export const useWorkStore = definePiniaStore("work-store", {
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam porttitor sapien eget metus facilisis ornare. Donec aliquam elit non est tincidunt, quis vehicula eros imperdiet. Proin efficitur maximus lorem et malesuada. In hac habitasse platea dictumst. Mauris mollis neque quis ullamcorper rutrum. Proin semper, metus dignissim facilisis suscipit, ante odio tinc",
         images: [
-          ["/images/work/yeye/landscape.mp4", "/images/work/yeye/yeye-logo.png"],
-          "/images/work/yeye/yeye-pattern1.png",
-          "/images/work/yeye/yeye-pattern2.png",
-          "/images/work/yeye/yeye-pattern3.png",
+          ["/images/work/yeye/landscape.mp4", "/images/work/yeye/yeye-logo.jpg"],
+          "/images/work/yeye/yeye-pattern1.jpg",
+          "/images/work/yeye/yeye-pattern2.jpg",
+          "/images/work/yeye/yeye-pattern3.jpg",
         ],
         imageGridSize: [1, 1],
         mobileLayout: "1fr / 1fr / 1fr / 1fr / 1fr",
@@ -132,6 +132,13 @@ export const useWorkStore = definePiniaStore("work-store", {
         description:
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam porttitor sapien eget metus facilisis ornare. Donec aliquam elit non est tincidunt, quis vehicula eros imperdiet. Proin efficitur maximus lorem et malesuada. In hac habitasse platea dictumst. Mauris mollis neque quis ullamcorper rutrum. Proin semper, metus dignissim facilisis suscipit, ante odio tinc",
         images: [
+          "/images/work/foundation/HH-KELLY-NEW.jpg",
+          "/images/work/foundation/HH-MOSEY-NEW-story.jpg",
+          "/images/work/foundation/House-Jasmin-story.jpg",
+          "/images/work/foundation/House-John-NEW.jpg",
+          "/images/work/foundation/House-Nene-story-min.jpg",
+          "/images/work/foundation/kidsclass-afroteen-story-min.jpg",
+          "/images/work/foundation/kidsclass-ballet2-story-min.jpg",
           "/images/work/foundation/fd-ketikoti-story.jpg",
           "/images/work/foundation/foundation-jam-poster-story.jpg",
           "/images/work/foundation/Instastory-dj-chainsaw-adv.jpg",

@@ -30,33 +30,35 @@
           :key="`col-${colIndex}`"
           class="column"
         >
-        <div class="video-container" 
-              v-if="
-              getWork?.images?.[
-                calculateImageIndex(rows, rowIndex, colIndex)
-              ][0]?.endsWith('mp4')
-        ">
-          <video
-            controls
-            @play="handlePlay(colIndex)" @pause="handlePause(colIndex)"
-            :poster="getWork?.images?.[
-                calculateImageIndex(rows, rowIndex, colIndex)
-              ][1]"
-            
-          >
-              <source :src="getWork?.images?.[
-                calculateImageIndex(rows, rowIndex, colIndex)
-              ][0]" type="video/mp4"/>
-                Browser does not support video tag  
-         
-          </video>
-          <div class="play-button"  :data-video-index="colIndex" v-if="showPlayButtons[
-                `video-${colIndex}`]" @click="playClickedVideo">
-            <SvgPlay/>
+       
+          <div class="video-container" 
+                v-if="
+                Array.isArray(getWork?.images?.[
+                  calculateImageIndex(rows, rowIndex, colIndex)
+                ])
+          ">
+            <video
+              controls
+              @play="handlePlay(colIndex)" @pause="handlePause(colIndex)"
+              :poster="getWork?.images?.[
+                  calculateImageIndex(rows, rowIndex, colIndex)
+                ][1]"
+              
+            >
+                <source :src="getWork?.images?.[
+                  calculateImageIndex(rows, rowIndex, colIndex)
+                ][0]" type="video/mp4"/>
+                  Browser does not support video tag  
+          
+            </video>
+            <div class="play-button" :data-video-index="colIndex" v-if="showPlayButtons[`video-${colIndex}`]" @click="playClickedVideo">
+              <SvgPlay/>
+            </div>
           </div>
-        </div>
           <nuxt-img
-            v-else
+            v-if="!!getWork?.images?.[calculateImageIndex(rows, rowIndex, colIndex)] && !Array.isArray(getWork?.images?.[
+                  calculateImageIndex(rows, rowIndex, colIndex)
+                ])"
             :src="
               getWork?.images?.[calculateImageIndex(rows, rowIndex, colIndex)] as string | undefined
             "
@@ -177,7 +179,6 @@ const handlePause = (index: number) => {
 
 onMounted(() => {
   const media = document.querySelectorAll("video, img");
-
   animateElement(media);
 });
 </script>
@@ -189,6 +190,7 @@ onMounted(() => {
   animation: move-in 0.4s ease forwards;
   opacity: 0;
   transform: translateY(0);
+  margin: 0 auto;
 }
 
 .row .Image {
@@ -308,7 +310,8 @@ h2 {
 }
 
 .grid-container {
-  margin-top: 2rem;
+  max-width: 1000px;
+  margin: 2rem auto 0;
 }
 .row {
   display: grid;
