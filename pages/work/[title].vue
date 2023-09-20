@@ -30,13 +30,6 @@
           :key="`col-${colIndex}`"
           class="column"
         >
-          {{
-            console.log(
-              getWork.images[calculateImageIndex(rows, rowIndex, colIndex)]
-            )
-          }}
-          {{ console.log(calculateImageIndex(rows, rowIndex, colIndex)) }}
-
           <video
             controls
             v-if="
@@ -80,7 +73,7 @@
 
 <script setup lang="ts">
 import { useWorkStore } from "~/stores/work";
-
+import animateElement from "~/utils/animateElement";
 definePageMeta({
   layout: "detail",
 });
@@ -155,6 +148,12 @@ const calculateImageIndex = (
   }
   return -1; // If we can't find it for some reason, return an error code (-1)
 };
+
+onMounted(() => {
+  const media = document.querySelectorAll("video, img");
+
+  animateElement(media);
+});
 </script>
 
 <style lang="scss" scoped>
@@ -234,6 +233,7 @@ h2 {
     align-items: flex-start;
   }
   p {
+    font-size: 16px;
     max-width: 540px;
     margin-top: 30px;
     @include breakpoint(xmedium) {
@@ -301,5 +301,14 @@ h2 {
 
     width: 100%;
   }
+}
+video,
+img {
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.animate-in {
+  opacity: 1; /* When the animate-in class is added, the subtitles will become visible */
 }
 </style>

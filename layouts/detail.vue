@@ -13,7 +13,14 @@ useHead({
       content: "Portfolio website of Jo-ann Lap",
     },
   ],
-  link: [{ rel: "icon", type: "image/png", href: "/favicon.png" }],
+  link: [
+    { rel: "icon", type: "svg", href: "/favicon.svg" },
+    {
+      rel: "apple-touch-icon",
+      sizes: "180x180",
+      href: "/favicon.png",
+    },
+  ],
 });
 </script>
 

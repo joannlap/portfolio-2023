@@ -13,7 +13,6 @@
 </template>
 
 <script setup lang="ts" scoped>
-
 onMounted(() => {
   // Animations n shit
 });
@@ -43,8 +42,8 @@ onMounted(() => {
 p {
   margin-top: 3rem;
   max-width: 435px;
-  font-size: 14px;
-  animation: move-in .4s ease forwards;
+  font-size: 16px;
+  animation: move-in 0.4s ease forwards;
   opacity: 0;
 }
 </style>

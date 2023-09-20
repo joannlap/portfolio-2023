@@ -6,11 +6,16 @@
       class="PlaygroundImage Image"
       :src="image.src"
       :alt="image.alt"
+      @click="modalStore.setLink(image.src)"
     />
   </section>
+  <ImageModal v-if="modalStore.getLink" />
 </template>
 
 <script setup lang="ts">
+import { useModalStore } from "~/stores/modal";
+const modalStore = useModalStore();
+
 const playground = {
   images: [
     {
@@ -59,10 +64,6 @@ const playground = {
     },
   ],
 };
-
-onMounted(() => {
-  // Animations n shit
-});
 </script>
 
 <style lang="scss" scoped>

@@ -100,13 +100,18 @@ ul {
       display: flex;
       justify-content: flex-start;
       font-weight: 500;
+      margin: 0 1rem;
+      font-family: "Inter", sans-serif;
+      margin: 0 1rem;
       svg {
         margin-right: 5px;
         margin-top: -2px;
         min-width: 26px;
         min-height: 26px;
+        display: none;
 
         @include breakpoint(xmedium) {
+          display: block;
           margin-right: 10px;
         }
       }
