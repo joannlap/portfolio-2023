@@ -1,9 +1,21 @@
 <template>
   <footer>
     <div class="Socials">
-      <a href="https://www.instagram.com/jafns_/"><SvgInstagram /></a>
-      <a href="https://www.linkedin.com/in/jo-ann-lieuw-a-peuw-056829192/"><SvgLinkedIn /></a>
-      <a href="https://www.behance.net/joannlieuw60d6"><SvgBehance /></a>
+      <a
+        href="https://www.instagram.com/jafns_/"
+        aria-label="Visit my Instagram"
+        ><SvgInstagram
+      /></a>
+      <a
+        href="https://www.linkedin.com/in/jo-ann-lieuw-a-peuw-056829192/"
+        aria-label="Visit my LinkedIn"
+        ><SvgLinkedIn
+      /></a>
+      <a
+        href="https://www.behance.net/joannlieuw60d6"
+        aria-label="Visit my Behance"
+        ><SvgBehance
+      /></a>
     </div>
     <a href="mailto:joannlieuw@gmail.com" class="Email">joannlieuw@gmail.com</a>
   </footer>

@@ -1,6 +1,6 @@
 <template>
   <aside>
-    <NuxtLink to="/" class="Logo"><SvgLogo /></NuxtLink>
+    <NuxtLink to="/" aria-label="Go to Home" class="Logo"><SvgLogo /></NuxtLink>
     <nav class="Navigation">
       <ul>
         <li>
@@ -116,7 +116,6 @@ ul {
         @include breakpoint(xmedium) {
           display: block;
           margin-right: 10px;
-          
         }
       }
     }

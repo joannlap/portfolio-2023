@@ -14,6 +14,9 @@ useHead({
     },
   ],
   link: [{ rel: "icon", type: "image/png", href: "/favicon.png" }],
+  htmlAttrs: {
+    lang: "en",
+  },
 });
 </script>
 
