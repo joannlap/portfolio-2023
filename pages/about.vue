@@ -1,6 +1,11 @@
 <template>
   <section id="maincontent" class="Container">
-    <nuxt-img class="Image" src="/images/joanndesktop.jpg" alt="Joann" />
+    <nuxt-img
+      class="Image"
+      src="/images/joanndesktop.jpg"
+      alt="Joann"
+      sizes="xs:280px sm:350px md:487px lg:487px xl:487px"
+    />
     <p>
       I'm Jo-Ann, a graphic designer who focuses on 3D modelling, motion design,
       and illustration. I strongly believe that visual language can bridge
@@ -35,7 +40,8 @@
 .Image {
   margin-top: 0;
   margin-bottom: 30px;
-  @include breakpoint(xmedium) {
+
+  @include breakpoint(medium) {
     max-width: 487px;
     margin-bottom: 0;
   }

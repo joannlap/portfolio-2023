@@ -1,6 +1,5 @@
 <template>
   <div class="PlaygroundContainer">
-
     <section id="maincontent" class="Container">
       <nuxt-img
         v-for="image in playground.images"
@@ -9,6 +8,7 @@
         :src="image.src"
         :alt="image.alt"
         @click="modalStore.setLink(image.src)"
+        sizes="md:455px sm:360px xsm:260px"
       />
     </section>
   </div>
@@ -98,7 +98,7 @@ const playground = {
   grid-column: 1/-1;
   aspect-ratio: 1/1;
   margin: 0;
-  
+
   &:nth-child(even) {
     grid-column: 1/-1;
   }
