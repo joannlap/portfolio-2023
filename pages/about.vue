@@ -2,9 +2,16 @@
   <section id="maincontent" class="Container">
     <nuxt-img class="Image" src="/images/joanndesktop.jpg" alt="Joann" />
     <p>
-      Hi! my name is Jo-Ann, I’m a designer focussed on graphic design,
-      illustration and 3D/Motion. Graduated in the summer of 2022 from Amsterdam
-      University of Applied Sciences as an Interaction Designer.
+      I'm Jo-Ann, a graphic designer who focuses on 3D modelling, motion design,
+      and illustration. I strongly believe that visual language can bridge
+      communication gaps among people of different cultures and backgrounds.
+      With a bachelors degree in interaction design, I have paved my way
+      developing a strong interest in graphic design and craftsmanship. Next to
+      design my passion for dance has grown over the past couple years that it
+      has taken it’s own journey and career path.<br />
+      <br />
+      → link resumé:
+      <a href="https://read.cv/joannlap">https://read.cv/joannlap</a>
     </p>
   </section>
   <div class="MobileFooter">

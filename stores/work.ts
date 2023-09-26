@@ -11,9 +11,12 @@ export const useWorkStore = definePiniaStore("work-store", {
         date: "July 2023",
         tags: ["Motion Design"],
         description:
-          "August 2023 marks 50 years of Hiphop. Hiphop is known for its rich cultural history in music. Coke studio presents 50 years of Hiphop Tribute show in collaboration with Lowlands and Foundation Amsterdam Hiphop Academy. As part of the tribute show, an intro video reveals a short timeline of pioneers with big influences in Hiphop music. The video was a compilation of various interviews and music clips, in combination with text motion.",
+          "August 2023 marks the 50th anniversary of Hiphop, a genre known for its rich cultural history in music. To celebrate this milestone, Coke Studio is presenting a special tribute show titled '50 Years of Hiphop' in collaboration with Lowlands and Foundation Amsterdam Hiphop Academy. \n As part of the tribute show, an introductory video showcases a short timeline highlighting the pioneers who have had a significant impact on Hiphop music. This video is a compilation of interviews, music clips, and dynamic text motion.",
         images: [
-          ["/images/work/LL-tribute/Lowlands-50yrs-hiphop-intro_3.mp4", "/images/work/LL-tribute/LL-tribute.png"],
+          [
+            "/images/work/LL-tribute/Lowlands-50yrs-hiphop-intro_3.mp4",
+            "/images/work/LL-tribute/LL-tribute.png",
+          ],
           "/images/work/LL-tribute/73broke.jpg",
           "/images/work/LL-tribute/electrifying.jpg",
           "/images/work/LL-tribute/koolherc.jpg",
@@ -33,7 +36,7 @@ export const useWorkStore = definePiniaStore("work-store", {
         date: "March-July 2023",
         tags: ["Graphic design", "Motion design", "3D"],
         description:
-          "A lot of sweat, growth, pain, bodywork, brainwork, love and knowledge easily summarizes Foundation Bootcamp. Every summer Foundation Hiphop Academy holds a 3 week intensive bootcamp where dancers can dive into the elements of street and club culture. With more than 60 workshops in different street styles, parties, lectures, debates and an evaluation program called the Hawks Method. Foundation bootcamp visual language originated from street- and pop art. My inspiration where based from old hiphop/street magazines, graffiti art and movie posters. The approach was a city view, combined into an assemble of Avengers  ",
+          "Foundation Bootcamp can be summarized as a journey of hard work, growth, challenges, physical and mental exertion and knowledge. Every summer, Foundation Hiphop Academy organizes a 3-week intensive bootcamp that allows dancers to immerse themselves in the elements of street and club culture. The bootcamp offers over 60 workshops in various street styles, as well as lectures, parties and an evaluation program known as the Hawks Method. \n The visual language of Foundation Bootcamp is influenced by street and pop art. My inspiration for the design came from hiphop and street magazines, graffiti art, and movie posters. The overall approach aimed to capture the essence of a cityscape, combining elements like an assembly of Avengers.",
         images: [
           "/images/work/FD-Bootcamp/FD-BOOTCAMP2023-FEED.jpg",
           "/images/work/FD-Bootcamp/gifbootcamps.gif",
@@ -46,8 +49,14 @@ export const useWorkStore = definePiniaStore("work-store", {
           "/images/work/FD-Bootcamp/suzume.jpg",
           "/images/work/FD-Bootcamp/willow.jpg",
           "/images/work/FD-Bootcamp/yugson.jpg",
-          ["/images/work/FD-Bootcamp/btcmp-promo.mp4", "/images/work/FD-Bootcamp/btcmp-promo.png"],
-          ["/images/work/FD-Bootcamp/btcmp-teaser_3.mp4", "/images/work/FD-Bootcamp/btcmp-teaser.jpg"],
+          [
+            "/images/work/FD-Bootcamp/btcmp-promo.mp4",
+            "/images/work/FD-Bootcamp/btcmp-promo.png",
+          ],
+          [
+            "/images/work/FD-Bootcamp/btcmp-teaser_3.mp4",
+            "/images/work/FD-Bootcamp/btcmp-teaser.jpg",
+          ],
           "/images/work/FD-Bootcamp/FD-BOOTCAMP-SCHEDULE-W1.jpg",
           "/images/work/FD-Bootcamp/FD-BOOTCAMP-SCHEDULE-W2.jpg",
           "/images/work/FD-Bootcamp/FD-BOOTCAMP-SCHEDULE-W3.jpg",
@@ -66,7 +75,7 @@ export const useWorkStore = definePiniaStore("work-store", {
         date: "July 2023",
         tags: ["Graphic design"],
         description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam porttitor sapien eget metus facilisis ornare. Donec aliquam elit non est tincidunt, quis vehicula eros imperdiet. Proin efficitur maximus lorem et malesuada. In hac habitasse platea dictumst. Mauris mollis neque quis ullamcorper rutrum. Proin semper, metus dignissim facilisis suscipit, ante odio tinc",
+          "NightOwls Amsterdam presents an event in collaboration with the multicultural festival Kwaku at Nelson Mandelapark. The event will feature Afrotech, House Music, Deep House, and Techno sounds. \n The approach for this collaboration was to create a visually strong illustration that captures the essence of the event and its vibrant atmosphere by using a selected color palette that complements the event.",
         images: [
           "/images/work/nightowls/kwaku-2023-poster.jpg",
           "/images/work/nightowls/kwaku-0508-story.jpg",
@@ -86,9 +95,12 @@ export const useWorkStore = definePiniaStore("work-store", {
         date: "April-June 2023",
         tags: ["Motion design"],
         description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam porttitor sapien eget metus facilisis ornare. Donec aliquam elit non est tincidunt, quis vehicula eros imperdiet. Proin efficitur maximus lorem et malesuada. In hac habitasse platea dictumst. Mauris mollis neque quis ullamcorper rutrum. Proin semper, metus dignissim facilisis suscipit, ante odio tinc",
+          "Yeye is an event that brings together the diverse sounds of African diasporic music, good vibes and a celebration of culture. It’s a gathering where people can immerse themselves in the rhythms and melodies that have emerged from the African diaspora, while enjoying delicious food. \n For the first event, a looped video backdrop will showcase different music clips with animations featuring Adrinka symbols.",
         images: [
-          ["/images/work/yeye/landscape.mp4", "/images/work/yeye/yeye-logo.jpg"],
+          [
+            "/images/work/yeye/landscape.mp4",
+            "/images/work/yeye/yeye-logo.jpg",
+          ],
           "/images/work/yeye/yeye-pattern1.jpg",
           "/images/work/yeye/yeye-pattern2.jpg",
           "/images/work/yeye/yeye-pattern3.jpg",
@@ -106,7 +118,7 @@ export const useWorkStore = definePiniaStore("work-store", {
         date: "February - July 2023",
         tags: ["Graphic design"],
         description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam porttitor sapien eget metus facilisis ornare. Donec aliquam elit non est tincidunt, quis vehicula eros imperdiet. Proin efficitur maximus lorem et malesuada. In hac habitasse platea dictumst. Mauris mollis neque quis ullamcorper rutrum. Proin semper, metus dignissim facilisis suscipit, ante odio tinc",
+          "The Foundation Hiphop Academy, in collaboration with the Public Library of Amsterdam, presents 'Hiphop is Heritage' or 'Hiphop is erfgoed'. This program includes lectures and debates that explore the theme of why Hiphop is considered heritage.",
         images: [
           "/images/work/HHisErfgoed/fd-lecture-poster.jpg",
           "/images/work/HHisErfgoed/HHerfgoed-sugacane-feed.jpg",
@@ -130,7 +142,7 @@ export const useWorkStore = definePiniaStore("work-store", {
         date: "January 2023 - ongoing",
         tags: ["Graphic design"],
         description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam porttitor sapien eget metus facilisis ornare. Donec aliquam elit non est tincidunt, quis vehicula eros imperdiet. Proin efficitur maximus lorem et malesuada. In hac habitasse platea dictumst. Mauris mollis neque quis ullamcorper rutrum. Proin semper, metus dignissim facilisis suscipit, ante odio tinc",
+          "Foundation Hiphop Academy, located in the South-East of Amsterdam, is a Hiphop Academy that provides knowledge and development in various street styles within the street culture. This enables dancers to explore, build, and develop their skills in the art form. 'For self-elevation, you need foundation' (Foundation, 2020). \n These posters showcase the classes that take place at Foundation, as well as past classes and events.",
         images: [
           "/images/work/foundation/HH-KELLY-NEW.jpg",
           "/images/work/foundation/HH-MOSEY-NEW-story.jpg",
