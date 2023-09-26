@@ -84,7 +84,6 @@
               getWork?.images?.[calculateImageIndex(rows, rowIndex, colIndex)] as string | undefined
             "
             alt="#"
-            loading="lazy"
           />
         </div>
       </div>

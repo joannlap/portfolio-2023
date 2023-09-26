@@ -21,8 +21,7 @@
               class="HomeImage Image"
               :src="workItem?.headerImage"
               :alt="workItem?.headerImageAlt"
-              sizes="md:500px sm:300px xsm:250px"
-              loading="lazy"
+              sizes="lg:492px md:448px sm:300px xsm:250px"
             />
             <div class="ImageHover">
               <h3>{{ workItem?.title }}</h3>
