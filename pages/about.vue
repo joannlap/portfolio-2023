@@ -2,7 +2,7 @@
   <section id="maincontent" class="Container">
     <nuxt-img
       class="Image"
-      src="/images/joanndesktop.jpg"
+      src="/images/joanndesktop.webp"
       alt="Joann"
       sizes="xs:280px sm:350px md:487px lg:487px xl:487px"
     />

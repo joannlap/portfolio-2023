@@ -22,44 +22,44 @@ const modalStore = useModalStore();
 const playground = {
   images: [
     {
-      src: "/images/playground/appa.jpg",
+      src: "/images/playground/appa.webp",
       alt: "An illustration of Appa, the character of Avatar the Last Airbender",
     },
     {
-      src: "/images/playground/DISNEY.jpg",
+      src: "/images/playground/DISNEY.webp",
       alt: "An illustration of Disney Pin",
     },
     {
-      src: "/images/playground/ramen.jpg",
+      src: "/images/playground/ramen.webp",
       alt: "An illustration of an asian dish",
     },
     {
-      src: "/images/playground/theOrphans.jpg",
+      src: "/images/playground/theOrphans.webp",
       alt: "An 3D model of my work name, Joann Lap",
     },
     {
-      src: "/images/playground/inflation.jpg",
+      src: "/images/playground/inflation.webp",
       alt: "An 3D model of my name, Joann",
     },
     {
-      src: "/images/playground/joannlap--round-v4.jpg",
+      src: "/images/playground/joannlap--round-v4.webp",
       alt: "An 3D model of my name, Joann",
     },
 
     {
-      src: "/images/playground/customs-kirby.jpg",
+      src: "/images/playground/customs-kirby.webp",
       alt: "An 3D model of my work name, Joann Lap",
     },
     {
-      src: "/images/playground/custom-kirby-1.jpg",
+      src: "/images/playground/custom-kirby-1.webp",
       alt: "An 3D model of my work name, Joann Lap",
     },
     {
-      src: "/images/playground/dragonball-1.jpg",
+      src: "/images/playground/dragonball-1.webp",
       alt: "An 3D model of my work name, Joann Lap",
     },
     {
-      src: "/images/playground/dragonball-2.jpg",
+      src: "/images/playground/dragonball-2.webp",
       alt: "An 3D model of my work name, Joann Lap",
     },
   ],

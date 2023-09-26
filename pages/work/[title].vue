@@ -5,8 +5,12 @@
       <h1 class="Work-title">{{ getWork?.title }}</h1>
       <div class="Work-info">
         <div class="Work-data">
-          <h2>Client: <span>{{ getWork?.client }}</span></h2>
-          <h2>Date: <span>{{ getWork?.date }}</span></h2>
+          <h2>
+            Client: <span>{{ getWork?.client }}</span>
+          </h2>
+          <h2>
+            Date: <span>{{ getWork?.date }}</span>
+          </h2>
           <div class="TagGroup">
             <Tag v-for="tag in getWork?.tags" :key="tag" :tagName="tag" />
           </div>
@@ -30,35 +34,52 @@
           :key="`col-${colIndex}`"
           class="column"
         >
-       
-          <div class="video-container" 
-                v-if="
-                Array.isArray(getWork?.images?.[
-                  calculateImageIndex(rows, rowIndex, colIndex)
-                ])
-          ">
+          <div
+            class="video-container"
+            v-if="
+              Array.isArray(
+                getWork?.images?.[calculateImageIndex(rows, rowIndex, colIndex)]
+              )
+            "
+          >
             <video
               controls
-              @play="handlePlay(colIndex)" @pause="handlePause(colIndex)"
-              :poster="getWork?.images?.[
+              @play="handlePlay(colIndex)"
+              @pause="handlePause(colIndex)"
+              :poster="
+                getWork?.images?.[
                   calculateImageIndex(rows, rowIndex, colIndex)
-                ][1]"
-              
+                ][1]
+              "
             >
-                <source :src="getWork?.images?.[
-                  calculateImageIndex(rows, rowIndex, colIndex)
-                ][0]" type="video/mp4"/>
-                  Browser does not support video tag  
-          
+              <source
+                :src="
+                  getWork?.images?.[
+                    calculateImageIndex(rows, rowIndex, colIndex)
+                  ][0]
+                "
+                type="video/webm"
+              />
+              Browser does not support video tag
             </video>
-            <div class="play-button" :data-video-index="colIndex" v-if="showPlayButtons[`video-${colIndex}`]" @click="playClickedVideo">
-              <SvgPlay/>
+            <div
+              class="play-button"
+              :data-video-index="colIndex"
+              v-if="showPlayButtons[`video-${colIndex}`]"
+              @click="playClickedVideo"
+            >
+              <SvgPlay />
             </div>
           </div>
           <nuxt-img
-            v-if="!!getWork?.images?.[calculateImageIndex(rows, rowIndex, colIndex)] && !Array.isArray(getWork?.images?.[
-                  calculateImageIndex(rows, rowIndex, colIndex)
-                ])"
+            v-if="
+              !!getWork?.images?.[
+                calculateImageIndex(rows, rowIndex, colIndex)
+              ] &&
+              !Array.isArray(
+                getWork?.images?.[calculateImageIndex(rows, rowIndex, colIndex)]
+              )
+            "
             :src="
               getWork?.images?.[calculateImageIndex(rows, rowIndex, colIndex)] as string | undefined
             "
@@ -153,16 +174,17 @@ const calculateImageIndex = (
   return -1; // If we can't find it for some reason, return an error code (-1)
 };
 
-
 const showPlayButtons = ref<{ [key: string]: boolean }>({});
-const numVideos = getWork.images.filter(image => image[0].endsWith('mp4')).length;
+const numVideos = getWork.images.filter((image) =>
+  image[0].endsWith("webm")
+).length;
 for (let i = 0; i < numVideos; i++) {
   showPlayButtons.value[`video-${i}`] = true;
 }
 const playClickedVideo = (event: Event) => {
   const playButtonElement = event.target as HTMLElement;
-  const videoContainer = playButtonElement?.closest('.video-container');
-  const videoElement = videoContainer?.querySelector('video');
+  const videoContainer = playButtonElement?.closest(".video-container");
+  const videoElement = videoContainer?.querySelector("video");
 
   if (videoElement instanceof HTMLVideoElement) {
     videoElement.play();
@@ -222,7 +244,7 @@ h1.Work-title {
 h2 {
   font-family: "Inter";
   font-size: 16px;
-  
+
   span {
     font-weight: 400;
   }
@@ -270,7 +292,6 @@ h2 {
     justify-content: space-between;
     align-items: flex-start;
   }
-  
 }
 .Work-data {
   min-width: 300px;
@@ -356,7 +377,7 @@ img {
   transform: translate(-50%, -50%);
   font-size: 2em; /* Update based on your design */
   cursor: pointer;
-  opacity: .7;
+  opacity: 0.7;
 }
 
 .animate-in {

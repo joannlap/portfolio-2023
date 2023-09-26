@@ -16,7 +16,6 @@
           tabindex="0"
           @click="handleClick(workItem.id, workItem.title)"
         >
-          <!-- <NuxtLink :to="`work/${workItem.title}`"> -->
           <div class="ImageContainer">
             <nuxt-img
               class="HomeImage Image"
@@ -43,7 +42,6 @@
             <SvgArrowDownRight />
             {{ workItem?.title }}
           </div>
-          <!-- </NuxtLink> -->
         </div>
       </TransitionGroup>
     </section>
@@ -89,7 +87,6 @@ const handleClick = (id: number, title: string) => {
     grid-template-columns: 1fr 1fr;
   }
 
-
   .HomeItem {
     cursor: pointer;
     transition: all 1s var(--stagger);
@@ -123,11 +120,11 @@ const handleClick = (id: number, title: string) => {
     }
 
     &.fade-out {
-      transition: opacity .2s var(--stagger) ease;
+      transition: opacity 0.2s var(--stagger) ease;
       opacity: 0;
     }
     &.fade-late {
-      transition: opacity 1s .2s ease;
+      transition: opacity 1s 0.2s ease;
       opacity: 0;
     }
   }
