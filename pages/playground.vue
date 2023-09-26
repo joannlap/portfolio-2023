@@ -35,32 +35,31 @@ const playground = {
     },
     {
       src: "/images/playground/theOrphans.webp",
-      alt: "An 3D model of my work name, Joann Lap",
+      alt: "An Illustration of my game, the Orphans",
     },
     {
       src: "/images/playground/inflation.webp",
-      alt: "An 3D model of my name, Joann",
+      alt: "A 3D model of my name, Joann",
     },
     {
       src: "/images/playground/joannlap--round-v4.webp",
-      alt: "An 3D model of my name, Joann",
+      alt: "A 3D model of my name, Joann Lap",
     },
-
     {
       src: "/images/playground/customs-kirby.webp",
-      alt: "An 3D model of my work name, Joann Lap",
+      alt: "Kirby Shoe design side 1",
     },
     {
       src: "/images/playground/custom-kirby-1.webp",
-      alt: "An 3D model of my work name, Joann Lap",
+      alt: "Kirby Shoe design side 2",
     },
     {
       src: "/images/playground/dragonball-1.webp",
-      alt: "An 3D model of my work name, Joann Lap",
+      alt: "Dragonball Shoe design side 1",
     },
     {
       src: "/images/playground/dragonball-2.webp",
-      alt: "An 3D model of my work name, Joann Lap",
+      alt: "Dragonball Shoe design side 2",
     },
   ],
 };

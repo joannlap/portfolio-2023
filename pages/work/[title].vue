@@ -83,7 +83,7 @@
             :src="
               getWork?.images?.[calculateImageIndex(rows, rowIndex, colIndex)] as string | undefined
             "
-            alt="#"
+            :alt="'Project ' + getWork.title + ' Afbeelding'"
           />
         </div>
       </div>
