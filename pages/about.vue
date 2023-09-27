@@ -13,10 +13,7 @@
       With a bachelors degree in interaction design, I have paved my way
       developing a strong interest in graphic design and craftsmanship. Next to
       design my passion for dance has grown over the past couple years that it
-      has taken it’s own journey and career path.<br />
-      <br />
-      → link resumé:
-      <a href="https://read.cv/joannlap">https://read.cv/joannlap</a>
+      has taken it’s own journey and career path.
     </p>
   </section>
   <div class="MobileFooter">
