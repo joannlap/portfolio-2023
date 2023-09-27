@@ -16,6 +16,7 @@ export const useWorkStore = definePiniaStore("work-store", {
           [
             "/images/work/LL-tribute/Lowlands-50yrs-hiphop-intro_3.webm",
             "/images/work/LL-tribute/LL-tribute.webp",
+            "/images/work/LL-tribute/Lowlands-50yrs-hiphop-intro_3.mp4",
           ],
           "/images/work/LL-tribute/73broke.webp",
           "/images/work/LL-tribute/electrifying.webp",
@@ -52,10 +53,12 @@ export const useWorkStore = definePiniaStore("work-store", {
           [
             "/images/work/FD-Bootcamp/btcmp-promo.webm",
             "/images/work/FD-Bootcamp/btcmp-promo.webp",
+            "/images/work/FD-Bootcamp/btcmp-promo.mp4",
           ],
           [
             "/images/work/FD-Bootcamp/btcmp-teaser_3.webm",
             "/images/work/FD-Bootcamp/btcmp-teaser.webp",
+            "/images/work/FD-Bootcamp/btcmp-teaser_3.mp4",
           ],
           "/images/work/FD-Bootcamp/FD-BOOTCAMP-SCHEDULE-W1.webp",
           "/images/work/FD-Bootcamp/FD-BOOTCAMP-SCHEDULE-W2.webp",
@@ -100,6 +103,7 @@ export const useWorkStore = definePiniaStore("work-store", {
           [
             "/images/work/yeye/landscape.webm",
             "/images/work/yeye/yeye-logo.webp",
+            "/images/work/yeye/landscape.mp4",
           ],
           "/images/work/yeye/yeye-pattern1.webp",
           "/images/work/yeye/yeye-pattern2.webp",

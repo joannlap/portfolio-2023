@@ -60,6 +60,14 @@
                 "
                 type="video/webm"
               />
+              <source
+                :src="
+                  getWork?.images?.[
+                    calculateImageIndex(rows, rowIndex, colIndex)
+                  ][2]
+                "
+                type="video/mp4"
+              />
               Browser does not support video tag
             </video>
             <div
