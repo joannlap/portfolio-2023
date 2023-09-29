@@ -6,7 +6,7 @@
 
 <script setup lang="ts">
 useHead({
-  title: "Jo-ann Lap",
+  title: "Jo-Ann LAP",
   meta: [
     {
       name: "description",
