@@ -5,6 +5,9 @@ export default defineNuxtConfig({
   ssr: false,
   image: {
     provider: "netlify",
+    cloudinary: {
+      baseURL: "https://res.cloudinary.com/dkz244x00/image/upload/",
+    },
   },
   modules: [
     [
@@ -15,9 +18,13 @@ export default defineNuxtConfig({
     ],
     "@nuxtjs/google-fonts",
     "@nuxt/image-edge",
+    "@nuxtjs/cloudinary",
   ],
   runtimeConfig: {
     // Private keys are only available on the server
+    CLOUDINARY_CLOUD_NAME: process.env.CLOUDINARY_CLOUD_NAME,
+    CLOUDINARY_API_KEY: process.env.CLOUDINARY_API_KEY,
+    CLOUDINARY_API_SECRET: process.env.CLOUDINARY_API_SECRET,
     FIREBASE_API_KEY: process.env.FIREBASE_API_KEY,
     FIREBASE_AUTH_DOMAIN: process.env.FIREBASE_AUTH_DOMAIN,
     FIREBASE_PROJECT_ID: process.env.FIREBASE_PROJECT_ID,
@@ -34,7 +41,7 @@ export default defineNuxtConfig({
       FIREBASE_MESSAGING_SENDER_ID: process.env.FIREBASE_MESSAGING_SENDER_ID,
       FIREBASE_APP_ID: process.env.FIREBASE_APP_ID,
       FIREBASE_MEASUREMENT_ID: process.env.FIREBASE_MEASUREMENT_ID,
-    }
+    },
   },
   css: ["normalize.css/normalize.css"],
   vite: {
