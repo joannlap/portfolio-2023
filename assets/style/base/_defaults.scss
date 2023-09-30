@@ -44,3 +44,7 @@ h2 {
     margin: 4rem 0;
   }
 }
+
+html::before {
+  background-color: transparent;
+}
