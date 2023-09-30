@@ -33,6 +33,7 @@
           Browser does not support video tag
         </video>
         <nuxt-img provider="cloudinary" :src="item" v-else />
+        {{ item }}
         <button>Remove</button>
       </div>
     </div>

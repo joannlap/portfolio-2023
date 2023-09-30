@@ -1,6 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
-import { getFirestore, addDoc, collection } from "firebase/firestore";
+import { getFirestore, setDoc, doc, collection } from "firebase/firestore";
 import { getAnalytics } from "firebase/analytics";
 
 export default defineNuxtPlugin((nuxtApp) => {
@@ -205,8 +205,14 @@ export default defineNuxtPlugin((nuxtApp) => {
   // Function to add project data to Firestore
   async function addProjects() {
     for (const projectData of projectsData) {
+      console.log("Data: ", projectData.id.toString());
       try {
-        const docRef = await addDoc(collection(firestore, "work"), projectData);
+        if (!projectData || !projectData.id.toString()) return;
+        const docRef = await setDoc(
+          doc(firestore, "work", projectData.id.toString()),
+          projectData
+        );
+
         console.log(`Document written with ID: ${docRef.id}`);
       } catch (e) {
         console.error("Error adding document: ", e);
