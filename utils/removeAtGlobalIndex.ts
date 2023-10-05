@@ -18,8 +18,14 @@ const removeAtGlobalIndex = (
       // Remove the item at the specified position within the row
       rowItems.splice(positionInRow, 1);
 
-      // Update the row string
-      layoutArray.value[i] = rowItems.join(" ");
+      // Check if the child array is empty now
+      if (rowItems.length === 0) {
+        // Remove the whole child array
+        layoutArray.value.splice(i, 1);
+      } else {
+        // Update the row string
+        layoutArray.value[i] = rowItems.join(" ");
+      }
 
       // Break out of loop since the item has been removed
       break;

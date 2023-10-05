@@ -20,6 +20,9 @@ export default defineNuxtConfig({
     "@nuxt/image-edge",
     "@nuxtjs/cloudinary",
   ],
+  cloudinary: {
+    cloudName: process.env.CLOUDINARY_CLOUD_NAME,
+  },
   runtimeConfig: {
     // Private keys are only available on the server
     CLOUDINARY_CLOUD_NAME: process.env.CLOUDINARY_CLOUD_NAME,

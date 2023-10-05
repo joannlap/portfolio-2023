@@ -1,7 +1,7 @@
 import { Ref } from "vue";
 const insertAtGlobalIndex = (
-  layoutArray: Ref<string[]>,
-  newItem: string,
+  layoutArray: Ref<any[]>,
+  newItem: any,
   targetIndex: number
 ) => {
   let currentIndex = 0;
@@ -14,7 +14,7 @@ const insertAtGlobalIndex = (
 
       // Extract the items in the row and insert the new item
       const rowItems = layoutArray.value[i].trim().split(" ");
-      rowItems.splice(positionInRow, 0, newItem);
+      rowItems.splice(positionInRow + 1, 0, newItem);
 
       // Update the row string
       layoutArray.value[i] = rowItems.join(" ");

@@ -89,27 +89,69 @@
               addItem(calculateImageIndex(rows, rowIndex, colIndex), id, layout)
             "
           >
-            Add item
+            <SvgAdd />
           </button>
           <!-- <button class="column-replace" @click="replaceImage()">Replace image</button> -->
-          <input
-            type="file"
-            name="image"
-            accept="image/webm"
-            ref=""
-            @click="replaceImage(calculateImageIndex(rows, rowIndex, colIndex))"
-          />
+          <label
+            class="column-fr"
+            :for="`fr-${calculateImageIndex(rows, rowIndex, colIndex)}`"
+          >
+            FR:
+            <input
+              :id="`fr-${calculateImageIndex(rows, rowIndex, colIndex)}`"
+              type="number"
+              :value="
+                getAtGlobalIndex(
+                  currentLayout,
+                  calculateImageIndex(rows, rowIndex, colIndex)
+                )?.replace('fr', '')
+              "
+              @keyup.enter="
+                (e) =>
+                  updateImageSize(
+                    e,
+                    calculateImageIndex(rows, rowIndex, colIndex)
+                  )
+              "
+            />
+          </label>
+          <label
+            :for="`replace-${calculateImageIndex(rows, rowIndex, colIndex)}`"
+            class="column-replace"
+          >
+            <CldUploadWidget
+              v-slot="{ open }"
+              uploadPreset="unsigned_bootcamp"
+              :onUpload="handleUpload"
+            >
+              <button type="button" @click="open">Upload an Image</button>
+            </CldUploadWidget>
+            <!-- <CldUploadButton
+              signatureEndpoint="<API Endpoint (ex: /api/sign-cloudinary-params)>"
+              >Upload</CldUploadButton
+            > -->
+            <!-- <input
+              :id="`replace-${calculateImageIndex(rows, rowIndex, colIndex)}`"
+              type="file"
+              name="image"
+              accept="image/webm"
+              @click="
+                (e) =>
+                  replaceImage(e, calculateImageIndex(rows, rowIndex, colIndex))
+              "
+            /> -->
+          </label>
           <button
             class="column-remove"
             @click="
               removeItem(calculateImageIndex(rows, rowIndex, colIndex), layout)
             "
           >
-            <SvgClose /> Remove item
+            <SvgTrash />
           </button>
         </div>
-        <div class="row-below">Add row below</div>
-        <div class="row-above">Add row above</div>
+        <div class="row-below"><SvgArrowDown />Add row below</div>
+        <div class="row-above"><SvgArrowUp />Add row above</div>
       </div>
     </div>
     <button @click="saveWorkItem()">saveWorkItem</button>
@@ -117,19 +159,27 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted } from "vue";
 import { useWorkStore } from "~/stores/work";
-import SvgClose from "~/assets/icons/close.svg?component";
-import { Cloudinary } from "@cloudinary/url-gen";
+import SvgTrash from "~/assets/icons/trash.svg?component";
+import SvgAdd from "~/assets/icons/add.svg?component";
+import SvgArrowUp from "~/assets/icons/arrow-up.svg?component";
+import SvgArrowDown from "~/assets/icons/arrow-down.svg?component";
 import insertAtGlobalIndex from "~/utils/insertAtGlobalIndex";
 import removeAtGlobalIndex from "~/utils/removeAtGlobalIndex";
+import getAtGlobalIndex from "~/utils/getAtGlobalIndex";
+import { Cloudinary } from "@cloudinary/url-gen";
+definePageMeta({
+  title: "CMS",
+  layout: "admin",
+  middleware: ["auth"],
+});
+const { public: config } = useRuntimeConfig();
+
 const cld = new Cloudinary({
   cloud: {
-    cloudName: "dkz244x00",
+    cloudName: config.cloudinary.cloudName,
   },
 });
-
-// import { v2 as cloudinary } from "cloudinary";
 
 type MediaElement = {
   mp4?: string;
@@ -149,11 +199,6 @@ type Work = {
   desktopLayout: string;
 };
 const workStore = useWorkStore(); // Initialize the store
-definePageMeta({
-  title: "CMS",
-  layout: "admin",
-  middleware: ["auth"],
-});
 
 const route = useRoute();
 
@@ -167,6 +212,11 @@ const mobileLayout: Ref<string> = ref("");
 const desktopLayout: Ref<string> = ref("");
 const tags: Ref<string[]> = ref([]);
 const media: Ref<MediaElement[]> = ref([]);
+
+// Store the current layout
+const currentLayout = ref<string[]>([]);
+const dormantLayout = ref<string[]>([]);
+const layout = ref<string>("desktop");
 const rows: ComputedRef<string[][]> = computed(() => {
   return currentLayout.value.map((r) =>
     r
@@ -175,17 +225,11 @@ const rows: ComputedRef<string[][]> = computed(() => {
       .map((c) => c.trim())
   );
 });
-
 // const removeImage = (image) => {
 //   cloudinary.v2.api
 //     .delete_resources([image], { type: "upload", resource_type: "image" })
 //     .then(console.log);
 // };
-
-// Store the current layout
-const currentLayout = ref<string[]>([]);
-const dormantLayout = ref<string[]>([]);
-const layout = ref<string>("desktop");
 
 // Function to update layout based on screen width
 const updateLayout = (newLayout: string) => {
@@ -237,7 +281,6 @@ const addItem = (mediaIndex: number, id: string, layout: string) => {
   });
   insertAtGlobalIndex(currentLayout, "1fr", mediaIndex);
   insertAtGlobalIndex(dormantLayout, "1fr", mediaIndex);
-  console.log(currentLayout);
 
   if (layout === "desktop") {
     desktopLayout.value = arrayToString(currentLayout.value);
@@ -270,9 +313,26 @@ const saveWorkItem = () => {
     );
   }
 };
-const replaceImage = (mediaIndex: number) => {
+const replaceImage = (e: Event, mediaIndex: number, test: any) => {
+  console.log(media.value[0]);
   media.value.splice(mediaIndex, 1);
+  console.log("Event replace", e);
+  console.log("Event test", test);
+  media.value.splice(mediaIndex, 0, { image: "placeholder-image" });
+};
+
+const updateImageSize = (e: any, mediaIndex: number) => {
   removeAtGlobalIndex(currentLayout, mediaIndex);
+  insertAtGlobalIndex(
+    currentLayout,
+    `${e.target.value < 0.3 ? "0.3" : e.target.value}fr`,
+    mediaIndex - 1
+  );
+};
+
+const handleUpload = (result: any, widget: any) => {
+  console.log("result", result);
+  console.log("widget", widget);
 };
 
 onMounted(async () => {
@@ -284,16 +344,14 @@ onMounted(async () => {
   description.value = workItem[0].description;
   client.value = workItem[0].client;
   date.value = workItem[0].date;
-  console.log(workItem[0].tags);
   tags.value = workItem[0].tags;
-  console.log(tags.value);
   media.value = workItem[0].media;
-  console.log(media.value);
   mobileLayout.value = workItem[0].mobileLayout;
   desktopLayout.value = workItem[0].desktopLayout;
 
   // Initial layout setting
   updateLayout("desktop");
+  console.log("Cloudinary: ", cld);
 });
 </script>
 
@@ -326,7 +384,7 @@ textarea {
   position: relative;
   display: grid;
   column-gap: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
 }
 .column {
   width: 100%;
@@ -344,10 +402,12 @@ textarea {
 .row-above,
 .column-add,
 .column-remove,
-.column-replace {
+.column-replace,
+.column-fr {
   position: absolute;
   z-index: 10;
   display: flex;
+  flex-direction: row;
 
   svg {
     width: 25px;
@@ -362,23 +422,53 @@ textarea {
   top: 0;
   right: -8em;
 }
+
+.column-fr {
+  bottom: 2em;
+  left: 50%;
+  transform: translateX(-50%);
+  column-gap: 1em;
+  input {
+    max-width: 30px;
+  }
+}
 .column-add {
   top: 50%;
   transform: translateY(-50%);
-  right: 0;
-  background-color: green;
+  right: -1em;
+  background-color: darkgreen;
+  color: white;
+  border: solid 1px black;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .column-remove {
   top: 0;
   transform: translateY(-50%);
   left: 0;
-  background: red;
+  background: darkred;
+  color: white;
+  border: solid 1px black;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .column-replace {
   top: 0;
-  transform: translateY(-50%);
   right: 0;
   background: yellow;
+  width: 30px;
+  height: 30px;
+  input {
+    display: none;
+  }
 }
 .Remove {
   position: absolute;
