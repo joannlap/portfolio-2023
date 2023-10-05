@@ -50,23 +50,26 @@
               controls
               provider="cloudinary"
               :poster="
-                createCloudinaryURL(
-                  media?.[calculateImageIndex(rows, rowIndex, colIndex)]?.cover
+                createImageCloudinaryURL(
+                  media?.[calculateImageIndex(rows, rowIndex, colIndex)]
+                    ?.cover ?? ''
                 )
               "
             >
               <source
                 :src="
-                  createCloudinaryURL(
-                    media?.[calculateImageIndex(rows, rowIndex, colIndex)]?.webm
+                  createVideoCloudinaryURL(
+                    media?.[calculateImageIndex(rows, rowIndex, colIndex)]
+                      ?.webm ?? ''
                   )
                 "
                 type="video/webm"
               />
               <source
                 :src="
-                  createCloudinaryURL(
-                    media?.[calculateImageIndex(rows, rowIndex, colIndex)]?.mp4
+                  createVideoCloudinaryURL(
+                    media?.[calculateImageIndex(rows, rowIndex, colIndex)]
+                      ?.mp4 ?? ''
                   )
                 "
                 type="video/mp4"
@@ -75,28 +78,41 @@
             </video>
           </div>
           <nuxt-img
-            v-if="
-              !media?.[calculateImageIndex(rows, rowIndex, colIndex)]?.cover
-            "
+            v-if="media?.[calculateImageIndex(rows, rowIndex, colIndex)]?.image"
             provider="cloudinary"
-            :src="
-              media?.[calculateImageIndex(rows, rowIndex, colIndex)].image || ''
-            "
+            :src="media?.[calculateImageIndex(rows, rowIndex, colIndex)].image"
             :alt="'Project ' + title + ' Afbeelding'"
           />
-          <div
+          <button
             class="column-add"
-            @click="addItem(calculateImageIndex(rows, rowIndex, colIndex))"
+            @click="
+              addItem(calculateImageIndex(rows, rowIndex, colIndex), id, layout)
+            "
           >
             Add item
-          </div>
-          <div class="column-replace">Replace item</div>
-          <div class="column-remove"><SvgClose /> Remove item</div>
+          </button>
+          <!-- <button class="column-replace" @click="replaceImage()">Replace image</button> -->
+          <input
+            type="file"
+            name="image"
+            accept="image/webm"
+            ref=""
+            @click="replaceImage(calculateImageIndex(rows, rowIndex, colIndex))"
+          />
+          <button
+            class="column-remove"
+            @click="
+              removeItem(calculateImageIndex(rows, rowIndex, colIndex), layout)
+            "
+          >
+            <SvgClose /> Remove item
+          </button>
         </div>
         <div class="row-below">Add row below</div>
         <div class="row-above">Add row above</div>
       </div>
     </div>
+    <button @click="saveWorkItem()">saveWorkItem</button>
   </section>
 </template>
 
@@ -105,6 +121,8 @@ import { onMounted } from "vue";
 import { useWorkStore } from "~/stores/work";
 import SvgClose from "~/assets/icons/close.svg?component";
 import { Cloudinary } from "@cloudinary/url-gen";
+import insertAtGlobalIndex from "~/utils/insertAtGlobalIndex";
+import removeAtGlobalIndex from "~/utils/removeAtGlobalIndex";
 const cld = new Cloudinary({
   cloud: {
     cloudName: "dkz244x00",
@@ -114,10 +132,10 @@ const cld = new Cloudinary({
 // import { v2 as cloudinary } from "cloudinary";
 
 type MediaElement = {
-  mp4: string;
-  webm: string;
-  cover: string;
-  image: string;
+  mp4?: string;
+  webm?: string;
+  cover?: string;
+  image?: string;
 };
 
 type Work = {
@@ -141,15 +159,15 @@ const route = useRoute();
 
 // Your Component Code
 let id = route.params.id;
-let title: Ref<string> = ref("");
-let description: Ref<string> = ref("");
-let client: Ref<string> = ref("");
-let date: Ref<string> = ref("");
-let mobileLayout: Ref<string> = ref("");
-let desktopLayout: Ref<string> = ref("");
-let tags: Ref<string[]> = ref([]);
-let media: Ref<MediaElement[]> = ref([]);
-let rows: ComputedRef<string[][]> = computed(() => {
+const title: Ref<string> = ref("");
+const description: Ref<string> = ref("");
+const client: Ref<string> = ref("");
+const date: Ref<string> = ref("");
+const mobileLayout: Ref<string> = ref("");
+const desktopLayout: Ref<string> = ref("");
+const tags: Ref<string[]> = ref([]);
+const media: Ref<MediaElement[]> = ref([]);
+const rows: ComputedRef<string[][]> = computed(() => {
   return currentLayout.value.map((r) =>
     r
       .trim()
@@ -166,15 +184,21 @@ let rows: ComputedRef<string[][]> = computed(() => {
 
 // Store the current layout
 const currentLayout = ref<string[]>([]);
+const dormantLayout = ref<string[]>([]);
+const layout = ref<string>("desktop");
 
 // Function to update layout based on screen width
-const updateLayout = (layout: string) => {
-  if (layout === "mobile") {
+const updateLayout = (newLayout: string) => {
+  if (newLayout === "mobile") {
     // Use mobile layout
     currentLayout.value = mobileLayout.value?.split("/") || [];
+    dormantLayout.value = desktopLayout.value?.split("/") || [];
+    layout.value = "mobile";
   } else {
     // Use desktop layout
     currentLayout.value = desktopLayout.value?.split("/") || [];
+    dormantLayout.value = mobileLayout.value?.split("/") || [];
+    layout.value = "desktop";
   }
 };
 
@@ -198,17 +222,62 @@ const calculateImageIndex = (
   }
   return -1; // If we can't find it for some reason, return an error code (-1)
 };
-const createCloudinaryURL = (item: string) => {
+const createImageCloudinaryURL = (item: string) => {
   return cld.image(item).format("auto").quality("auto").toURL();
 };
-const addItem = (mediaIndex: number) => {
-  console.log(mediaIndex);
+const createVideoCloudinaryURL = (item: string) => {
+  return cld.video(item).format("auto").quality("auto").toURL();
+};
+const arrayToString = (array: string[]): string => {
+  return array.join(" / ");
+};
+const addItem = (mediaIndex: number, id: string, layout: string) => {
+  media.value.splice(mediaIndex + 1, 0, {
+    image: "placeholder-image.jpeg",
+  });
+  insertAtGlobalIndex(currentLayout, "1fr", mediaIndex);
+  insertAtGlobalIndex(dormantLayout, "1fr", mediaIndex);
+  console.log(currentLayout);
+
+  if (layout === "desktop") {
+    desktopLayout.value = arrayToString(currentLayout.value);
+    mobileLayout.value = arrayToString(dormantLayout.value);
+  } else if (layout === "mobile") {
+    mobileLayout.value = arrayToString(currentLayout.value);
+    desktopLayout.value = arrayToString(dormantLayout.value);
+  }
+};
+const removeItem = (mediaIndex: number, layout: string) => {
+  media.value.splice(mediaIndex, 1);
+  removeAtGlobalIndex(currentLayout, mediaIndex);
+  removeAtGlobalIndex(dormantLayout, mediaIndex);
+  if (layout === "desktop") {
+    desktopLayout.value = arrayToString(currentLayout.value);
+    mobileLayout.value = arrayToString(dormantLayout.value);
+  } else if (layout === "mobile") {
+    mobileLayout.value = arrayToString(currentLayout.value);
+    desktopLayout.value = arrayToString(dormantLayout.value);
+  }
+};
+
+const saveWorkItem = () => {
+  if (media.value && desktopLayout && mobileLayout) {
+    workStore.saveWorkItem(
+      id,
+      media.value,
+      desktopLayout.value,
+      mobileLayout.value
+    );
+  }
+};
+const replaceImage = (mediaIndex: number) => {
+  media.value.splice(mediaIndex, 1);
+  removeAtGlobalIndex(currentLayout, mediaIndex);
 };
 
 onMounted(async () => {
   if (workStore.work.length === 0) await workStore.fetchWorks();
   const workItem = workStore.getWorkById(parseInt(id));
-  console.log("WorkItem", workItem);
   if (!workItem) navigateTo("/cms/work");
 
   title.value = workItem[0].title;
@@ -218,15 +287,13 @@ onMounted(async () => {
   console.log(workItem[0].tags);
   tags.value = workItem[0].tags;
   console.log(tags.value);
-  media.value = workItem[0].images;
+  media.value = workItem[0].media;
   console.log(media.value);
   mobileLayout.value = workItem[0].mobileLayout;
   desktopLayout.value = workItem[0].desktopLayout;
 
   // Initial layout setting
   updateLayout("desktop");
-
-  console.log("rows", rows);
 });
 </script>
 

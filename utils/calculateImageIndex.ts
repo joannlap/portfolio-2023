@@ -20,4 +20,3 @@ const calculateImageIndex = (
   return -1; // If we can't find it for some reason, return an error code (-1)
 };
 export default calculateImageIndex;
-

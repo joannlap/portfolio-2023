@@ -38,7 +38,7 @@ export default defineNuxtPlugin((nuxtApp) => {
       tags: ["Motion Design"],
       description:
         "August 2023 marks the 50th anniversary of Hiphop, a genre known for its rich cultural history in music. To celebrate this milestone, Coke Studio is presenting a special tribute show titled '50 Years of Hiphop' in collaboration with Lowlands and Foundation Amsterdam Hiphop Academy. \n\n As part of the tribute show, an introductory video showcases a short timeline highlighting the pioneers who have had a significant impact on Hiphop music. This video is a compilation of interviews, music clips, and dynamic text motion.",
-      images: [
+      media: [
         {
           webm: "/work/LL-tribute/Lowlands-50yrs-hiphop-intro_3.webm",
           cover: "/work/LL-tribute/LL-tribute.webp",
@@ -64,7 +64,7 @@ export default defineNuxtPlugin((nuxtApp) => {
       tags: ["Graphic design", "Motion design", "3D"],
       description:
         "Foundation Bootcamp can be summarized as a journey of hard work, growth, challenges, physical and mental exertion and knowledge. Every summer, Foundation Hiphop Academy organizes a 3-week intensive bootcamp that allows dancers to immerse themselves in the elements of street and club culture. The bootcamp offers over 60 workshops in various street styles, as well as lectures, parties and an evaluation program known as the Hawks Method. \n\n The visual language of Foundation Bootcamp is influenced by street and pop art. My inspiration for the design came from hiphop and street magazines, graffiti art, and movie posters. The overall approach aimed to capture the essence of a cityscape, combining elements like an assembly of Avengers.",
-      images: [
+      media: [
         { image: "/work/FD-Bootcamp/FD-BOOTCAMP2023-FEED.webp" },
         { image: "/work/FD-Bootcamp/gifbootcamps.gif" },
         { image: "/work/FD-Bootcamp/arjun.webp" },
@@ -105,7 +105,7 @@ export default defineNuxtPlugin((nuxtApp) => {
       tags: ["Graphic design"],
       description:
         "NightOwls Amsterdam presents an event in collaboration with the multicultural festival Kwaku at Nelson Mandelapark. The event will feature Afrotech, House Music, Deep House, and Techno sounds. \n\n The approach for this collaboration was to create a visually strong illustration that captures the essence of the event and its vibrant atmosphere by using a selected color palette that complements the event.",
-      images: [
+      media: [
         { image: "/work/nightowls/kwaku-2023-poster.webp" },
         { image: "/work/nightowls/kwaku-0508-story.webp" },
         { image: "/work/nightowls/Nightowls_Kwaku-3.webp" },
@@ -125,7 +125,7 @@ export default defineNuxtPlugin((nuxtApp) => {
       tags: ["Motion design"],
       description:
         "Yeye is an event that brings together the diverse sounds of African diasporic music, good vibes and a celebration of culture. It’s a gathering where people can immerse themselves in the rhythms and melodies that have emerged from the African diaspora, while enjoying delicious food. \n\n For the first event, a looped video backdrop will showcase different music clips with animations featuring Adrinka symbols.",
-      images: [
+      media: [
         {
           webm: "/work/yeye/landscape.webm",
           cover: "/work/yeye/yeye-logo.webp",
@@ -149,7 +149,7 @@ export default defineNuxtPlugin((nuxtApp) => {
       tags: ["Graphic design"],
       description:
         "The Foundation Hiphop Academy, in collaboration with the Public Library of Amsterdam, presents 'Hiphop is Heritage' or 'Hiphop is erfgoed'. This program includes lectures and debates that explore the theme of why Hiphop is considered heritage.",
-      images: [
+      media: [
         { image: "/work/HHisErfgoed/fd-lecture-poster.webp" },
         { image: "/work/HHisErfgoed/HHerfgoed-sugacane-feed.webp" },
         { image: "/work/HHisErfgoed/HHerfgoed-ArjunChadha-feed.webp" },
@@ -173,7 +173,7 @@ export default defineNuxtPlugin((nuxtApp) => {
       tags: ["Graphic design"],
       description:
         "Foundation Hiphop Academy, located in the South-East of Amsterdam, is a Hiphop Academy that provides knowledge and development in various street styles within the street culture. This enables dancers to explore, build, and develop their skills in the art form. 'For self-elevation, you need foundation' (Foundation, 2020). \n\n These posters showcase the classes that take place at Foundation, as well as past classes and events.",
-      images: [
+      media: [
         { image: "/work/foundation/HH-KELLY-NEW.webp" },
         { image: "/work/foundation/HH-MOSEY-NEW-story.webp" },
         { image: "/work/foundation/House-Jasmin-story.webp" },
