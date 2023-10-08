@@ -1,0 +1,28 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "strapi": "strapi"
+  },
+  "devDependencies": {
+    "@nuxt/types": "^2.15.8",
+    "@nuxt/typescript-build": "^2.1.0",
+    "node-sass": "^8.0.0",
+    "nuxt": "3.0.0"
+  },
+  "dependencies": {
+    "@nuxtjs/i18n": "^7.3.0",
+    "@nuxtjs/markdownit": "^2.0.0",
+    "@nuxtjs/strapi": "^1.6.3",
+    "@pinia/nuxt": "^0.4.3",
+    "@volar-plugins/vetur": "^0.1.0",
+    "dotenv": "^16.0.3",
+    "sass": "^1.57.1",
+    "sass-loader": "^13.2.0",
+    "vue": "^3.2.45"
+  }
+}
