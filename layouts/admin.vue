@@ -53,6 +53,12 @@ useHead({
   htmlAttrs: {
     lang: "en",
   },
+  script: [
+    {
+      src: "https://widget.cloudinary.com/v2.0/global/all.js",
+      body: true,
+    },
+  ],
 });
 </script>
 <style lang="scss">

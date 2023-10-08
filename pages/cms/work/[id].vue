@@ -119,13 +119,14 @@
             :for="`replace-${calculateImageIndex(rows, rowIndex, colIndex)}`"
             class="column-replace"
           >
-            <CldUploadWidget
+            <UploadWidget msg="test" />
+            <!-- <CldUploadWidget
               v-slot="{ open }"
               uploadPreset="unsigned_bootcamp"
               :onUpload="handleUpload"
             >
               <button type="button" @click="open">Upload an Image</button>
-            </CldUploadWidget>
+            </CldUploadWidget> -->
             <!-- <CldUploadButton
               signatureEndpoint="<API Endpoint (ex: /api/sign-cloudinary-params)>"
               >Upload</CldUploadButton
@@ -180,7 +181,7 @@ const cld = new Cloudinary({
     cloudName: config.cloudinary.cloudName,
   },
 });
-
+console.log("ID CLOUD", cld);
 type MediaElement = {
   mp4?: string;
   webm?: string;
@@ -225,6 +226,7 @@ const rows: ComputedRef<string[][]> = computed(() => {
       .map((c) => c.trim())
   );
 });
+
 // const removeImage = (image) => {
 //   cloudinary.v2.api
 //     .delete_resources([image], { type: "upload", resource_type: "image" })
@@ -330,9 +332,10 @@ const updateImageSize = (e: any, mediaIndex: number) => {
   );
 };
 
-const handleUpload = (result: any, widget: any) => {
+const handleUpload = (result: any, options: any) => {
   console.log("result", result);
-  console.log("widget", widget);
+  console.log("options", options);
+  console.log("uploadImage", document.getElementById("uploadedimage"));
 };
 
 onMounted(async () => {

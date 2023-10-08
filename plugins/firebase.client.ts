@@ -21,11 +21,12 @@ export default defineNuxtPlugin((nuxtApp) => {
   const auth = getAuth(app);
   const firestore = getFirestore(app);
 
-  nuxtApp.vueApp.provide("auth", auth);
-  nuxtApp.provide("auth", auth);
+  // nuxtApp.vueApp.provide("auth", auth);
+  // nuxtApp.provide("auth", auth);
 
-  nuxtApp.vueApp.provide("firestore", firestore);
-  nuxtApp.provide("firestore", firestore);
+  // nuxtApp.vueApp.provide("firestore", firestore);
+  // nuxtApp.provide("firestore", firestore);
+
   const projectsData = [
     {
       id: 1,
@@ -203,22 +204,22 @@ export default defineNuxtPlugin((nuxtApp) => {
   ];
 
   // Function to add project data to Firestore
-  async function addProjects() {
-    for (const projectData of projectsData) {
-      console.log("Data: ", projectData.id.toString());
-      try {
-        if (!projectData || !projectData.id.toString()) return;
-        const docRef = await setDoc(
-          doc(firestore, "work", projectData.id.toString()),
-          projectData
-        );
+  // async function addProjects() {
+  //   for (const projectData of projectsData) {
+  //     console.log("Data: ", projectData.id.toString());
+  //     try {
+  //       if (!projectData || !projectData.id.toString()) return;
+  //       const docRef = await setDoc(
+  //         doc(firestore, "work", projectData.id.toString()),
+  //         projectData
+  //       );
 
-        console.log(`Document written with ID: ${docRef.id}`);
-      } catch (e) {
-        console.error("Error adding document: ", e);
-      }
-    }
-  }
+  //       console.log(`Document written with ID: ${docRef.id}`);
+  //     } catch (e) {
+  //       console.error("Error adding document: ", e);
+  //     }
+  //   }
+  // }
 
   // Execute the function
   // addProjects();
