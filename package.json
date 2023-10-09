@@ -27,6 +27,7 @@
     "@vue/language-service": "^1.8.15",
     "@vuelidate/core": "^2.0.3",
     "@vuelidate/validators": "^2.0.3",
+    "axios": "^1.5.1",
     "cloudinary": "^1.41.0",
     "dotenv": "^16.3.1",
     "firebase": "^10.4.0",

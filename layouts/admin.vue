@@ -55,7 +55,7 @@ useHead({
   },
   script: [
     {
-      src: "https://widget.cloudinary.com/v2.0/global/all.js",
+      src: "https://media-library.cloudinary.com/global/all.js",
       body: true,
     },
   ],

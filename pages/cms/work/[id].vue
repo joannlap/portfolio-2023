@@ -1,4 +1,5 @@
 <template>
+  <div id="widget_container" :class="isMediaLibrary ? 'show' : ''"></div>
   <section>
     <div class="field">
       <h2>Title</h2>
@@ -51,6 +52,7 @@
               provider="cloudinary"
               :poster="
                 createImageCloudinaryURL(
+                  cld,
                   media?.[calculateImageIndex(rows, rowIndex, colIndex)]
                     ?.cover ?? ''
                 )
@@ -59,6 +61,7 @@
               <source
                 :src="
                   createVideoCloudinaryURL(
+                    cld,
                     media?.[calculateImageIndex(rows, rowIndex, colIndex)]
                       ?.webm ?? ''
                   )
@@ -68,6 +71,7 @@
               <source
                 :src="
                   createVideoCloudinaryURL(
+                    cld,
                     media?.[calculateImageIndex(rows, rowIndex, colIndex)]
                       ?.mp4 ?? ''
                   )
@@ -117,42 +121,44 @@
           </label>
           <label
             :for="`replace-${calculateImageIndex(rows, rowIndex, colIndex)}`"
-            class="column-replace"
+            aria-label="Upload & Replace image"
           >
-            <UploadWidget msg="test" />
-            <!-- <CldUploadWidget
-              v-slot="{ open }"
-              uploadPreset="unsigned_bootcamp"
-              :onUpload="handleUpload"
-            >
-              <button type="button" @click="open">Upload an Image</button>
-            </CldUploadWidget> -->
-            <!-- <CldUploadButton
-              signatureEndpoint="<API Endpoint (ex: /api/sign-cloudinary-params)>"
-              >Upload</CldUploadButton
-            > -->
-            <!-- <input
-              :id="`replace-${calculateImageIndex(rows, rowIndex, colIndex)}`"
-              type="file"
-              name="image"
-              accept="image/webm"
+            <button
+              id="open-btn"
+              class="column-replace"
               @click="
-                (e) =>
-                  replaceImage(e, calculateImageIndex(rows, rowIndex, colIndex))
+                handleUpload(calculateImageIndex(rows, rowIndex, colIndex))
               "
-            /> -->
+            >
+              <SvgReplace />
+            </button>
           </label>
           <button
             class="column-remove"
             @click="
               removeItem(calculateImageIndex(rows, rowIndex, colIndex), layout)
             "
+            aria-label="Remove image"
           >
             <SvgTrash />
           </button>
         </div>
-        <div class="row-below"><SvgArrowDown />Add row below</div>
-        <div class="row-above"><SvgArrowUp />Add row above</div>
+        <button
+          class="row-above"
+          @click="addRow('up', row, rowIndex)"
+          aria-label="Add row above"
+        >
+          <SvgAdd />
+          <SvgArrowUp />
+        </button>
+        <button
+          class="row-below"
+          @click="addRow('down', row, rowIndex)"
+          aria-label="Add row below"
+        >
+          <SvgAdd />
+          <SvgArrowDown />
+        </button>
       </div>
     </div>
     <button @click="saveWorkItem()">saveWorkItem</button>
@@ -165,10 +171,17 @@ import SvgTrash from "~/assets/icons/trash.svg?component";
 import SvgAdd from "~/assets/icons/add.svg?component";
 import SvgArrowUp from "~/assets/icons/arrow-up.svg?component";
 import SvgArrowDown from "~/assets/icons/arrow-down.svg?component";
+import SvgReplace from "~/assets/icons/replace.svg?component";
 import insertAtGlobalIndex from "~/utils/insertAtGlobalIndex";
 import removeAtGlobalIndex from "~/utils/removeAtGlobalIndex";
 import getAtGlobalIndex from "~/utils/getAtGlobalIndex";
 import { Cloudinary } from "@cloudinary/url-gen";
+import { v2 as cloudinary } from "cloudinary";
+import { arrayToString } from "~/utils/arrayToString";
+import {
+  createImageCloudinaryURL,
+  createVideoCloudinaryURL,
+} from "~/utils/createCloudinaryURL";
 definePageMeta({
   title: "CMS",
   layout: "admin",
@@ -181,6 +194,7 @@ const cld = new Cloudinary({
     cloudName: config.cloudinary.cloudName,
   },
 });
+
 console.log("ID CLOUD", cld);
 type MediaElement = {
   mp4?: string;
@@ -202,7 +216,8 @@ type Work = {
 const workStore = useWorkStore(); // Initialize the store
 
 const route = useRoute();
-
+const isMediaLibrary = ref<boolean>(false);
+const currentIndex = ref<number>(0);
 // Your Component Code
 let id = route.params.id;
 const title: Ref<string> = ref("");
@@ -226,12 +241,6 @@ const rows: ComputedRef<string[][]> = computed(() => {
       .map((c) => c.trim())
   );
 });
-
-// const removeImage = (image) => {
-//   cloudinary.v2.api
-//     .delete_resources([image], { type: "upload", resource_type: "image" })
-//     .then(console.log);
-// };
 
 // Function to update layout based on screen width
 const updateLayout = (newLayout: string) => {
@@ -268,15 +277,7 @@ const calculateImageIndex = (
   }
   return -1; // If we can't find it for some reason, return an error code (-1)
 };
-const createImageCloudinaryURL = (item: string) => {
-  return cld.image(item).format("auto").quality("auto").toURL();
-};
-const createVideoCloudinaryURL = (item: string) => {
-  return cld.video(item).format("auto").quality("auto").toURL();
-};
-const arrayToString = (array: string[]): string => {
-  return array.join(" / ");
-};
+
 const addItem = (mediaIndex: number, id: string, layout: string) => {
   media.value.splice(mediaIndex + 1, 0, {
     image: "placeholder-image.jpeg",
@@ -315,12 +316,11 @@ const saveWorkItem = () => {
     );
   }
 };
-const replaceImage = (e: Event, mediaIndex: number, test: any) => {
-  console.log(media.value[0]);
+const replaceImage = (mediaIndex: number, image: string) => {
+  console.log("Replace image", media.value);
+  console.log("Replace image", mediaIndex, image);
   media.value.splice(mediaIndex, 1);
-  console.log("Event replace", e);
-  console.log("Event test", test);
-  media.value.splice(mediaIndex, 0, { image: "placeholder-image" });
+  media.value.splice(mediaIndex, 0, { image: image });
 };
 
 const updateImageSize = (e: any, mediaIndex: number) => {
@@ -332,12 +332,30 @@ const updateImageSize = (e: any, mediaIndex: number) => {
   );
 };
 
-const handleUpload = (result: any, options: any) => {
-  console.log("result", result);
-  console.log("options", options);
-  console.log("uploadImage", document.getElementById("uploadedimage"));
+const handleUpload = (mediaIndex: number) => {
+  isMediaLibrary.value = true;
+  currentIndex.value = mediaIndex;
+  window.ml.show();
 };
-
+const addRow = (direction: string, row: Array, rowIndex: number) => {
+  const imageIndex = ref<number>(0);
+  const rowNumber = direction === "up" ? rowIndex : rowIndex + 1;
+  for (let i = 0; i < rows.value.length; i++) {
+    console.log(i, rowNumber);
+    if (i < rowNumber) {
+      imageIndex.value += rows.value[i].length;
+    }
+  }
+  currentLayout.value.splice(rowNumber, 0, "1fr");
+  console.log(imageIndex.value);
+  media.value.splice(imageIndex.value, 0, { image: "placeholder-image" });
+  imageIndex.value = 0;
+};
+const addRowDown = (row: Array, rowIndex: number) => {
+  console.log(rowIndex);
+  console.log(currentLayout.value);
+  currentLayout.value.splice(rowIndex + 1, 0, "1fr");
+};
 onMounted(async () => {
   if (workStore.work.length === 0) await workStore.fetchWorks();
   const workItem = workStore.getWorkById(parseInt(id));
@@ -354,7 +372,32 @@ onMounted(async () => {
 
   // Initial layout setting
   updateLayout("desktop");
-  console.log("Cloudinary: ", cld);
+
+  const projectFolder = "FD-Bootcamp";
+  window.ml = window.cloudinary.createMediaLibrary(
+    {
+      cloud_name: config.cloudinary.cloudName,
+      api_key: config.cloudinary.apiKey,
+      remove_header: true,
+      max_files: "1",
+      insert_caption: "Insert",
+      inline_container: "#widget_container",
+      default_transformations: [[]],
+      button_class: "myBtn",
+      button_caption: "Select Image or Video",
+    },
+    {
+      insertHandler: function (data) {
+        data.assets.forEach((asset) => {
+          console.log("Inserted asset:", JSON.stringify(asset, null, 2));
+          isMediaLibrary.value = false;
+          replaceImage(currentIndex.value, asset.public_id);
+          currentIndex.value = 0;
+        });
+      },
+    },
+    document.getElementById("open-btn")
+  );
 });
 </script>
 
@@ -432,7 +475,7 @@ textarea {
   transform: translateX(-50%);
   column-gap: 1em;
   input {
-    max-width: 30px;
+    width: 50px;
   }
 }
 .column-add {
@@ -467,8 +510,14 @@ textarea {
   top: 0;
   right: 0;
   background: yellow;
+  color: black;
+  border: none;
   width: 30px;
   height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   input {
     display: none;
   }
@@ -479,5 +528,16 @@ textarea {
   right: 0;
   border: none;
   background: none;
+}
+
+#widget_container {
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  position: absolute;
+}
+.show {
+  display: block !important;
+  z-index: 1000;
 }
 </style>
