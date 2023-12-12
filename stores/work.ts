@@ -132,6 +132,7 @@ export const useWorkStore = definePiniaStore("work-store", {
           "/images/work/HHisErfgoed/debat-poster-maart-feed.webp",
           "/images/work/HHisErfgoed/debat-poster-maart-story.webp",
           "/images/work/HHisErfgoed/lecture29JULY-04.webp",
+          "/images/work/HHisErfgoed/debat-ade-story.webp",
         ],
         imageGridSize: [1, 2],
         mobileLayout: "1fr / 1fr / 1fr / 1fr / 1fr / 1fr / 1fr / 1fr / 1fr",
