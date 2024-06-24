@@ -2,12 +2,33 @@ export const useWorkStore = definePiniaStore("work-store", {
   state: () => ({
     work: [
       {
+        id: 3,
+        title: "Avant Garde Battle",
+        headerImage: "/images/work/project-thumbnails/avantgarde.webp",
+        headerImageAlt: "Avant-Garde-Battle",
+        client: "Avant Garde Collective",
+        date: "February-April 2024",
+        tags: ["Graphic design"],
+        description:
+          "A battle event organized by the Avant Garde Collective that took place at the city theater in Haarlem.  It features three categories, each with its unique rules and prize money. \n\n The visual language of the event is inspired by the Avant Garde collective's style, blending vintage aesthetics from the early 20th century. This approach reflects both historical influences and modern artistic expression.",
+        images: [
+          "/images/work/avantgarde/AvantGardeBattle-poster.webp",
+          "/images/work/avantgarde/avg-battleguest-1.webp",
+          "/images/work/avantgarde/avg-battleguest-2.webp",
+          "/images/work/avantgarde/avg-dj.webp",
+          "/images/work/avantgarde/avg-lucinda.webp",
+          "/images/work/avantgarde/avg-price.webp",
+        ],
+        mobileLayout: "1fr / 1fr / 1fr / 1fr / 1fr / 1fr",
+        desktopLayout: "1fr / 1fr 1fr / 1fr 1fr / 1fr",
+      },
+      {
         id: 1,
         title:
           "Coke Studio presents: 50 years hiphop tribute powered by Foundation",
         headerImage: "/images/work/project-thumbnails/LL-tribute.webp",
         headerImageAlt: "Lowlands tribute afbeelding",
-        client: "Foundation Amsterdam Hiphop Academy",
+        client: "Coke studio / Foundation",
         date: "July 2023",
         tags: ["Motion Design"],
         description:
@@ -69,25 +90,6 @@ export const useWorkStore = definePiniaStore("work-store", {
           "1.2fr 0.8fr / 1fr 1fr 1fr / 1fr 1fr 1fr / 1fr 1fr 1fr / 1fr 1fr / 1fr / 1fr / 1fr",
       },
       {
-        id: 3,
-        title: "Nightowls x Kwaku Festival",
-        headerImage: "/images/work/project-thumbnails/Nightowls.webp",
-        headerImageAlt: "NightOwls x Kwaku illustratie",
-        client: "Foundation Amsterdam Hiphop Academy",
-        date: "July 2023",
-        tags: ["Graphic design"],
-        description:
-          "NightOwls Amsterdam presents an event in collaboration with the multicultural festival Kwaku at Nelson Mandelapark. The event will feature Afrotech, House Music, Deep House, and Techno sounds. \n\n The approach for this collaboration was to create a visually strong illustration that captures the essence of the event and its vibrant atmosphere by using a selected color palette that complements the event.",
-        images: [
-          "/images/work/nightowls/kwaku-2023-poster.webp",
-          "/images/work/nightowls/kwaku-0508-story.webp",
-          "/images/work/nightowls/Nightowls_Kwaku-3.webp",
-          "/images/work/nightowls/Nightowls_Kwaku-v3.webp",
-        ],
-        mobileLayout: "1fr / 1fr / 1fr / 1fr",
-        desktopLayout: "64% 36% / 41.4% 58.6%",
-      },
-      {
         id: 4,
         title: "Yeye: African Diasporic music",
         headerImage: "/images/work/project-thumbnails/YEYE.webp",
@@ -103,6 +105,7 @@ export const useWorkStore = definePiniaStore("work-store", {
             "/images/work/yeye/yeye-logo.webp",
             "/images/work/yeye/landscape.mp4",
           ],
+          "/images/work/yeye/yeye-logo.webp",
           "/images/work/yeye/yeye-pattern1.webp",
           "/images/work/yeye/yeye-pattern2.webp",
           "/images/work/yeye/yeye-pattern3.webp",
@@ -112,7 +115,7 @@ export const useWorkStore = definePiniaStore("work-store", {
       },
       {
         id: 5,
-        title: "Foundation x OBA: Hiphop is Erfgoed",
+        title: "Hiphop is Erfgoed",
         headerImage: "/images/work/project-thumbnails/HHisErfgoed.webp",
         headerImageAlt: "Hiphop is Erfgoed afbeelding",
         client: "Foundation Hiphop Academy",
@@ -151,8 +154,6 @@ export const useWorkStore = definePiniaStore("work-store", {
           "/images/work/foundation/HH-Kelly-story.jpg",
           "/images/work/foundation/HH-Karel-story.jpg",
           "/images/work/foundation/HH-Mosey-story.jpg",
-          "/images/work/foundation/FD-choreo-story.jpg",
-          "/images/work/foundation/strength-miguel-story.jpg",
           "/images/work/foundation/Youth-Lara-story.jpg",
           "/images/work/foundation/Youth-DiAnnah-story.jpg",
           "/images/work/foundation/Youth-Danimé-story.jpg",
