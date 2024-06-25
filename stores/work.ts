@@ -116,7 +116,7 @@ export const useWorkStore = definePiniaStore("work-store", {
       {
         id: 5,
         title: "Hiphop is Erfgoed",
-        headerImage: "/images/work/project-thumbnails/HHisErfgoed.webp",
+        headerImage: "/images/work/project-thumbnails/hh-iserfgoed 1.webp",
         headerImageAlt: "Hiphop is Erfgoed afbeelding",
         client: "Foundation Hiphop Academy",
         date: "February - July 2023",
@@ -124,18 +124,14 @@ export const useWorkStore = definePiniaStore("work-store", {
         description:
           "The Foundation Hiphop Academy, in collaboration with the Public Library of Amsterdam, presents 'Hiphop is Heritage' or 'Hiphop is erfgoed'. This program includes lectures and debates that explore the theme of why Hiphop is considered heritage.",
         images: [
-          "/images/work/HHisErfgoed/fd-lecture-poster.webp",
-          "/images/work/HHisErfgoed/HHerfgoed-sugacane-feed.webp",
-          "/images/work/HHisErfgoed/HHerfgoed-ArjunChadha-feed.webp",
-          "/images/work/HHisErfgoed/debat-juni-geel-feed.webp",
           "/images/work/HHisErfgoed/debat-juni-geel-story.webp",
-          "/images/work/HHisErfgoed/debat-poster-maart-feed.webp",
           "/images/work/HHisErfgoed/debat-poster-maart-story.webp",
           "/images/work/HHisErfgoed/lecture29JULY-04.webp",
           "/images/work/HHisErfgoed/debat-ade-story.webp",
+           "/images/work/HHisErfgoed/HHisErfgoed-feb1724-story.webp"
         ],
         mobileLayout: "1fr / 1fr / 1fr / 1fr / 1fr / 1fr / 1fr / 1fr / 1fr",
-        desktopLayout: "1fr / 1fr 1fr / 1.3fr .7fr / 1.3fr .7fr / .7fr .7fr",
+        desktopLayout: " .7fr .7fr / .7fr .7fr / .7fr .7fr",
       },
       {
         id: 6,

@@ -7,13 +7,15 @@
       sizes="xs:280px sm:350px md:487px lg:487px xl:487px"
     />
     <p>
-      I'm Jo-Ann, a graphic designer who focuses on 3D modelling, motion design,
-      and illustration. I strongly believe that visual language can bridge
+      I'm Jo-Ann, a graphic designer focussing on 3D modelling and motion graphics. I strongly believe that visual language can bridge
       communication gaps among people of different cultures and backgrounds.
       With a bachelors degree in interaction design, I have paved my way
-      developing a strong interest in graphic design and craftsmanship. Next to
+      developing a strong interest in product design and craftsmanship. Next to
       design my passion for dance has grown over the past couple years that it
       has taken it’s own journey and career path.
+      <br>
+      <br>
+      <a href="https://read.cv/joannlap" target="_blank">resume</a>
     </p>
   </section>
   <div class="MobileFooter">
