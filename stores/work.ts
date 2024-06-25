@@ -125,7 +125,6 @@ export const useWorkStore = definePiniaStore("work-store", {
           "The Foundation Hiphop Academy, in collaboration with the Public Library of Amsterdam, presents 'Hiphop is Heritage' or 'Hiphop is erfgoed'. This program includes lectures and debates that explore the theme of why Hiphop is considered heritage.",
         images: [
           "/images/work/HHisErfgoed/debat-juni-geel-story.webp",
-          "/images/work/HHisErfgoed/debat-poster-maart-story.webp",
           "/images/work/HHisErfgoed/lecture29JULY-04.webp",
           "/images/work/HHisErfgoed/debat-ade-story.webp",
            "/images/work/HHisErfgoed/HHisErfgoed-feb1724-story.webp"
