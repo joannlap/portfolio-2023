@@ -3,6 +3,22 @@ export const useWorkStore = definePiniaStore("work-store", {
     work: [
       {
         id: 3,
+        title: "The New Originals",
+        headerImage: "/images/work/project-thumbnails/tno.jpg",
+        headerImageAlt: "The-New-Originals",
+        client: "The New Originals",
+        collaborators:"",
+        date: "2024",
+        tags: ["Graphic design", "Marketing", "Product design", "Tech-packs"],
+        description:
+          "Collection of projects and design work during my time at The New Originals. Ranging from graphics for events, marketing, product design",
+        images: [
+        ],
+        mobileLayout: "1fr / 1fr / 1fr / 1fr / 1fr / 1fr",
+        desktopLayout: "1fr / 1fr 1fr / 1fr 1fr / 1fr",
+      },
+      {
+        id: 3,
         title: "Avant Garde Battle",
         headerImage: "/images/work/project-thumbnails/avantgarde.webp",
         headerImageAlt: "Avant-Garde-Battle",
@@ -136,7 +152,7 @@ export const useWorkStore = definePiniaStore("work-store", {
           "/images/work/foundation/house-jasmin.jpg",
         ],
         mobileLayout:
-          "1fr / 1fr / 1fr / 1fr/ 1fr / 1fr/ 1fr / 1fr / 1fr ",
+          "1fr / 1fr / 1fr / 1fr/ 1fr / 1fr/ 1fr / 1fr / 1fr / 1fr",
         desktopLayout:
           "1fr 1fr  / 1fr 1fr / 1fr 1fr / 1fr 1fr/ 1fr 1fr",
       },
