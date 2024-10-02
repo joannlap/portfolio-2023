@@ -7,12 +7,16 @@
       sizes="xs:280px sm:350px md:487px lg:487px xl:487px"
     />
     <p>
-      I'm Jo-Ann, a graphic designer focussing on 3D modelling and motion graphics. I strongly believe that visual language can bridge
-      communication gaps among people of different cultures and backgrounds.
-      With a bachelors degree in interaction design, I have paved my way
-      developing a strong interest in product design and craftsmanship. Next to
-      design my passion for dance has grown over the past couple years that it
-      has taken it’s own journey and career path.
+      My name is Jo-Ann, an Amsterdam based graphic designer. Influenced by brutalism, pop art and street culture.
+      <br>
+      <br>
+      I really appreciate design that gains tangible value; there's more life in them. Therefore over time I've been more interested in product design and craftmanship.
+      <br>
+      <br>
+      Specializing in branding, illustrations, motion graphics and 3D modelling. 
+      <br>
+      <br>
+      Currently freelancing and available for commissions.
       <br>
       <br>
       <a href="https://read.cv/joannlap" target="_blank">resume</a>
