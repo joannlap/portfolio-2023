@@ -39,7 +39,7 @@ export const useWorkStore = definePiniaStore("work-store", {
             "/images/work/tno/frediletti.jpg",
             
           ],
-        mobileLayout: "1fr / 1fr / 1fr / 1fr / 1fr / 1fr",
+        mobileLayout: "1fr / 1fr / 1fr / 1fr / 1fr / 1fr / 1fr / 1fr",
         desktopLayout: "1fr 1fr / 1fr 1fr / 1fr 1fr / 1fr 1fr / 1fr 1fr",
       
       },    
