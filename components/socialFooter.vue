@@ -2,7 +2,7 @@
   <footer>
     <div class="Socials">
       <a
-        href="https://www.instagram.com/jafns_/"
+        href="https://www.instagram.com/joannlap_/"
         aria-label="Visit my Instagram"
         ><SvgInstagram
       /></a>
