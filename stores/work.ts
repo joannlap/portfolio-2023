@@ -6,15 +6,25 @@ export const useWorkStore = definePiniaStore("work-store", {
         title: "SMIB X TNO FEST '24",
         headerImage: "/images/work/project-thumbnails/tnofest.jpg",
         headerImageAlt: "Smibtno-fest-24",
-        client: "The New Originals / Smib",
+        client: "Smibtno Fest",
         date: "2024",
         tags: ["Marketing", "Print design"],
         description:
-          "Branding and socials for this edition of Smib x TNO fest. Collaborators: Bram Romkes ",
+          "Festival located in Amsterdam South-East, organized by SMIB and The New Originals. Features live performances from Hip hop to Jazz and afrobeats, recreational area and catering/food services. With the goal to provide platform for new talent to reach young people in the neighbourhood. \n\n Posters as social content for the festival and development of stage banners for this edition of Smib x TNO fest. Collaborators: Bram Romkes ",
         images: [
+          "/images/work/smibtno/lineup.png",
+          "/images/work/smibtno/1month.png",
+          "/images/work/smibtno/week.png",
+          "/images/work/smibtno/3days.png",
+          "/images/work/smibtno/afterparty.png",
+           "/images/work/smibtno/paneltalk.png",
+           "/images/work/smibtno/stage.jpg",
+           "/images/work/smibtno/banner1.jpg",
+           "/images/work/smibtno/banner2.jpg",
+
         ],
         mobileLayout: "1fr / 1fr / 1fr / 1fr / 1fr / 1fr",
-        desktopLayout: "1fr / 1fr 1fr / 1fr 1fr / 1fr",
+        desktopLayout: "1fr 1fr / 1fr 1fr / 1fr 1fr / 1fr / 1fr / 1fr",
       },
       {
         id: 2,
@@ -25,7 +35,7 @@ export const useWorkStore = definePiniaStore("work-store", {
         date: "2024",
         tags: ["Marketing","Product development", "Illustration"],
         description:
-          "Collection of design work through various projects during my time at The New Originals. From top to bottom: New Balance Jersey Kit for the Basement Cup 2024. Slipmat design as part of TNO Love Themes pt.2 vinyl release. Posters for collaborative events with TNO. Collaborators: Bram Romkes, Wessel, Gabriel Polo and Jessey de Nijs",
+          "Collection of design work through various clients during my time at The New Originals. From top to bottom: New Balance Jersey Kit for the Basement Cup 2024. Slipmat design as part of TNO Love Themes pt.2 vinyl release. \n\n Posters for collaborative events with TNO. Collaborators: Bram Romkes, Wessel, Gabriel Polo and Jessey de Nijs. Photography by Brownievisuals",
           images: [
             "/images/work/tno/NB-jersey.jpg",
             "/images/work/tno/nb-jersey-mockup.jpg",
@@ -46,13 +56,13 @@ export const useWorkStore = definePiniaStore("work-store", {
       {
         id: 3,
         title: "Avant Garde Battle",
-        headerImage: "/images/work/project-thumbnails/avantgarde.webp",
+        headerImage: "/images/work/project-thumbnails/avantgarde.jpg",
         headerImageAlt: "Avant-Garde-Battle",
         client: "Avant Garde Collective",
         date: "2024",
-        tags: ["Graphic design", "Branding"],
+        tags: ["Branding"],
         description:
-          "A battle event organized by the Avant Garde Collective that took place at the city theater in Haarlem.  It features three categories, each with its unique rules and prize money. \n\n The visual language of the event is inspired by the Avant Garde collective's style, blending vintage aesthetics from the early 20th century. This approach reflects both historical influences and modern artistic expression.",
+          "Battle event organized by the Avant Garde Collective that took place at the city theater in Haarlem. It features three categories, each with its unique rules and prize money. \n\n The visual language of the event is inspired by the Avant Garde collective's style, blending vintage aesthetics from the early 20th century. This approach reflects both historical influences and modern artistic expression.",
         images: [
           "/images/work/avantgarde/AvantGardeBattle-poster.webp",
           "/images/work/avantgarde/avg-battleguest-1.webp",
@@ -71,9 +81,9 @@ export const useWorkStore = definePiniaStore("work-store", {
         headerImageAlt: "Foundation Hiphop Centre afbeelding",
         client: "Foundation Hiphop Centre",
         date: "2023-2024",
-        tags: ["Graphic design"],
+        tags: ["Branding","Marketing", "Print design", "3D", "Illustration"],
         description:
-          "Collection of posters for Foundation Hiphop Centre, located in South-East of Amsterdam. Cultural centre that provides knowledge and development in various street styles.",
+          "Collection of posters for social media content and printwork for Foundation. Located in South-East of Amsterdam, a cultural centre that provides knowledge and development in various street styles.",
         images: [
           "/images/work/foundation/FD-BC-CLUB-24.jpg",
           "/images/work/foundation/FD-btcmp-24.jpg",
@@ -167,7 +177,7 @@ export const useWorkStore = definePiniaStore("work-store", {
         date: "2023",
         tags: ["Motion design", "3D Modelling"],
         description:
-          "Yeye is an event that brings together the diverse sounds of African diasporic music, good vibes and a celebration of culture. It’s a gathering where people can immerse themselves in the rhythms and melodies that have emerged from the African diaspora, while enjoying delicious food. \n\n For the first event, a looped video backdrop will showcase different music clips with animations featuring Adrinka symbols.",
+          "Yeye is a gathering where people can immerse themselves in the rhythms and melodies that have emerged from the African diaspora, while enjoying delicious food. \n\n For the first event, a looped video backdrop will showcase different music clips with animations featuring Adrinka symbols.",
         images: [
           [
             "/images/work/yeye/landscape.webm",

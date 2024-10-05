@@ -7,16 +7,10 @@
       sizes="xs:280px sm:350px md:487px lg:487px xl:487px"
     />
     <p>
-      My name is Jo-Ann, an Amsterdam based graphic designer. Influenced by brutalism, pop art and street culture.
+      My name is Jo-Ann, an Amsterdam based graphic designer. I really appreciate design that gains tangible value; there's more life in them. Therefore over time I've been more interested in product design and craftmanship.
       <br>
       <br>
-      I really appreciate design that gains tangible value; there's more life in them. Therefore over time I've been more interested in product design and craftmanship.
-      <br>
-      <br>
-      Specializing in branding, illustrations, motion graphics and 3D modelling. 
-      <br>
-      <br>
-      Currently freelancing and available for commissions.
+      Gravitated towards branding, illustrations, motion graphics and 3D modelling.
       <br>
       <br>
       <a href="https://read.cv/joannlap" target="_blank">resume</a>
