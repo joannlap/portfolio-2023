@@ -23,7 +23,7 @@ export const useWorkStore = definePiniaStore("work-store", {
            "/images/work/smibtno/banner2.jpg",
 
         ],
-        mobileLayout: "1fr / 1fr / 1fr / 1fr / 1fr / 1fr",
+        mobileLayout:"1fr / 1fr / 1fr / 1fr / 1fr / 1fr / 1fr / 1fr / 1fr/ 1fr",
         desktopLayout: "1fr 1fr / 1fr 1fr / 1fr 1fr / 1fr / 1fr / 1fr",
       },
       {
