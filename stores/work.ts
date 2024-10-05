@@ -35,7 +35,7 @@ export const useWorkStore = definePiniaStore("work-store", {
         date: "2024",
         tags: ["Marketing","Product development", "Illustration"],
         description:
-          "Collection of design work through various clients during my time at The New Originals. From top to bottom: New Balance Jersey Kit for the Basement Cup 2024. Slipmat design as part of TNO Love Themes pt.2 vinyl release. \n\n Posters for collaborative events with TNO. Collaborators: Bram Romkes, Wessel, Gabriel Polo and Jessey de Nijs. Photography by Brownievisuals",
+          "Collection of design work through various clients during my time at The New Originals. From top to bottom: New Balance Jersey Kit for the Basement Cup 2024. Slipmat design as part of TNO Love Themes pt.2 vinyl release. Posters for collaborative events with TNO. \n\n Collaborators: Bram Romkes, Wessel, Gabriel Polo and Jessey de Nijs. Photography by Brownievisuals",
           images: [
             "/images/work/tno/NB-jersey.jpg",
             "/images/work/tno/nb-jersey-mockup.jpg",
