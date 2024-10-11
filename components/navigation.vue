@@ -7,7 +7,7 @@
           <NuxtLink to="/about"><SvgArrowDownRight />About</NuxtLink>
         </li>
         <li>
-          <NuxtLink to="/playground"><SvgArrowDownRight />Playground</NuxtLink>
+          <NuxtLink to="/personal"><SvgArrowDownRight />Personal</NuxtLink>
         </li>
       </ul>
     </nav>

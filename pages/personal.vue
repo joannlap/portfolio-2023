@@ -1,10 +1,10 @@
 <template>
-  <div class="PlaygroundContainer">
+  <div class="PersonalContainer">
     <section id="maincontent" class="Container">
       <nuxt-img
-        v-for="image in playground.images"
+        v-for="image in personal.images"
         key="image"
-        class="PlaygroundImage Image"
+        class="PersonalImage Image"
         :src="image.src"
         :alt="image.alt"
         @click="modalStore.setLink(image.src)"
@@ -19,46 +19,46 @@
 import { useModalStore } from "~/stores/modal";
 const modalStore = useModalStore();
 
-const playground = {
+const personal = {
   images: [
     {
-      src: "/images/playground/appa.webp",
+      src: "/images/personal/appa.webp",
       alt: "An illustration of Appa, the character of Avatar the Last Airbender",
     },
     {
-      src: "/images/playground/DISNEY.webp",
+      src: "/images/personal/DISNEY.webp",
       alt: "An illustration of Disney Pin",
     },
     {
-      src: "/images/playground/ramen.webp",
+      src: "/images/personal/ramen.webp",
       alt: "An illustration of an asian dish",
     },
     {
-      src: "/images/playground/theOrphans.webp",
+      src: "/images/personal/theOrphans.webp",
       alt: "An Illustration of my game, the Orphans",
     },
     {
-      src: "/images/playground/inflation.webp",
+      src: "/images/personal/inflation.webp",
       alt: "A 3D model of my name, Joann",
     },
     {
-      src: "/images/playground/joannlap--round-v4.webp",
+      src: "/images/personal/joannlap--round-v4.webp",
       alt: "A 3D model of my name, Joann Lap",
     },
     {
-      src: "/images/playground/customs-kirby.webp",
+      src: "/images/personal/customs-kirby.webp",
       alt: "Kirby Shoe design side 1",
     },
     {
-      src: "/images/playground/custom-kirby-1.webp",
+      src: "/images/personal/custom-kirby-1.webp",
       alt: "Kirby Shoe design side 2",
     },
     {
-      src: "/images/playground/dragonball-1.webp",
+      src: "/images/personal/dragonball-1.webp",
       alt: "Dragonball Shoe design side 1",
     },
     {
-      src: "/images/playground/dragonball-2.webp",
+      src: "/images/personal/dragonball-2.webp",
       alt: "Dragonball Shoe design side 2",
     },
   ],
@@ -84,13 +84,13 @@ const playground = {
     grid-template-columns: 1fr;
   }
 }
-.PlaygroundContainer {
+.PersonalContainer {
   margin-left: 0;
   @include breakpoint(xmedium) {
     margin-left: 350px;
   }
 }
-.PlaygroundImage {
+.PersonalImage {
   object-fit: cover;
   height: 100%;
   width: 100%;
