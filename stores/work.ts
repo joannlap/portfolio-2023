@@ -3,12 +3,32 @@ export const useWorkStore = definePiniaStore("work-store", {
     work: [
       {
         id: 1,
+        title: "TNO Messenger Capsule Collection teaser campaign",
+        headerImage: "/images/work/project-thumbnails/msn-tno.jpg",
+        headerImageAlt: "HD24-teaser",
+        client: "The New Originals",
+        date: "2024",
+        tags: ["Marketing", "Motion design", "Illustration"],
+        description:
+          " For The New Originals holiday drop, the capsule collection explores the nostalgic era of internet within the theme of MSN Messenger. The collection consist of graphical jerseys, hoodies and a cap catered to this theme. As part of the drop, a teaser rolled out to announce the collection. \n\n The concept initially started as a loading animation of the messenger dolls, developed into a full storytelling exploring the theme of MSN. Assets were developed with multiple softwares: Figma, Procreate and After Effects). \n\n Collaborators: Eben Badu, special credits to Gabriel Polo for developing the capsule collection. ",
+        images: [
+          "/images/work/tno-msn/start.png",
+          "/images/work/tno-msn/loading-dolls.gif",
+          "/images/work/tno-msn/contacts.png",
+          "/images/work/tno-msn/chat.png",
+          "/images/work/tno-msn/sentFile.png",
+        ],
+        mobileLayout:"1fr / 1fr / 1fr / 1fr / 1fr / 1fr / 1fr / 1fr / 1fr/ 1fr",
+        desktopLayout: "1fr / 1fr 1fr / 1fr / 1fr / 1fr / 1fr / 1fr",
+      },
+      {
+        id: 1,
         title: "SMIB X TNO FEST '24",
         headerImage: "/images/work/project-thumbnails/tnofest.jpg",
         headerImageAlt: "Smibtno-fest-24",
         client: "Smibtno Fest",
         date: "2024",
-        tags: ["Marketing", "Print design"],
+        tags: ["Marketing", "Print design", "Illustration"],
         description:
           "Festival located in Amsterdam South-East, organized by SMIB and The New Originals. Features live performances from Hip hop to Jazz and afrobeats, recreational area and catering/food services. With the goal to provide platform for new talent to reach young people in the neighbourhood. \n\n Posters as social content for the festival and development of stage banners for this edition of Smib x TNO fest. Collaborators: Bram Romkes ",
         images: [
@@ -33,9 +53,9 @@ export const useWorkStore = definePiniaStore("work-store", {
         headerImageAlt: "The-New-Originals",
         client: "The New Originals",
         date: "2024",
-        tags: ["Marketing","Product development", "Illustration"],
+        tags: ["Graphic design","Product design","Marketing"],
         description:
-          "Collection of design work through various clients during my time at The New Originals. From top to bottom: New Balance Jersey Kit for the Basement Cup 2024. Slipmat design as part of TNO Love Themes pt.2 vinyl release. Posters for collaborative events with TNO. \n\n Collaborators: Bram Romkes, Wessel, Gabriel Polo and Jessey de Nijs. Photography by Brownievisuals",
+          "Collection of design work through various clients during my time at The New Originals. From top to bottom: New Balance Jersey Kit for the Basement Cup 2024. Slipmat design as part of TNO Love Themes pt.2 vinyl release. Posters for collaborative events with TNO. \n\n Collaborators: Bram Romkes, Wessel and Jessey de Nijs. Photography by Brownievisuals",
           images: [
             "/images/work/tno/NB-jersey.jpg",
             "/images/work/tno/nb-jersey-mockup.jpg",
@@ -127,47 +147,47 @@ export const useWorkStore = definePiniaStore("work-store", {
         mobileLayout: "1fr / 1fr / 1fr / 1fr",
         desktopLayout: "1fr / 1fr / 1fr / 1fr",
       },
-      // {
-      //   id: 2,
-      //   title: "Foundation Bootcamp 2023",
-      //   headerImage: "/images/work/project-thumbnails/FD-Bootcamp.webp",
-      //   headerImageAlt: "Foundation Bootcamp afbeelding",
-      //   client: "Foundation Amsterdam Hiphop Academy",
-      //   date: "2023",
-      //   tags: ["Graphic design", "Motion design", "3D"],
-      //   description:
-      //     "Foundation Bootcamp can be summarized as a journey of hard work, growth, challenges, physical and mental exertion and knowledge. Every summer, Foundation Hiphop Academy organizes a 3-week intensive bootcamp that allows dancers to immerse themselves in the elements of street and club culture. The bootcamp offers over 60 workshops in various street styles, as well as lectures, parties and an evaluation program known as the Hawks Method. \n\n The visual language of Foundation Bootcamp is influenced by street and pop art. My inspiration for the design came from hiphop and street magazines, graffiti art, and movie posters. The overall approach aimed to capture the essence of a cityscape, combining elements like an assembly of Avengers.",
-      //   images: [
-      //     "/images/work/FD-Bootcamp/FD-BOOTCAMP2023-FEED.webp",
-      //     "/images/work/FD-Bootcamp/gifbootcamps.gif",
-      //     "/images/work/FD-Bootcamp/arjun.webp",
-      //     "/images/work/FD-Bootcamp/frankwa.webp",
-      //     "/images/work/FD-Bootcamp/jimmyyudat.webp",
-      //     "/images/work/FD-Bootcamp/josephgo.webp",
-      //     "/images/work/FD-Bootcamp/mamson.webp",
-      //     "/images/work/FD-Bootcamp/nedda.webp",
-      //     "/images/work/FD-Bootcamp/suzume.webp",
-      //     "/images/work/FD-Bootcamp/willow.webp",
-      //     "/images/work/FD-Bootcamp/yugson.webp",
-      //     [
-      //       "/images/work/FD-Bootcamp/btcmp-promo.webm",
-      //       "/images/work/FD-Bootcamp/btcmp-promo.webp",
-      //       "/images/work/FD-Bootcamp/btcmp-promo.mp4",
-      //     ],
-      //     [
-      //       "/images/work/FD-Bootcamp/btcmp-teaser_3.webm",
-      //       "/images/work/FD-Bootcamp/btcmp-teaser.webp",
-      //       "/images/work/FD-Bootcamp/btcmp-teaser_3.mp4",
-      //     ],
-      //     "/images/work/FD-Bootcamp/FD-BOOTCAMP-SCHEDULE-W1.webp",
-      //     "/images/work/FD-Bootcamp/FD-BOOTCAMP-SCHEDULE-W2.webp",
-      //     "/images/work/FD-Bootcamp/FD-BOOTCAMP-SCHEDULE-W3.webp",
-      //   ],
-      //   mobileLayout:
-      //     "1fr / 1fr / 1fr 1fr / 1fr 1fr / 1fr 1fr / 1fr 1fr / 1fr / 1fr / 1fr /  1fr / 1fr / 1fr",
-      //   desktopLayout:
-      //     "1.2fr 0.8fr / 1fr 1fr 1fr / 1fr 1fr 1fr / 1fr 1fr 1fr / 1fr 1fr / 1fr / 1fr / 1fr",
-      // },
+      {
+        id: 2,
+        title: "Foundation Bootcamp 2023",
+        headerImage: "/images/work/project-thumbnails/FD-Bootcamp.webp",
+        headerImageAlt: "Foundation Bootcamp afbeelding",
+        client: "Foundation Amsterdam Hiphop Academy",
+        date: "2023",
+        tags: ["Branding", "Motion design", "3D"],
+        description:
+          "Foundation Bootcamp can be summarized as a journey of hard work, growth, challenges, physical and mental exertion and knowledge. Every summer, Foundation Hiphop Academy organizes a 3-week intensive bootcamp that allows dancers to immerse themselves in the elements of street and club culture. The bootcamp offers over 60 workshops in various street styles, as well as lectures, parties and an evaluation program known as the Hawks Method. \n\n The visual language of Foundation Bootcamp is influenced by street and pop art. My inspiration for the design came from hiphop and street magazines, graffiti art, and movie posters. The overall approach aimed to capture the essence of a cityscape, combining elements like an assembly of Avengers.",
+        images: [
+          "/images/work/FD-Bootcamp/FD-BOOTCAMP2023-FEED.webp",
+          "/images/work/FD-Bootcamp/gifbootcamps.gif",
+          "/images/work/FD-Bootcamp/arjun.webp",
+          "/images/work/FD-Bootcamp/frankwa.webp",
+          "/images/work/FD-Bootcamp/jimmyyudat.webp",
+          "/images/work/FD-Bootcamp/josephgo.webp",
+          "/images/work/FD-Bootcamp/mamson.webp",
+          "/images/work/FD-Bootcamp/nedda.webp",
+          "/images/work/FD-Bootcamp/suzume.webp",
+          "/images/work/FD-Bootcamp/willow.webp",
+          "/images/work/FD-Bootcamp/yugson.webp",
+          [
+            "/images/work/FD-Bootcamp/btcmp-promo.webm",
+            "/images/work/FD-Bootcamp/btcmp-promo.webp",
+            "/images/work/FD-Bootcamp/btcmp-promo.mp4",
+          ],
+          [
+            "/images/work/FD-Bootcamp/btcmp-teaser_3.webm",
+            "/images/work/FD-Bootcamp/btcmp-teaser.webp",
+            "/images/work/FD-Bootcamp/btcmp-teaser_3.mp4",
+          ],
+          "/images/work/FD-Bootcamp/FD-BOOTCAMP-SCHEDULE-W1.webp",
+          "/images/work/FD-Bootcamp/FD-BOOTCAMP-SCHEDULE-W2.webp",
+          "/images/work/FD-Bootcamp/FD-BOOTCAMP-SCHEDULE-W3.webp",
+        ],
+        mobileLayout:
+          "1fr / 1fr / 1fr 1fr / 1fr 1fr / 1fr 1fr / 1fr 1fr / 1fr / 1fr / 1fr /  1fr / 1fr / 1fr",
+        desktopLayout:
+          "1.2fr 0.8fr / 1fr 1fr 1fr / 1fr 1fr 1fr / 1fr 1fr 1fr / 1fr 1fr / 1fr / 1fr / 1fr",
+      },
       {
         id: 6,
         title: "Yeye: African Diasporic music",

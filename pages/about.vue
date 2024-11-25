@@ -2,15 +2,14 @@
   <section id="maincontent" class="Container">
     <nuxt-img
       class="Image"
-      src="/images/joanndesktop.webp"
+      src="/images/joann.jpg"
       alt="Joann"
       sizes="xs:280px sm:350px md:487px lg:487px xl:487px"
     />
     <p>
-      My name is Jo-Ann, an Amsterdam based graphic designer. I really appreciate design that gains tangible value; there's more life in them. Therefore over time I've been more interested in product design and craftmanship.
+      My name is Jo-Ann, an Amsterdam based graphic designer. With a passion for creating visuals and brand experiences that goes beyond the digital screen. I enjoy approaching my work through a tangible touch, whether that is developing a product or creating interactive visuals.       <br>
       <br>
-      <br>
-      Gravitated towards branding, illustrations, motion graphics and 3D modelling.
+      Specialties lies in branding, motion graphics, 3D modelling
       <br>
       <br>
       <a href="https://read.cv/joannlap" target="_blank">resume</a>
