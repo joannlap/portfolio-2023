@@ -7,9 +7,9 @@
       sizes="xs:280px sm:350px md:487px lg:487px xl:487px"
     />
     <p>
-      My name is Jo-Ann, an Amsterdam based graphic designer. With a passion for creating visuals and brand experiences that goes beyond the digital screen. I enjoy approaching my work through a tangible touch, whether that is developing a product or creating interactive visuals.       <br>
+      My name is Jo-Ann, born and raised in Amsterdam. A designer with a passion for creating visuals and brand experiences that goes beyond the digital screen. I enjoy approaching my work through a tangible touch, whether that is developing a product or creating interactive visuals.       <br>
       <br>
-      Specialties lies in branding, motion graphics, 3D modelling
+      Services: branding, print, packaging design, motion graphics, illustration, 3D modelling.
       <br>
       <br>
       <a href="https://read.cv/joannlap" target="_blank">resume</a>

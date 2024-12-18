@@ -36,7 +36,7 @@ const work = props.work;
 ul {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0 0 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;

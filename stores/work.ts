@@ -8,7 +8,7 @@ export const useWorkStore = definePiniaStore("work-store", {
         headerImageAlt: "HD24-teaser",
         client: "The New Originals",
         date: "2024",
-        tags: ["Marketing", "Motion design", "Illustration"],
+        tags: ["Motion design", "Illustration", "Marketing"],
         description:
           " For The New Originals holiday drop, the capsule collection explores the nostalgic era of internet within the theme of MSN Messenger. The collection consist of graphical jerseys, hoodies and a cap catered to this theme. As part of the drop, a teaser rolled out to announce the collection. \n\n The concept initially started as a loading animation of the messenger dolls, developed into a full storytelling exploring the theme of MSN. Assets were developed with multiple softwares: Figma, Procreate and After Effects). \n\n Collaborators: Eben Badu, special credits to Gabriel Polo for developing the capsule collection. ",
         images: [

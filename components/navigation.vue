@@ -52,10 +52,10 @@ aside {
   }
 }
 .Navigation {
-  margin: 35px 0 0;
+  margin: 35px 0;
 
   @include breakpoint(xmedium) {
-    margin: 35px 0 65px;
+    margin: 35px 0 25px;
   }
 
   ul {
