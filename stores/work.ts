@@ -8,7 +8,7 @@ export const useWorkStore = definePiniaStore("work-store", {
         headerImageAlt: "HD24-teaser",
         client: "The New Originals",
         date: "2024",
-        tags: ["Motion design", "Illustration", "Marketing"],
+        tags: ["Campaign Graphics", "Motion", "Illustration"],
         description:
           " For The New Originals holiday drop, the capsule collection explores the nostalgic era of internet within the theme of MSN Messenger. The collection consist of graphical jerseys, hoodies and a cap catered to this theme. As part of the drop, a teaser rolled out to announce the collection. \n\n The concept initially started as a loading animation of the messenger dolls, developed into a full storytelling exploring the theme of MSN. Assets were developed with multiple softwares: Figma, Procreate and After Effects). \n\n Collaborators: Eben Badu, special credits to Gabriel Polo for developing the capsule collection. ",
         images: [
@@ -32,7 +32,7 @@ export const useWorkStore = definePiniaStore("work-store", {
         headerImageAlt: "Smibtno-fest-24",
         client: "Smibtno Fest",
         date: "2024",
-        tags: ["Marketing", "Print design", "Illustration"],
+        tags: ["Event Graphics"],
         description:
           "Festival located in Amsterdam South-East, organized by SMIB and The New Originals. Features live performances from Hip hop to Jazz and afrobeats, recreational area and catering/food services. With the goal to provide platform for new talent to reach young people in the neighbourhood. \n\n Posters as social content for the festival and development of stage banners for this edition of Smib x TNO fest. Collaborators: Bram Romkes ",
         images: [
@@ -57,9 +57,9 @@ export const useWorkStore = definePiniaStore("work-store", {
         headerImageAlt: "The-New-Originals",
         client: "The New Originals",
         date: "2024",
-        tags: ["Graphic design","Product design","Marketing"],
+        tags: ["Brand Graphics","Product design","Poster design"],
         description:
-          "Collection of design work through various clients during my time at The New Originals. From top to bottom: New Balance Jersey Kit for the Basement Cup 2024. Slipmat design as part of TNO Love Themes pt.2 vinyl release. Posters for collaborative events with TNO. \n\n Collaborators: Bram Romkes, Wessel and Jessey de Nijs. Photography by Brownievisuals",
+          "Selected work of various clients during my time at The New Originals. From top to bottom: New Balance Jersey Kit for the Basement Cup 2024. Slipmat design as part of TNO Love Themes pt.2 vinyl release. Posters for collaborative events with TNO. \n\n Collaborators: Bram Romkes, Wessel and Jessey de Nijs. Photography by Brownievisuals",
           images: [
             "/images/work/tno/NB-jersey.jpg",
             "/images/work/tno/nb-jersey-mockup.jpg",
@@ -84,7 +84,7 @@ export const useWorkStore = definePiniaStore("work-store", {
         headerImageAlt: "Avant-Garde-Battle",
         client: "Avant Garde Collective",
         date: "2024",
-        tags: ["Branding"],
+        tags: ["Brand Identity", "Event Graphics"],
         description:
           "Battle event organized by the Avant Garde Collective that took place at the city theater in Haarlem. It features three categories, each with its unique rules and prize money. \n\n The visual language of the event is inspired by the Avant Garde collective's style, blending vintage aesthetics from the early 20th century. This approach reflects both historical influences and modern artistic expression.",
         images: [
@@ -105,7 +105,7 @@ export const useWorkStore = definePiniaStore("work-store", {
         headerImageAlt: "Foundation Hiphop Centre afbeelding",
         client: "Foundation Hiphop Centre",
         date: "2023-2024",
-        tags: ["Branding","Marketing", "Print design", "3D", "Illustration"],
+        tags: ["Brand Graphics","Poster Design"],
         description:
           "Collection of posters for social media content and printwork for Foundation. Located in South-East of Amsterdam, a cultural centre that provides knowledge and development in various street styles.",
         images: [
@@ -158,7 +158,7 @@ export const useWorkStore = definePiniaStore("work-store", {
         headerImageAlt: "Foundation Bootcamp afbeelding",
         client: "Foundation Amsterdam Hiphop Academy",
         date: "2023",
-        tags: ["Branding", "Motion design", "3D"],
+        tags: ["Event Graphics"],
         description:
           "Foundation Bootcamp can be summarized as a journey of hard work, growth, challenges, physical and mental exertion and knowledge. Every summer, Foundation Hiphop Academy organizes a 3-week intensive bootcamp that allows dancers to immerse themselves in the elements of street and club culture. The bootcamp offers over 60 workshops in various street styles, as well as lectures, parties and an evaluation program known as the Hawks Method. \n\n The visual language of Foundation Bootcamp is influenced by street and pop art. My inspiration for the design came from hiphop and street magazines, graffiti art, and movie posters. The overall approach aimed to capture the essence of a cityscape, combining elements like an assembly of Avengers.",
         images: [
@@ -199,7 +199,7 @@ export const useWorkStore = definePiniaStore("work-store", {
         headerImageAlt: "Yeye illustratie",
         client: "Yeye",
         date: "2023",
-        tags: ["Motion design", "3D Modelling"],
+        tags: ["Event Graphics"],
         description:
           "Yeye is a gathering where people can immerse themselves in the rhythms and melodies that have emerged from the African diaspora, while enjoying delicious food. \n\n For the first event, a looped video backdrop will showcase different music clips with animations featuring Adrinka symbols.",
         images: [

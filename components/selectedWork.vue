@@ -16,7 +16,7 @@
 </template>
 
 <script setup lang="ts">
-import SvgArrowDownRight from "~/assets/icons/arrow-down-right.svg?component";
+// import SvgArrowDownRight from "~/assets/icons/arrow-down-right.svg?component";
 const props = defineProps<{
   work: {
     id: number;
@@ -30,8 +30,8 @@ const work = props.work;
 .SubHeading {
   font-size: 18px;
   text-transform: uppercase;
-  font-weight: 600;
-  margin-bottom: 1rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
 }
 ul {
   list-style: none;
@@ -48,7 +48,7 @@ ul {
   li {
     margin: 0;
     padding: 0;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     max-width: 260px;
     margin-right: 10px;
 
@@ -62,16 +62,17 @@ ul {
       display: flex;
       justify-content: flex-start;
       font-weight: 500;
-      svg {
-        margin-right: 5px;
-        margin-top: -2px;
-        min-width: 26px;
-        min-height: 26px;
+      font-size: 14px;
+      // svg {
+      //   margin-right: 5px;
+      //   margin-top: -2px;
+      //   min-width: 26px;
+      //   min-height: 26px;
 
-        @include breakpoint(xmedium) {
-          margin-right: 10px;
-        }
-      }
+      //   @include breakpoint(xmedium) {
+      //     margin-right: 10px;
+      //   }
+      // }
     }
     &:hover {
       a {

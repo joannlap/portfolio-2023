@@ -17,7 +17,7 @@
 </template>
 
 <script setup lang="ts">
-import SvgArrowDownRight from "~/assets/icons/arrow-down-right.svg?component";
+// import SvgArrowDownRight from "~/assets/icons/arrow-down-right.svg?component";
 import SvgLogo from "~/assets/icons/logo.svg?component";
 import { useWorkStore } from "~/stores/work";
 
@@ -86,7 +86,7 @@ ul {
   li {
     margin: 0;
     padding: 0;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     max-width: 260px;
     margin-right: 10px;
 
@@ -106,18 +106,18 @@ ul {
       @include breakpoint(xmedium) {
         margin-left: 0;
       }
-      svg {
-        margin-right: 5px;
-        margin-top: -2px;
-        min-width: 26px;
-        min-height: 26px;
-        display: none;
+      // svg {
+      //   margin-right: 5px;
+      //   margin-top: -2px;
+      //   min-width: 26px;
+      //   min-height: 26px;
+      //   display: none;
 
-        @include breakpoint(xmedium) {
-          display: block;
-          margin-right: 10px;
-        }
-      }
+      //   @include breakpoint(xmedium) {
+      //     display: block;
+      //     margin-right: 10px;
+      //   }
+      // }
     }
     &:hover {
       a {
