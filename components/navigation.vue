@@ -4,10 +4,10 @@
     <nav class="Navigation">
       <ul>
         <li>
-          <NuxtLink to="/about"><SvgArrowDownRight />About</NuxtLink>
+          <NuxtLink to="/about"><SvgArrowDownRight />ABOUT</NuxtLink>
         </li>
         <li>
-          <NuxtLink to="/personal"><SvgArrowDownRight />Personal</NuxtLink>
+          <NuxtLink to="/personal"><SvgArrowDownRight />PERSONAL</NuxtLink>
         </li>
       </ul>
     </nav>
@@ -69,7 +69,7 @@ aside {
 .SubHeading {
   font-size: 18px;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 1rem;
 }
 ul {
@@ -99,7 +99,7 @@ ul {
       text-decoration: none;
       display: flex;
       justify-content: flex-start;
-      font-weight: 500;
+      font-weight:700;
       margin: 0 1rem;
       font-family: "Inter", sans-serif;
       margin: 0 1rem;

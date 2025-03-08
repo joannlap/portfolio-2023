@@ -28,9 +28,9 @@ const work = props.work;
 
 <style lang="scss" scoped>
 .SubHeading {
-  font-size: 18px;
+  font-size: 16px;
   text-transform: uppercase;
-  font-weight: 800;
+  font-weight: 700;
   margin-bottom: 0.5rem;
 }
 ul {
