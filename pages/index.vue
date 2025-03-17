@@ -38,7 +38,7 @@
             </div>
           </div>
           <div class="HomeItem-button">
-            <SvgArrowDownRight />
+            <!-- <SvgArrowDownRight /> -->
             {{ workItem?.title }}
           </div>
         </div>
@@ -52,7 +52,7 @@
 
 <script setup lang="ts">
 import { useWorkStore } from "~/stores/work";
-import SvgArrowDownRight from "~/assets/icons/arrow-down-right.svg?component";
+// import SvgArrowDownRight from "~/assets/icons/arrow-down-right.svg?component";
 
 definePageMeta({
   title: "Home",

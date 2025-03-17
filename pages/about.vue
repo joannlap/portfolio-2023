@@ -7,7 +7,7 @@
       sizes="xs:280px sm:350px md:487px lg:487px xl:487px"
     />
     <p>
-      My name is Jo-Ann, born and raised in Amsterdam. A designer with a passion for creating visuals and brand experiences that goes beyond the digital screen. I enjoy approaching my work through a tangible touch, whether that is developing a product or creating interactive visuals.       <br>
+      My name is Jo-Ann, born and raised in Amsterdam. A designer with passion for creating graphics and brand experiences that goes beyond the digital screen. I enjoy approaching my work through a tangible touch, from applying textures to developing a product.       <br>
       <br>
       Services: 
       <br>

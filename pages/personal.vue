@@ -21,26 +21,27 @@ const modalStore = useModalStore();
 
 const personal = {
   images: [
+   
+    {
+      src: "/images/personal/grapesoda.png",
+      alt: "greengrape juice, packaging design",
+    },
     {
       src: "/images/personal/appa.webp",
       alt: "An illustration of Appa, the character of Avatar the Last Airbender",
     },
     {
-      src: "/images/personal/DISNEY.webp",
-      alt: "An illustration of Disney Pin",
-    },
-    {
       src: "/images/personal/ramen.webp",
       alt: "An illustration of an asian dish",
     },
-    {
-      src: "/images/personal/theOrphans.webp",
-      alt: "An Illustration of my game, the Orphans",
-    },
-    {
-      src: "/images/personal/inflation.webp",
-      alt: "A 3D model of my name, Joann",
-    },
+    // {
+    //   src: "/images/personal/theOrphans.webp",
+    //   alt: "An Illustration of my game, the Orphans",
+    // },
+    // {
+    //   src: "/images/personal/inflation.webp",
+    //   alt: "A 3D model of my name, Joann",
+    // },
     {
       src: "/images/personal/joannlap--round-v4.webp",
       alt: "A 3D model of my name, Joann Lap",
