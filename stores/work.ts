@@ -3,12 +3,37 @@ export const useWorkStore = definePiniaStore("work-store", {
     work: [
       {
         id: 1,
-        title: "TNO Messenger Capsule Collection teaser campaign",
+        title: "WALK THAT TALK",
+        headerImage: "/images/work/project-thumbnails/wtt.jpg",
+        headerImageAlt: "WTT",
+        client: "WALK THAT TALK",
+        date: "2024 - NOW",
+        tags: ["Brand Identity", "Merch Design"],
+        description:
+          "Walk That Talk is a cultural institution inspired by the underground culture. Connecting communities with audiences through different forms of expression. Through events, stories, art, workshops, markets, and cultural activities. \n\n Our focus on the identity was creating a loud and clear tone of voice that was playful at the same time. Walk That Talk indicates like an order within the army. Morse code serves as a universal language with a clear purpose, much like art within underground culture. Both communicate meaning beyond words, serving as tools of connection and expression.",
+        images: [
+          "/images/work/wtt/logos.jpg",
+          "/images/work/wtt/brandguide.jpg",
+          "/images/work/wtt/colors.jpg",
+          "/images/work/wtt/faces.jpg",
+          "/images/work/wtt/Weestep-jumpdown 2.gif",
+          "/images/work/wtt/Weestep-run 2.gif",
+          "/images/work/wtt/camoprint.jpg",
+          "/images/work/wtt/wtt-scarves.jpg",
+          "/images/work/wtt/wtt-bandanas.jpg",
+          "/images/work/wtt/wtt-tees.jpg",
+        ],
+        mobileLayout:"1fr / 1fr / 1fr / 1fr / 1fr / 1fr",
+        desktopLayout: "1fr / 1fr / 1fr / 1fr / 1fr 1fr / 1fr / 1fr / 1fr / 1fr",
+      },
+      {
+        id: 1,
+        title: "TNO Messenger Capsule Collection teaser",
         headerImage: "/images/work/project-thumbnails/msn-tno.jpg",
         headerImageAlt: "HD24-teaser",
         client: "The New Originals",
         date: "2024",
-        tags: ["Campaign Graphics", "Motion", "Illustration"],
+        tags: ["Campaign Graphics", "Motion Design", "Illustration"],
         description:
           " For The New Originals holiday drop, the capsule collection explores the nostalgic era of internet within the theme of MSN Messenger. The collection consist of graphical jerseys, hoodies and a cap catered to this theme. As part of the drop, a teaser rolled out to announce the collection. \n\n The concept initially started as a loading animation of the messenger dolls, developed into a full storytelling exploring the theme of MSN. Assets were developed with multiple softwares: Figma, Procreate and After Effects). \n\n Collaborators: Eben Badu, special credits to Gabriel Polo for developing the capsule collection. ",
         images: [
@@ -25,6 +50,7 @@ export const useWorkStore = definePiniaStore("work-store", {
         mobileLayout:"1fr / 1fr / 1fr / 1fr / 1fr / 1fr",
         desktopLayout: "1fr / 1fr / 1fr 1fr / 1fr / 1fr / 1fr / 1fr / 1fr",
       },
+     
       {
         id: 1,
         title: "SMIB X TNO FEST '24",
@@ -125,32 +151,32 @@ export const useWorkStore = definePiniaStore("work-store", {
         desktopLayout:
           "1fr 1fr  / 1fr 1fr / 1fr 1fr / 1fr 1fr/ 1fr 1fr",
       },
-      {
-        id: 5,
-        title:
-          "Coke Studio presents: 50 years hiphop tribute powered by Foundation",
-        headerImage: "/images/work/project-thumbnails/LL-tribute.webp",
-        headerImageAlt: "Lowlands tribute afbeelding",
-        client: "Coke studio / Foundation",
-        date: "2023",
-        tags: ["Motion Design"],
-        description:
-          "August 2023 marks the 50th anniversary of Hiphop, a genre known for its rich cultural history in music. To celebrate this milestone, Coke Studio is presenting a special tribute show titled '50 Years of Hiphop' in collaboration with Lowlands and Foundation Amsterdam Hiphop Academy. \n\n As part of the tribute show, an introductory video showcases a short timeline highlighting the pioneers who have had a significant impact on Hiphop music. This video is a compilation of interviews, music clips, and dynamic text motion.",
-        images: [
-          [
-            "/images/work/LL-tribute/Lowlands-50yrs-hiphop-intro_3.webm",
-            "/images/work/LL-tribute/LL-tribute.webp",
-            "/images/work/LL-tribute/Lowlands-50yrs-hiphop-intro_3.mp4",
-          ],
-          "/images/work/LL-tribute/73broke.webp",
-          "/images/work/LL-tribute/electrifying.webp",
-          "/images/work/LL-tribute/koolherc.webp",
-          "/images/work/LL-tribute/LL-1.webp",
-        ],
-        gridLayout: "100%",
-        mobileLayout: "1fr / 1fr / 1fr / 1fr",
-        desktopLayout: "1fr / 1fr / 1fr / 1fr",
-      },
+      // {
+      //   id: 5,
+      //   title:
+      //     "Coke Studio presents: 50 years hiphop tribute powered by Foundation",
+      //   headerImage: "/images/work/project-thumbnails/LL-tribute.webp",
+      //   headerImageAlt: "Lowlands tribute afbeelding",
+      //   client: "Coke studio / Foundation",
+      //   date: "2023",
+      //   tags: ["Motion Design"],
+      //   description:
+      //     "August 2023 marks the 50th anniversary of Hiphop, a genre known for its rich cultural history in music. To celebrate this milestone, Coke Studio is presenting a special tribute show titled '50 Years of Hiphop' in collaboration with Lowlands and Foundation Amsterdam Hiphop Academy. \n\n As part of the tribute show, an introductory video showcases a short timeline highlighting the pioneers who have had a significant impact on Hiphop music. This video is a compilation of interviews, music clips, and dynamic text motion.",
+      //   images: [
+      //     [
+      //       "/images/work/LL-tribute/Lowlands-50yrs-hiphop-intro_3.webm",
+      //       "/images/work/LL-tribute/LL-tribute.webp",
+      //       "/images/work/LL-tribute/Lowlands-50yrs-hiphop-intro_3.mp4",
+      //     ],
+      //     "/images/work/LL-tribute/73broke.webp",
+      //     "/images/work/LL-tribute/electrifying.webp",
+      //     "/images/work/LL-tribute/koolherc.webp",
+      //     "/images/work/LL-tribute/LL-1.webp",
+      //   ],
+      //   gridLayout: "100%",
+      //   mobileLayout: "1fr / 1fr / 1fr / 1fr",
+      //   desktopLayout: "1fr / 1fr / 1fr / 1fr",
+      // },
       {
         id: 2,
         title: "Foundation Bootcamp 2023",
