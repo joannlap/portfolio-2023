@@ -23,7 +23,7 @@ export const useWorkStore = definePiniaStore("work-store", {
           "/images/work/wtt/wtt-bandanas.jpg",
           "/images/work/wtt/wtt-tees.jpg",
         ],
-        mobileLayout:"1fr / 1fr / 1fr / 1fr / 1fr / 1fr",
+        mobileLayout:"1fr / 1fr / 1fr / 1fr / 1fr / 1fr / 1fr / 1fr/ 1fr / 1fr",
         desktopLayout: "1fr / 1fr / 1fr / 1fr / 1fr 1fr / 1fr / 1fr / 1fr / 1fr",
       },
       {
@@ -49,8 +49,7 @@ export const useWorkStore = definePiniaStore("work-store", {
         ],
         mobileLayout:"1fr / 1fr / 1fr / 1fr / 1fr / 1fr",
         desktopLayout: "1fr / 1fr / 1fr 1fr / 1fr / 1fr / 1fr / 1fr / 1fr",
-      },
-     
+      },    
       {
         id: 1,
         title: "SMIB X TNO FEST '24",
