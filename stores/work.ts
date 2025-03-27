@@ -10,7 +10,7 @@ export const useWorkStore = definePiniaStore("work-store", {
         date: "2024 - NOW",
         tags: ["Brand Identity", "Merch Design"],
         description:
-          "Walk That Talk is a cultural institution inspired by the underground culture. Connecting communities with audiences through different forms of expression. Through events, stories, art, workshops, markets, and cultural activities. \n\n Our focus on the identity was creating a loud and clear tone of voice that was playful at the same time. Walk That Talk indicates like an order within the army. Morse code serves as a universal language with a clear purpose, much like art within underground culture. Both communicate meaning beyond words, serving as tools of connection and expression.",
+          "Walk That Talk is a cultural institution inspired by the underground culture. Connecting communities with audiences through different forms of expression. Through events, stories, art, workshops, markets, and cultural activities. \n\n Our focus on the identity was creating a loud and clear tone of voice that was playful at the same time. 'Walk That Talk' is an expression like an order within the army. The morse code serves as a universal language with a clear purpose, much like art within underground culture. Both communicate meaning beyond words, serving as tools of connection and expression.",
         images: [
           "/images/work/wtt/logos.jpg",
           "/images/work/wtt/brandguide.jpg",
