@@ -7,22 +7,20 @@
       sizes="xs:280px sm:350px md:487px lg:487px xl:487px"
     />
     <p>
-      My name is Jo-Ann, born and raised in Amsterdam. A designer with passion for creating graphics and brand experiences that goes beyond the digital screen. I approach my work through a tangible touch, from applying textures to developing a product.       <br>
+      My name is Jo-Ann, born and raised in Amsterdam. A graphic designer with passion for creating graphics and brand experiences that goes beyond the digital screen. I approach my work through a tangible touch, from applying textures to developing a product.    <br>
       <br>
       Services: 
       <br>
       Branding
       <br>
-      Product Design
-      <br>
-      Packaging Design
+      Illustration
       <br>
       Motion Graphics 
       <br>
       3D modelling
       <br>
       <br>
-      <a href="https://read.cv/joannlap" target="_blank">Resume</a>
+      <a href="/resume-joannlap.pdf" target="_blank">Resume</a>
     </p>
   </section>
   <div class="MobileFooter">
