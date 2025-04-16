@@ -8,23 +8,24 @@ export const useWorkStore = definePiniaStore("work-store", {
         headerImageAlt: "WTT",
         client: "WALK THAT TALK",
         date: "2024 - NOW",
-        tags: ["Brand Identity", "Merch Design"],
+        tags: ["Logo Design","Brand Identity", "Merch Design"],
         description:
-          "Walk That Talk is a cultural institution inspired by the underground culture. Connecting communities with audiences through different forms of expression. Through events, stories, art, workshops, markets, and cultural activities. \n\n Our focus on the identity was creating a loud and clear tone of voice that was playful at the same time. 'Walk That Talk' is an expression like an order within the army. The morse code serves as a universal language with a clear purpose, much like art within underground culture. Both communicate meaning beyond words, serving as tools of connection and expression.",
+          "Walk That Talk is a cultural institution inspired by the underground culture. Connecting communities with audiences through different forms of expression. Through events, stories, art, workshops, markets, and cultural activities. \n\n Focus on the identity was creating a loud and clear tone of voice that was playful at the same time. 'Walk That Talk' is an expression like an order within the army. The morse code serves as a universal language with a clear purpose, much like art within underground culture. Both communicate meaning beyond words, serving as tools of connection and expression.",
         images: [
-          "/images/work/wtt/logos.jpg",
-          "/images/work/wtt/brandguide.jpg",
+          "/images/work/wtt/logo.jpg",
+          "/images/work/wtt/weestep.jpg",
           "/images/work/wtt/colors.jpg",
-          "/images/work/wtt/faces.jpg",
-          "/images/work/wtt/Weestep-jumpdown 2.gif",
-          "/images/work/wtt/Weestep-run 2.gif",
+          "/images/work/wtt/Weestep-jumpdown.gif",
+          "/images/work/wtt/Weestep-run2.gif",
+          "/images/work/wtt/brandguide.jpg",
           "/images/work/wtt/camoprint.jpg",
+          "/images/work/wtt/faces.jpg",
           "/images/work/wtt/wtt-scarves.jpg",
           "/images/work/wtt/wtt-bandanas.jpg",
           "/images/work/wtt/wtt-tees.jpg",
         ],
         mobileLayout:"1fr / 1fr / 1fr / 1fr / 1fr / 1fr / 1fr / 1fr/ 1fr / 1fr",
-        desktopLayout: "1fr / 1fr / 1fr / 1fr / 1fr 1fr / 1fr / 1fr / 1fr / 1fr",
+        desktopLayout: "1fr / 1fr / 1fr / 1fr 1fr / 1fr / 1fr / 1fr / 1fr / 1fr / 1fr",
       },
       {
         id: 1,
@@ -78,7 +79,7 @@ export const useWorkStore = definePiniaStore("work-store", {
       {
         id: 2,
         title: "The New Originals",
-        headerImage: "/images/work/project-thumbnails/tno.jpg",
+        headerImage: "/images/work/project-thumbnails/tno-2.jpg",
         headerImageAlt: "The-New-Originals",
         client: "The New Originals",
         date: "2024",
@@ -109,10 +110,11 @@ export const useWorkStore = definePiniaStore("work-store", {
         headerImageAlt: "Avant-Garde-Battle",
         client: "Avant Garde Collective",
         date: "2024",
-        tags: ["Brand Identity", "Event Graphics"],
+        tags: ["Logo Design","Brand Identity", "Event Graphics"],
         description:
           "Battle event organized by the Avant Garde Collective that took place at the city theater in Haarlem. It features three categories, each with its unique rules and prize money. \n\n The visual language of the event is inspired by the Avant Garde collective's style, blending vintage aesthetics from the early 20th century. This approach reflects both historical influences and modern artistic expression.",
         images: [
+          "/images/work/avantgarde/avg-logo.jpg",
           "/images/work/avantgarde/AvantGardeBattle-poster.webp",
           "/images/work/avantgarde/avg-battleguest-1.webp",
           "/images/work/avantgarde/avg-battleguest-2.webp",
@@ -121,7 +123,7 @@ export const useWorkStore = definePiniaStore("work-store", {
           "/images/work/avantgarde/avg-price.webp",
         ],
         mobileLayout: "1fr / 1fr / 1fr / 1fr / 1fr / 1fr",
-        desktopLayout: "1fr / 1fr 1fr / 1fr 1fr / 1fr",
+        desktopLayout: "1fr / 1fr / 1fr 1fr / 1fr 1fr / 1fr / 1fr ",
       },
       {
         id: 4,
@@ -183,7 +185,7 @@ export const useWorkStore = definePiniaStore("work-store", {
         headerImageAlt: "Foundation Bootcamp afbeelding",
         client: "Foundation Amsterdam Hiphop Academy",
         date: "2023",
-        tags: ["Event Graphics"],
+        tags: ["Logo Design","Event Graphics"],
         description:
           "Foundation Bootcamp can be summarized as a journey of hard work, growth, challenges, physical and mental exertion and knowledge. Every summer, Foundation Hiphop Academy organizes a 3-week intensive bootcamp that allows dancers to immerse themselves in the elements of street and club culture. The bootcamp offers over 60 workshops in various street styles, as well as lectures, parties and an evaluation program known as the Hawks Method. \n\n The visual language of Foundation Bootcamp is influenced by street and pop art. My inspiration for the design came from hiphop and street magazines, graffiti art, and movie posters. The overall approach aimed to capture the essence of a cityscape, combining elements like an assembly of Avengers.",
         images: [

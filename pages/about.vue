@@ -20,7 +20,7 @@
       3D modelling
       <br>
       <br>
-      <a href="/resume-joannlap.pdf" target="_blank">Resume</a>
+      <a href="/cv-joannlap.pdf" target="_blank">Resume</a>
     </p>
   </section>
   <div class="MobileFooter">
