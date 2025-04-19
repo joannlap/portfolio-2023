@@ -235,7 +235,7 @@ onMounted(() => {
 }
 h1.Work-title {
   font-family: "Inter";
-  font-weight: 600;
+  font-weight: 700;
   font-size: 30px;
   line-height: 130%;
 

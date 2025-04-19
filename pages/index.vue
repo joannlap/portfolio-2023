@@ -106,7 +106,7 @@ const handleClick = (id: number, title: string) => {
       display: flex;
 
       font-family: "Inter", sans-serif;
-      font-weight: 500;
+      font-weight: 600;
 
       @include breakpoint(xmedium) {
         display: none;
