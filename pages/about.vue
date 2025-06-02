@@ -7,19 +7,13 @@
       sizes="xs:280px sm:350px md:487px lg:487px xl:487px"
     />
     <p>
-      My name is Jo-Ann, born and raised in Amsterdam. A graphic designer with passion for creating graphics and brand experiences that goes beyond the digital screen. I approach my work through a tangible touch, from applying textures to developing a product.    <br>
-      <br>
-      Services: 
-      <br>
-      Branding
-      <br>
-      Illustration
-      <br>
-      Motion Graphics 
-      <br>
-      3D modelling
-      <br>
-      <br>
+      Hi, I’m Jo-Ann — a graphic designer based in Amsterdam. Working across branding, illustration, motion graphics, and 3D design. My approach lies in combining analog and digital techniques creating a tactile touch to my work.
+      <br>  
+      <br>  
+      Currently freelancing and open to new projects. For inquiries or any questions, feel free to get in touch by email.
+      <br>  
+      <br>  
+
       <a href="/cv-joannlap.pdf" target="_blank">Resume</a>
     </p>
   </section>
