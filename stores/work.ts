@@ -3,6 +3,31 @@ export const useWorkStore = definePiniaStore("work-store", {
     work: [
       {
         id: 1,
+        title: "Fong Food",
+        headerImage: "/images/work/project-thumbnails/fongfood.jpg",
+        headerImageAlt: "FongFood",
+        client: "Fong Food",
+        date: "2025",
+        tags: ["Brand Identity", "Print", "Packaging"],
+        description:
+          "Surinamese sandwich shop located in the heart of Bijlmer in Amsterdam Southeast since 2013. Due to rennovations the shop had to relocate to a temporary location for the upcoming three years, which led to a small rebranding. \n\n The new brand identity was built on the previous logo, with updated typography that retained its original essence. Designed banners, menu boards, sandwich bags and product shots. Collaborators: Raquel de Romas and Recent Studio. ",
+        images: [
+          "/images/work/fongfood/winkel.jpg",
+          "/images/work/fongfood/winkel2.jpg",
+          "/images/work/fongfood/logo-1.jpg",
+          "/images/work/fongfood/logo-2.jpg",
+          "/images/work/fongfood/colors.jpg",
+          "/images/work/fongfood/typografie.jpg",
+          "/images/work/fongfood/broodjes.jpg",
+          "/images/work/fongfood/menuborden-30.png",
+          "/images/work/fongfood/menuborden-28.png",
+          // "/images/work/fongfood/menuborden-39.png",
+        ],
+        mobileLayout: "1fr / 1fr / 1fr / 1fr / 1fr / 1fr / 1fr / 1fr/ 1fr / 1fr / 1fr",
+        desktopLayout: "1fr / 1fr / 1fr / 1fr / 1fr / 1fr / 1fr / 1fr 1fr / 1fr / 1fr",
+      },
+      {
+        id: 1,
         title: "WALK THAT TALK",
         headerImage: "/images/work/project-thumbnails/wtt.jpg",
         headerImageAlt: "WTT",
@@ -12,6 +37,10 @@ export const useWorkStore = definePiniaStore("work-store", {
         description:
           "Walk That Talk is a cultural organisation inspired by the underground culture. Connecting communities with audiences through different forms of expression. Through events, art, workshops and other cultural activities. \n\n Focus on the identity was creating a loud and clear tone of voice that was playful at the same time. 'Walk That Talk' is an expression like an order within the army. The morse code serves as a universal language with a clear purpose, much like art within underground culture. Both communicate meaning beyond words, serving as tools of connection and expression.",
         images: [
+          "/images/work/wtt/wtt-bandanas.jpg",
+          "/images/work/wtt/wtt-scarves.jpg",
+          "/images/work/wtt/stickers.jpg",
+          "/images/work/wtt/wtt-tees.jpg",
           "/images/work/wtt/logo.jpg",
           "/images/work/wtt/weestep.jpg",
           "/images/work/wtt/colors.jpg",
@@ -20,17 +49,13 @@ export const useWorkStore = definePiniaStore("work-store", {
           "/images/work/wtt/brandguide.jpg",
           "/images/work/wtt/camoprint.jpg",
           "/images/work/wtt/faces.jpg",
-          "/images/work/wtt/wtt-bandanas.jpg",
-          "/images/work/wtt/wtt-scarves.jpg",
-          "/images/work/wtt/stickers.jpg",
-          "/images/work/wtt/wtt-tees.jpg",
         ],
-        mobileLayout:"1fr / 1fr / 1fr / 1fr / 1fr / 1fr / 1fr / 1fr/ 1fr / 1fr / 1fr",
+        mobileLayout: "1fr / 1fr / 1fr / 1fr / 1fr / 1fr / 1fr / 1fr/ 1fr / 1fr / 1fr",
         desktopLayout: "1fr / 1fr / 1fr / 1fr / 1fr / 1fr / 1fr / 1fr / 1fr / 1fr",
       },
       {
         id: 1,
-        title: "ISH DANCE COLLECTIVE",
+        title: "ISH Dance Collective",
         headerImage: "/images/work/project-thumbnails/ish.jpg",
         headerImageAlt: "ISH",
         client: "ISH DANCE COLLECTIVE",
@@ -44,7 +69,7 @@ export const useWorkStore = definePiniaStore("work-store", {
           "/images/work/ish/avg-ish-billboard.jpg",
           "/images/work/ish/ish-visitekaarten.jpg",
         ],
-        mobileLayout:"1fr / 1fr / 1fr / 1fr / 1fr",
+        mobileLayout: "1fr / 1fr / 1fr / 1fr / 1fr",
         desktopLayout: "1fr / 1fr / 1fr / 1fr / 1fr",
       },
       {
@@ -68,9 +93,9 @@ export const useWorkStore = definePiniaStore("work-store", {
           "/images/work/tno-msn/chat.png",
           "/images/work/tno-msn/sentFile.png",
         ],
-        mobileLayout:"1fr / 1fr / 1fr / 1fr / 1fr / 1fr",
+        mobileLayout: "1fr / 1fr / 1fr / 1fr / 1fr / 1fr",
         desktopLayout: "1fr / 1fr / 1fr 1fr / 1fr / 1fr / 1fr / 1fr / 1fr",
-      },    
+      },
       {
         id: 1,
         title: "SMIB X TNO FEST '24",
@@ -93,7 +118,7 @@ export const useWorkStore = definePiniaStore("work-store", {
           "/images/work/smibtno/banner2.jpg",
 
         ],
-        mobileLayout:"1fr / 1fr / 1fr / 1fr / 1fr / 1fr / 1fr / 1fr / 1fr/ 1fr",
+        mobileLayout: "1fr / 1fr / 1fr / 1fr / 1fr / 1fr / 1fr / 1fr / 1fr/ 1fr",
         desktopLayout: "1fr 1fr / 1fr 1fr / 1fr 1fr / 1fr / 1fr / 1fr",
       },
       {
@@ -103,26 +128,26 @@ export const useWorkStore = definePiniaStore("work-store", {
         headerImageAlt: "The-New-Originals",
         client: "The New Originals",
         date: "2024",
-        tags: ["Brand Graphics","Product design","Poster design"],
+        tags: ["Brand Graphics", "Product design", "Poster design"],
         description:
           "Selected work of various clients during my time at The New Originals. From top to bottom: New Balance Jersey Kit for the Basement Cup 2024. Slipmat design as part of TNO Love Themes pt.2 vinyl release. Posters for collaborative events with TNO. \n\n Collaborators: Bram Romkes, Wessel and Jessey de Nijs. Photography by Brownievisuals",
-          images: [
-            "/images/work/tno/NB-jersey.jpg",
-            "/images/work/tno/nb-jersey-mockup.jpg",
-            "/images/work/tno/slipmat.jpg",
-            "/images/work/tno/slipmat-store.jpg",
-            "/images/work/tno/prophet.jpg",
-            "/images/work/tno/dankie.jpg",
-            "/images/work/tno/tno-pgltm-mainflyer.jpg",
-            "/images/work/tno/tno-pgltm-lineup.jpg",
-            "/images/work/tno/jahjah.jpg",
-            "/images/work/tno/frediletti.jpg",
-            
-          ],
+        images: [
+          "/images/work/tno/NB-jersey.jpg",
+          "/images/work/tno/nb-jersey-mockup.jpg",
+          "/images/work/tno/slipmat.jpg",
+          "/images/work/tno/slipmat-store.jpg",
+          "/images/work/tno/prophet.jpg",
+          "/images/work/tno/dankie.jpg",
+          "/images/work/tno/tno-pgltm-mainflyer.jpg",
+          "/images/work/tno/tno-pgltm-lineup.jpg",
+          "/images/work/tno/jahjah.jpg",
+          "/images/work/tno/frediletti.jpg",
+
+        ],
         mobileLayout: "1fr / 1fr / 1fr / 1fr / 1fr / 1fr / 1fr / 1fr / 1fr/ 1fr",
         desktopLayout: "1fr 1fr / 1fr 1fr / 1fr 1fr / 1fr 1fr / 1fr 1fr",
-      
-      },    
+
+      },
       {
         id: 3,
         title: "Avant Garde Battle",
@@ -130,7 +155,7 @@ export const useWorkStore = definePiniaStore("work-store", {
         headerImageAlt: "Avant-Garde-Battle",
         client: "Avant Garde Collective",
         date: "2024",
-        tags: ["Logo Design","Brand Identity", "Event Graphics"],
+        tags: ["Logo Design", "Brand Identity", "Event Graphics"],
         description:
           "Battle event organized by the Avant Garde Collective that took place at the city theater in Haarlem. It features three categories, each with its unique rules and prize money. \n\n The visual language of the event is inspired by the Avant Garde collective's style, blending vintage aesthetics from the early 20th century. This approach reflects both historical influences and modern artistic expression.",
         images: [
@@ -152,7 +177,7 @@ export const useWorkStore = definePiniaStore("work-store", {
         headerImageAlt: "Foundation Hiphop Centre afbeelding",
         client: "Foundation Hiphop Centre",
         date: "2023-2024",
-        tags: ["Brand Graphics","Poster Design"],
+        tags: ["Brand Graphics", "Poster Design"],
         description:
           "Collection of posters for social media content and printwork for Foundation. Located in South-East of Amsterdam, a cultural centre that provides knowledge and development in various street styles.",
         images: [
@@ -239,30 +264,30 @@ export const useWorkStore = definePiniaStore("work-store", {
       //   desktopLayout:
       //     "1.2fr 0.8fr / 1fr 1fr 1fr / 1fr 1fr 1fr / 1fr 1fr 1fr / 1fr 1fr / 1fr / 1fr / 1fr",
       // },
-      {
-        id: 6,
-        title: "Yeye: African Diasporic music",
-        headerImage: "/images/work/project-thumbnails/YEYE.webp",
-        headerImageAlt: "Yeye illustratie",
-        client: "Yeye",
-        date: "2023",
-        tags: ["Event Graphics"],
-        description:
-          "Yeye is a gathering where people can immerse themselves in the rhythms and melodies that have emerged from the African diaspora, while enjoying delicious food. \n\n For the first event, a looped video backdrop will showcase different music clips with animations featuring Adrinka symbols.",
-        images: [
-          [
-            "/images/work/yeye/landscape.webm",
-            "/images/work/yeye/yeye-logo.webp",
-            "/images/work/yeye/landscape.mp4",
-          ],
-          "/images/work/yeye/yeye-logo.webp",
-          "/images/work/yeye/yeye-pattern1.webp",
-          "/images/work/yeye/yeye-pattern2.webp",
-          "/images/work/yeye/yeye-pattern3.webp",
-        ],
-        mobileLayout: "1fr / 1fr / 1fr / 1fr / 1fr",
-        desktopLayout: "1fr / 1fr / 1fr / 1fr / 1fr",
-      },
+      // {
+      //   id: 6,
+      //   title: "Yeye: African Diasporic music",
+      //   headerImage: "/images/work/project-thumbnails/YEYE.webp",
+      //   headerImageAlt: "Yeye illustratie",
+      //   client: "Yeye",
+      //   date: "2023",
+      //   tags: ["Event Graphics"],
+      //   description:
+      //     "Yeye is a gathering where people can immerse themselves in the rhythms and melodies that have emerged from the African diaspora, while enjoying delicious food. \n\n For the first event, a looped video backdrop will showcase different music clips with animations featuring Adrinka symbols.",
+      //   images: [
+      //     [
+      //       "/images/work/yeye/landscape.webm",
+      //       "/images/work/yeye/yeye-logo.webp",
+      //       "/images/work/yeye/landscape.mp4",
+      //     ],
+      //     "/images/work/yeye/yeye-logo.webp",
+      //     "/images/work/yeye/yeye-pattern1.webp",
+      //     "/images/work/yeye/yeye-pattern2.webp",
+      //     "/images/work/yeye/yeye-pattern3.webp",
+      //   ],
+      //   mobileLayout: "1fr / 1fr / 1fr / 1fr / 1fr",
+      //   desktopLayout: "1fr / 1fr / 1fr / 1fr / 1fr",
+      // },
     ],
   }),
   getters: {
